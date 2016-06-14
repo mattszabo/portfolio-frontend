@@ -1,0 +1,54 @@
+html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
+  padding: 0
+  border: 0
+  margin: 0
+  font: inherit
+  font-size: 100%
+  font-family: "Helvetica Neue", Helvetica, sans-serif
+body
+  background-color: skyblue
+  font-size: 62.5%
+$width: 50%
+.basic-a
+  text-decoration: none
+  color: inherit
+.default
+  text-align: center
+  margin: 20px auto
+  ul
+    list-style-type: none
+.header
+  @extend .default
+  margin-top: 0
+  .brand
+    font-size: 3.2em
+    font-weight: bold
+.navbar
+  @extend .default
+  font-size: 2.4em
+  margin-bottom: 20px
+  background-color: black
+  color: white
+  li
+    display: inline-block
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  a
+    @extend .basic-a
+  .active
+    color: gray
+.content
+  @extend .default
+  font-size: 1.6em
+  width: $width
+  color: rgba(1, 1, 1, .7)
+.footer
+  font-size: 1.6em
+  background-color: black
+  color: white
+  text-align: center
+  a
+    @extend .basic-a
+.about
+  text-align: justify
