@@ -6,11 +6,12 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
   font-size: 100%
   font-family: "Helvetica Neue", Helvetica, sans-serif
 body
-  background-color: skyblue
+  background-color: lightgray
 nav
   background: black
   color: white
   text-align: center
+  padding: 20px
   li
     display: inline-block
     margin-right: 20px
@@ -21,7 +22,7 @@ nav
       text-decoration: none
       color: inherit
       &:hover
-        color: lighten(gray, 30)
+        color: lightgray
     .active
       color: gray
       cursor: default
@@ -30,3 +31,4 @@ nav
   .brand
     @extend .navbar-links
     float: left
+    color: white
