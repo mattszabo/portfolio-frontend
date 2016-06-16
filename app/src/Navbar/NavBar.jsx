@@ -9,7 +9,7 @@ export default class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedItem: 1,
+      selectedItem: 0,
       navBarList: NavBarData.getNavBarList(),
       brand: NavBarData.getBrand()
     }
@@ -20,22 +20,33 @@ export default class NavBar extends React.Component {
   }
 
   render() {
+    let brand = this.state.brand
     return(
       <nav className='group'>
         <div className='brand'>
-          {this.state.brand.text}
+          <NavBarItem
+            key = {brand.id}
+            url = {brand.url}
+            onClick = {this._updateItemSelection.bind(this, brand.id)}
+            isSelected={(this.state.selectedItem === brand.id)}
+          >
+            {this.state.brand.text}
+          </NavBarItem>
         </div>
-        <ul>
-          {this.state.navBarList.map((item) =>
-            <NavBarItem
-              key = {item.id}
-              url = {item.url}
-              text = {item.text}
-              onClick = {this._updateItemSelection.bind(this, item.id)}
-              isSelected={(this.state.selectedItem === item.id)}
-            />
-          )}
-        </ul>
+        <div className='navbar-links'>
+          <ul>
+            {this.state.navBarList.map((item) =>
+              <NavBarItem
+                key = {item.id}
+                url = {item.url}
+                onClick = {this._updateItemSelection.bind(this, item.id)}
+                isSelected={(this.state.selectedItem === item.id)}
+              >
+                {item.text}
+              </NavBarItem>
+            )}
+          </ul>
+        </div>
       </nav>
     );
   }

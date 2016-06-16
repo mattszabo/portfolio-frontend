@@ -8,18 +8,25 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
 body
   background-color: skyblue
 nav
+  background: black
+  color: white
   text-align: center
-  .brand
-    float: left
   li
     display: inline-block
     margin-right: 20px
     &:last-child
       margin-right: 0
-  ul
+  .navbar-links
     a
       text-decoration: none
       color: inherit
+      &:hover
+        color: lighten(gray, 30)
     .active
       color: gray
       cursor: default
+      &:hover
+        color: gray
+  .brand
+    @extend .navbar-links
+    float: left
