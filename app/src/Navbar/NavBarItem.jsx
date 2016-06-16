@@ -9,10 +9,15 @@ export default class NavBarItem extends React.Component {
   }
 
   render() {
-    this._class = (this.props.isSelected === true) ? 'active' : '';
+    this._class = this.props.text.toLowerCase();
+    this._class += (this.props.isSelected === true) ? ' active' : '';
     return (
-      <li className = {this._class}>
-        <Link to={this.props.url} onClick={this._handleItemClick.bind(this)}>
+      <li>
+        <Link
+          className = {this._class}
+          to={this.props.url}
+          onClick={this._handleItemClick.bind(this)}
+        >
           {this.props.text}
         </Link>
       </li>

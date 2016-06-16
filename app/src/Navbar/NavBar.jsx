@@ -9,8 +9,9 @@ export default class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedItem: 0,
-      navBarList: NavBarData.getNavBarList()
+      selectedItem: 1,
+      navBarList: NavBarData.getNavBarList(),
+      brand: NavBarData.getBrand()
     }
   }
 
@@ -20,7 +21,10 @@ export default class NavBar extends React.Component {
 
   render() {
     return(
-      <div>
+      <nav className='group'>
+        <div className='brand'>
+          {this.state.brand.text}
+        </div>
         <ul>
           {this.state.navBarList.map((item) =>
             <NavBarItem
@@ -32,7 +36,7 @@ export default class NavBar extends React.Component {
             />
           )}
         </ul>
-      </div>
+      </nav>
     );
   }
 }

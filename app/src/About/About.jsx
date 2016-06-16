@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = () => {
-  return(
+  return (
     <div className='about'>
       <p>
         My name is Matt and I come from a Java/SQL background and have decent knowledge of unix tools and bash scripting. I've been learning front end web development from scratch for about 6 weeks.
