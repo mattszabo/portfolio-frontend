@@ -9,16 +9,19 @@ body
   background-color: lightgray
 nav
   background: black
-  color: white
+  color: lightgray
   text-align: center
   padding: 20px
   font-size: 24px
   font-weight: 200
   li
     display: inline-block
-    margin-right: 40px
+    margin-right: 20px
+    padding-right: 20px
+    border-right: 1px solid lightgray
     &:last-child
       margin-right: 0
+      border-right: 0
   .navbar-links
     a
       text-decoration: none
@@ -27,7 +30,8 @@ nav
       &:before
         content: ""
         position: absolute
-        width: 100%
+        width: 95%
+        margin-left: 2.5%
         height: 2px
         bottom: 0
         left: 0
@@ -44,12 +48,15 @@ nav
     .active
       color: gray
       cursor: default
+      &:before
+        visibility: hidden
+      &:hover:before
+        visibility: hidden
       &:hover
         color: gray
   .brand
     @extend .navbar-links
     float: left
-    color: white
 .content
   margin: 20px
   .about
