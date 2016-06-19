@@ -13,18 +13,23 @@ import Contact  from '../Contact/components/Contact'
 var page = $('html, body');
 
 $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    page.on('scroll mousedown wheel DOMMouseScroll mousewheel keydown touchmove', function(){
+  $('a[href*="#"]:not([href="#"])').click(function(e) {
+    let hash = this.hash
+    page.on('scroll mousedown wheel DOMMouseScroll mousewheel keydown touchmove', function() {
       page.stop();
     });
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
+      console.log('location')
+      console.log(location.href)
+      target = target ? target : $('[name=' + target.slice(1) +']');
+      if (target) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000);
-        return false;
+        }, 1000, function() {
+          location.hash = hash;
+        });
+        e.preventDefault();
       }
     }
   });
