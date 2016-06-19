@@ -11,7 +11,8 @@ const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
   release: path.join(__dirname, 'build', 'release'),
-  styles: path.join(__dirname, 'app', 'styles')
+  styles: path.join(__dirname, 'app', 'styles'),
+  fonts: path.join(__dirname, 'app', 'styles', 'fonts')
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -41,6 +42,10 @@ const common = {
         test: /\.css$/,
         loaders: ['style', 'css'],
         include: PATHS.styles
+      },
+      {
+        test: /\.ttf$/,
+        loader: 'file?name=app/styles/fonts/[name].[ext]'
       },
       {
         test: /\.jsx?$/,

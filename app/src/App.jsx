@@ -4,23 +4,28 @@ import { Router, hashHistory, Redirect, Route } from 'react-router';
 import Layout   from './Layout/Layout';
 import Home     from './Home/Home';
 import About    from './About/About';
-import TodoApp  from './TodoApp/components/TodoApp';
+import Projects from './Projects/components/Projects';
+import Skills   from './Skills/components/Skills'
+import Contact   from './Contact/components/Contact'
 
 const app = (
   <Router history={hashHistory}>
     <Redirect from="/" to="/home" />
-    <Route path="/" component={Layout}>
-      <Route path="home"    component={Home}    />
-      <Route path="about"   component={About}   />
-      <Route path="todoapp" component={TodoApp} />
+    <Route path="/" component={ Layout }>
+      <Route path="home"      component={ Home }      />
+      <Route path="about"     component={ About }     />
+      <Route path="projects"  component={ Projects }  />
+      <Route path="skills"    component={ Skills }    />
+      <Route path="contact"   component={ Contact }   />
     </Route>
   </Router>
 );
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return(
       app
     );
   }
 }
+export default App
