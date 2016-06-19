@@ -1,5 +1,6 @@
 import React from 'react';
-import { Router, hashHistory, Redirect, Route } from 'react-router';
+import { Router, Redirect, Route, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history'
 
 import Layout   from './Layout/Layout';
 import Home     from './Home/Home';
@@ -8,8 +9,10 @@ import Projects from './Projects/components/Projects';
 import Skills   from './Skills/components/Skills'
 import Contact   from './Contact/components/Contact'
 
+let history = useRouterHistory(createHashHistory)({ queryKey: false })
+
 const app = (
-  <Router history={hashHistory}>
+  <Router history={history}>
     <Redirect from="/" to="/home" />
     <Route path="/" component={ Layout }>
       <Route path="home"      component={ Home }      />

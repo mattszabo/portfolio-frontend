@@ -11,49 +11,23 @@ nav
   background: scale-color(gray, $lightness: -70)
   color: scale-color(red, $lightness: 20)
   text-align: center
-  padding: 20px
+  margin: 0 auto
   font-size: 24px
   font-weight: 200
   li
     display: inline-block
-    margin-right: 20px
     padding-right: 20px
-    // border-right: 1px solid lightgray
     &:last-child
-      margin-right: 0
+      padding-right: 0
       border-right: 0
   .navbar-links
     a
       text-decoration: none
       position: relative
       color: inherit
-      &:before
-        content: ""
-        position: absolute
-        width: 95%
-        margin-left: 2.5%
-        height: 2px
-        bottom: 0
-        left: 0
-        background-color: scale-color(red, $lightness: 20)
-        visibility: hidden
-        -webkit-transform: scaleX(0)
-        transform: scaleX(0)
-        -webkit-transition: all 0.2s ease-in-out 0s
-        transition: all 0.2s ease-in-out 0s
-      &:hover:before
-        visibility: visible
-        -webkit-transform: scaleX(1)
-        transform: scaleX(1)
     .active
       color: gray
       cursor: default
-      &:before
-        visibility: hidden
-      &:hover:before
-        visibility: hidden
-      &:hover
-        // color: gray
   .brand
     @extend .navbar-links
     font-size: 32px
@@ -82,3 +56,13 @@ nav
     &:hover
       color: red
       border-bottom: 1px solid red
+.page-home
+  margin: 10px
+.page-about
+  margin: 10px
+.page-projects
+  margin: 10px
+.page-skills
+  margin: 10px
+.page-contact
+  margin: 10px

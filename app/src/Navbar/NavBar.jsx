@@ -10,8 +10,8 @@ export default class NavBar extends React.Component {
     super();
     this.state = {
       selectedItem: 0,
-      navBarList: NavBarData.getNavBarList(),
-      brand: NavBarData.getBrand()
+      navBarList: NavBarData.getNavBarList()
+      // brand: NavBarData.getBrand()
     }
   }
 
@@ -20,10 +20,10 @@ export default class NavBar extends React.Component {
   }
 
   render() {
-    let brand = this.state.brand
+    // let brand = this.state.brand
     return(
       <nav className='group'>
-        <div className='brand'>
+        {/*<div className='brand'>
           <NavBarItem
             key = {brand.id}
             url = {brand.url}
@@ -32,7 +32,7 @@ export default class NavBar extends React.Component {
           >
             {this.state.brand.text}
           </NavBarItem>
-        </div>
+        </div>*/}
         <div className='navbar-links'>
           <ul>
             {this.state.navBarList.map((item) =>
