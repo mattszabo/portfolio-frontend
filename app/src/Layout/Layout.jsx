@@ -1,4 +1,6 @@
 import React from 'react';
+import $ from 'jquery'
+
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
@@ -7,6 +9,21 @@ import About    from '../About/About';
 import Projects from '../Projects/components/Projects';
 import Skills   from '../Skills/components/Skills'
 import Contact  from '../Contact/components/Contact'
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
+});
 
 export default class Layout extends React.Component {
   render() {
