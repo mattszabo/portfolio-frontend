@@ -10,15 +10,20 @@ import Projects from '../Projects/components/Projects';
 import Skills   from '../Skills/components/Skills'
 import Contact  from '../Contact/components/Contact'
 
+var page = $('html, body');
+
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
+    page.on('scroll mousedown wheel DOMMouseScroll mousewheel keydown touchmove', function(){
+      page.stop();
+    });
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 500);
+        }, 1000);
         return false;
       }
     }
