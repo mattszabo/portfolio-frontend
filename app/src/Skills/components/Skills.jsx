@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Skills = () => (
-  <div>
+  <div className='page-skills' id='skills'>
     Skills page
   </div>
 )
