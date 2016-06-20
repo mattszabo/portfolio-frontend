@@ -14,19 +14,20 @@ var page = $('html, body');
 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function(e) {
-    let hash = this.hash
-    page.on('scroll mousedown wheel DOMMouseScroll mousewheel keydown touchmove', function() {
+
+    // stop auto scroll animation if the user manually scrolls during animation
+    page.on('scroll wheel DOMMouseScroll mousewheel touchmove', function() {
       page.stop();
     });
+
+    let hash = this.hash
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
-      console.log('location')
-      console.log(location.href)
       target = target ? target : $('[name=' + target.slice(1) +']');
       if (target) {
-        $('html, body').animate({
+        page.animate({
           scrollTop: target.offset().top
-        }, 1000, function() {
+        }, 750, function() {
           location.hash = hash;
         });
         e.preventDefault();
@@ -61,11 +62,4 @@ export default class Layout extends React.Component {
       </div>
     );
   }
-}
-
-Layout.propTypes = {
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.arrayOf(React.PropTypes.node),
-    React.PropTypes.node
-  ])
 }
