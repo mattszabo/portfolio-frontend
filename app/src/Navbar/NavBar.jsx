@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery'
 
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
@@ -12,6 +13,18 @@ class NavBar extends React.Component {
       selectedItem: 0,
       navBarList: NavBarData.getNavBarList()
     }
+  }
+
+  componentDidMount() {
+    $(document).ready(function(){
+      $(window).scroll(function() { // check if scroll event happened
+        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+          $('nav').css('background-color', 'transparent'); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else {
+          $('nav').css('background-color', '#262626'); // if not, change it back to transparent
+        }
+      });
+    });
   }
 
   _updateItemSelection(itemId) {

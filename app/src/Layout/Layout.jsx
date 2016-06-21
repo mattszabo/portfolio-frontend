@@ -1,42 +1,43 @@
 import React from 'react';
 import $ from 'jquery'
 
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
-import Home     from '../Home/Home';
-import About    from '../About/About';
-import Projects from '../Projects/components/Projects';
-import References   from '../References/components/References'
-import Contact  from '../Contact/components/Contact'
+import Home         from '../Home/Home';
+import About        from '../About/About';
+import Projects     from '../Projects/components/Projects';
+import References   from '../References/components/References';
+import Contact      from '../Contact/components/Contact';
 
-var page = $('html, body');
+class Layout extends React.Component {
 
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function(e) {
+  componentDidMount() {
+    var page = $('html, body');
 
-    // stop auto scroll animation if the user manually scrolls during animation
-    page.on('scroll wheel DOMMouseScroll mousewheel touchmove', function() {
-      page.stop();
-    });
+    $('a[href*="#"]:not([href="#"])').click(function(e) {
 
-    let hash = this.hash
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target ? target : $('[name=' + target.slice(1) +']');
-      if (target) {
-        page.animate({
-          scrollTop: target.offset().top
-        }, 750, function() {
-          location.hash = hash;
-        });
-        e.preventDefault();
+      // stop auto scroll animation if the user manually scrolls during animation
+      page.on('scroll wheel DOMMouseScroll mousewheel touchmove', function() {
+        page.stop();
+      });
+
+      let hash = this.hash
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target ? target : $('[name=' + target.slice(1) +']');
+        if (target) {
+          page.animate({
+            scrollTop: target.offset().top
+          }, 750, function() {
+            location.hash = hash;
+          });
+          e.preventDefault();
+        }
       }
-    }
-  });
-});
+    });
+  }
 
-export default class Layout extends React.Component {
   render() {
     return (
       <div>
@@ -63,3 +64,5 @@ export default class Layout extends React.Component {
     );
   }
 }
+
+export default Layout;
