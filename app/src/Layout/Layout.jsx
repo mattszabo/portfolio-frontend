@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer'
 import Home     from '../Home/Home';
 import About    from '../About/About';
 import Projects from '../Projects/components/Projects';
-import Skills   from '../Skills/components/Skills'
+import References   from '../References/components/References'
 import Contact  from '../Contact/components/Contact'
 
 var page = $('html, body');
@@ -51,8 +51,8 @@ export default class Layout extends React.Component {
           <div className='page-projects'>
             <Projects />
           </div>
-          <div className='page-skills'>
-            <Skills   />
+          <div className='page-references'>
+            <References   />
           </div>
           <div className='page-contact'>
             <Contact  />
