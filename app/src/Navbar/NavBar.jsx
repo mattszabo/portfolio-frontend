@@ -18,7 +18,7 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
-        if ($(document).scrollTop() > 200) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+        if ($(document).scrollTop() > 0) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
           $('nav').css('background-color', 'transparent');
         } else {
           $('nav').css('background-color', '#262626');
