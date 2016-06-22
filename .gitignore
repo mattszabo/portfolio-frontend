@@ -9,8 +9,11 @@ pids
 *.pid
 *.seed
 
-build/release/bundle*
-build/release/style*
+#build files
+build/release/*.js
+build/release/*.css
+build/release/*.jpg
+build/release/*.map
 
 # Dependency directory
 node_modules

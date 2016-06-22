@@ -22,6 +22,10 @@ class Layout extends React.Component {
         page.stop();
       });
 
+      // when there are multiple nav clicks we only want to action the most
+      // recent, so we stop any other scroll animation before preceeding
+      page.stop();
+
       let hash = this.hash
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);

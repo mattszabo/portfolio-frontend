@@ -10,18 +10,17 @@ const About = () => {
       <p>
         This single page app demonstates much of what I have learned so far. It is written in JS es6 (transpiled with babel) and uses react components and sass styling. For development I used webpack with hot module replacement, and for the build you see here I ran a production build - also with webpack - and served the resulting js and css on a nodejs express server, which resides on an AWS EC2 server housed in Sydney, Australia.
       </p>
-      <p>
-        Spefically, since I began I have learned the following skills:
-        <ul>
-          <li>JavaScript</li>
-          <li>CSS/Sass</li>
-          <li>React</li>
-          <li>Webpack</li>
-          <li>Node/express</li>
-          <li>Git</li>
-          <li>DevOps</li>
-        </ul>
-      </p>
+
+      Spefically, since I began I have learned the following skills:
+      <ul>
+        <li>JavaScript</li>
+        <li>CSS/Sass</li>
+        <li>React</li>
+        <li>Webpack</li>
+        <li>Node/express</li>
+        <li>Git</li>
+        <li>DevOps</li>
+      </ul>
     </section>
   )
 }

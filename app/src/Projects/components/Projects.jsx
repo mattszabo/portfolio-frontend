@@ -6,15 +6,13 @@ const Projects = () => (
     <p>
       To learn what I have so far I have started a series of git projects, which I have used to learn various skills along the way.
     </p>
-    <p>
-      List of Git projects:
-      <ul>
-        <li>Angular: javascript/single page/angular/build processes</li>
-        <li>React: further javascript/single page/react/webpack/babel transpiling/es6</li>
-        <li>React redux: further react/redux/source structure/testing</li>
-        <li>This porfolio: responsive design/jquery</li>
-      </ul>
-    </p>
+    List of Git projects:
+    <ul>
+      <li>Angular: javascript/single page/angular/build processes</li>
+      <li>React: further javascript/single page/react/webpack/babel transpiling/es6</li>
+      <li>React redux: further react/redux/source structure/testing</li>
+      <li>This porfolio: responsive design/jquery</li>
+    </ul>
   </section>
 )
 

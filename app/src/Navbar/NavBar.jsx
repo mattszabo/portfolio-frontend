@@ -18,7 +18,7 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // check if scroll event happened
-        if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
+        if ($(document).scrollTop() >= 0) { // check if user scrolled more than 50 from top of the browser window
           $('nav').css('background-color', 'transparent'); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
         } else {
           $('nav').css('background-color', '#262626'); // if not, change it back to transparent
