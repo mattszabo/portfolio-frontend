@@ -2,7 +2,7 @@ import React from 'react'
 
 const References = () => (
   <section className='page-references' id='references'>
-    <h1>References page</h1>
+    <h1>REFERENCES</h1>
     <ul>
       <li>Justin Wearne: Manager at Shine Technologes</li>
       <li>Someone else</li>

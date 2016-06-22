@@ -18,6 +18,7 @@ class Layout extends React.Component {
     $('a[href*="#"]:not([href="#"])').click(function(e) {
 
       // stop auto scroll animation if the user manually scrolls during animation
+      // note: has some side effect. e.g. two finger touch on track pad will interrupt
       page.on('scroll wheel DOMMouseScroll mousewheel touchmove', function() {
         page.stop();
       });

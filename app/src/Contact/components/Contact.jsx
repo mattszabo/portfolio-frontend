@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => (
   <section className='page-contact' id='contact'>
-    <h1>Contact page</h1>
+    <h1>CONTACT</h1>
     <ul>
       <li>LinkedIn</li>
       <li>Git</li>

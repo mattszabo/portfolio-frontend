@@ -11,8 +11,8 @@ nav
   position: fixed
   top: 0
   width: 100%
-  // background: #262626
-  background: transparent
+  background: #262626
+  // background: transparent
   color: scale-color(red, $lightness: 20)
   text-align: center
   font-size: 24px
@@ -39,14 +39,14 @@ nav
     .active
       color: darkgray
       border-bottom: 1px solid darkgray
-.content
-  text-align: center
-  margin: 20px
-  color: darkgray
-  .about
-    text-align: justify
-    width: 90%
-    margin: 0 auto
+// .content
+//   text-align: center
+//   margin: 20px
+//   color: darkgray
+//   .about
+//     text-align: justify
+//     width: 90%
+//     margin: 0 auto
 .footer
   background: scale-color(gray, $lightness: -70)
   padding: 20px
@@ -59,18 +59,32 @@ nav
     &:hover
       color: red
       border-bottom: 1px solid red
+$pages: home about projects references contact
+@each $page in $pages
+  .page-#{$page}
+    color: darkgray
+    margin: 10px
+    padding-top: 30px
+    h1
+      font-weight: bold
+      border-bottom: 1px solid
+      text-align: left
+      margin-bottom: 10px
+      font-size: 1.5em
+    p
+      margin-bottom: 1em
+    li
+      margin-left: 20px
 .page-home
-  margin: -25px 10px 10px 10px
-  padding-top: 30px
+  margin: -15px 10px 10px 10px
+  text-align: center
+  h2
+    position: absolute
+    top: 80px
+    color: rgba(white, 0.85)
+    font-weight: bold
+    font-size: 3em
+    background-color: rgba(darkgray, 0.4)
+    width: 60%
 .page-about
-  margin: 10px
-  padding-top: 30px
-.page-projects
-  margin: 10px
-  padding-top: 30px
-.page-references
-  margin: 10px
-  padding-top: 30px
-.page-contact
-  margin: 10px
-  padding-top: 30px
+  text-align: justify

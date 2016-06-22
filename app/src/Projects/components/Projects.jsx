@@ -2,7 +2,7 @@ import React from 'react'
 
 const Projects = () => (
   <section className='page-projects' id='projects'>
-    <h1>Projects page</h1>
+    <h1>PROJECTS</h1>
     <p>
       To learn what I have so far I have started a series of git projects, which I have used to learn various skills along the way.
     </p>
