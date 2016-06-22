@@ -12,7 +12,8 @@ const PATHS = {
   build: path.join(__dirname, 'build'),
   release: path.join(__dirname, 'build', 'release'),
   styles: path.join(__dirname, 'app', 'styles'),
-  fonts: path.join(__dirname, 'app', 'styles', 'fonts')
+  fonts: path.join(__dirname, 'app', 'styles', 'fonts'),
+  images: path.join(__dirname, 'app', 'images')
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -64,6 +65,11 @@ const common = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('css!sass')
+      },
+      { test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'url-loader?limit=200000',
+        // loader: 'file-loader?name=images/[name].[ext]',
+        include: PATHS.images
       }
     ]
   },
