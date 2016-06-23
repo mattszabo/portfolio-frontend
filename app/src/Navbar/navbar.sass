@@ -1,0 +1,23 @@
+nav
+  position: fixed
+  top: 0
+  width: 100%
+  background: #262626
+  color: scale-color(red, $lightness: 20)
+  text-align: center
+  font-size: 32px
+  font-weight: 200
+  li
+    display: inline-block
+    padding-right: 20px
+    &:last-child
+      padding-right: 0
+      border-right: 0
+  .navbar-links
+    a
+      text-decoration: none
+      // position: relative
+      color: inherit
+    .active
+      color: gray
+      cursor: default

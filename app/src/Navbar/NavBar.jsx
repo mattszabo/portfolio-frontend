@@ -4,6 +4,8 @@ import $ from 'jquery'
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
 
+import './navbar.sass'
+
 // Renders the navbar items and also acts as the controller by handling
 // navbar item clicks that are passed up by the NavBarItem class
 class NavBar extends React.Component {
