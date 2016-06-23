@@ -33,23 +33,29 @@ class NavBar extends React.Component {
     this.setState({selectedItem: itemId});
   }
 
+  navToggle() {
+    document.getElementsByClassName('navbar-links')[0]
+      .classList.toggle('responsive');
+  }
+
   render() {
     return(
-      <nav className='group'>
-        <div className='navbar-links'>
-          <ul>
-            {this.state.navBarList.map((item) =>
-              <NavBarItem
-                key = {item.id}
-                url = {item.url}
-                onClick = {this._updateItemSelection.bind(this, item.id)}
-                isSelected={(this.state.selectedItem === item.id)}
-              >
-                {item.text}
-              </NavBarItem>
-            )}
-          </ul>
-        </div>
+      <nav>
+        <ul className='navbar-links'>
+          {this.state.navBarList.map((item) =>
+            <NavBarItem
+              key = {item.id}
+              url = {item.url}
+              onClick = {this._updateItemSelection.bind(this, item.id)}
+              isSelected={(this.state.selectedItem === item.id)}
+            >
+              {item.text}
+            </NavBarItem>
+          )}
+          <li className="icon">
+            <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
+          </li>
+        </ul>
       </nav>
     );
   }

@@ -14,8 +14,8 @@ export default class NavBarItem extends React.Component {
       <li>
         <a
           className = {this._class}
-          href={this.props.url}
-          onClick={this._handleItemClick.bind(this)}
+          href      = {this.props.url}
+          onClick   = {this._handleItemClick.bind(this)}
         >
           {this.props.children}
         </a>
