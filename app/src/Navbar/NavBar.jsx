@@ -21,9 +21,9 @@ class NavBar extends React.Component {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
         if ($(document).scrollTop() > 0) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('nav').css('background-color', 'transparent');
+          $('nav').css('background-color', 'black');
         } else {
-          $('nav').css('background-color', '#262626');
+          $('nav').css('background-color', 'black');
         }
       });
     });
@@ -41,21 +41,23 @@ class NavBar extends React.Component {
   render() {
     return(
       <nav>
-        <ul className='navbar-links'>
-          {this.state.navBarList.map((item) =>
-            <NavBarItem
-              key = {item.id}
-              url = {item.url}
-              onClick = {this._updateItemSelection.bind(this, item.id)}
-              isSelected={(this.state.selectedItem === item.id)}
-            >
-              {item.text}
-            </NavBarItem>
-          )}
-          <li className="icon">
-            <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
-          </li>
-        </ul>
+        <div className="icon">
+          <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
+        </div>
+        <div className='navbar-links'>
+          <ul>
+            {this.state.navBarList.map((item) =>
+              <NavBarItem
+                key = {item.id}
+                url = {item.url}
+                onClick = {this._updateItemSelection.bind(this, item.id)}
+                isSelected={(this.state.selectedItem === item.id)}
+              >
+                {item.text}
+              </NavBarItem>
+            )}
+          </ul>
+        </div>
       </nav>
     );
   }

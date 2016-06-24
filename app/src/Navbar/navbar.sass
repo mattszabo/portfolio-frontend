@@ -2,71 +2,81 @@ nav
   position: fixed
   top: 0
   width: 100%
-  background: #262626
   color: scale-color(red, $lightness: 20)
   font-weight: 200
-  ul
-    list-style-type: none
-    &.navbar-links
-    li
-      float: left
-      padding-left: 10px
-      &:last-child
-        padding: 0
-      &.icon
-        display: none
+  font-size: 2em
+  .navbar-links
+    ul
+      list-style-type: none
+      text-align: center
+      li
+        display: inline-block
+        padding-right: 10px
+        &:last-child
+          padding: 0
+        a
+          text-decoration: none
+          color: inherit
+        .active
+          color: gray
+          cursor: default
+  .icon
+    display: none
+
+// @media only screen and (max-device-width:680px)
+//   nav
+//     background: #262626
+//     font-size: 4em
+//     float: left
+//     .navbar-links
+//       ul
+//         text-align: right
+//         li:not(:first-child)
+//           display: none
+//
+//     &.responsive
+//       position: relative
+//       li
+//         float: none
+//         display: block
+//         &.icon
+//           position: absolute
+//           right: 0
+//           top: 0
+//         a
+//           display: block
+//           text-align: left
+
+@media only screen and (max-width:680px)
+  nav
+    background-color: black
+    font-size: 2em
+    .icon
+      margin: 0 5px
+      display: inline-block
+      float: right
       a
         text-decoration: none
         color: inherit
-    .active
-      color: gray
-      cursor: default
-
-@media only screen and (max-device-width:680px)
-  nav
-    font-size: 4em
-    float: left
-    ul.navbar-links
-      li:not(:first-child)
-        display: none
-        &.icon
-          display: inline-block
-          position: absolute
-          right: 0
-          top: 0
+    .navbar-links
+      ul
+        padding: 0 10px
+        float: right
+        li:not(:first-child)
+          display: none
+        li:first-child
+          padding: 0
+          text-align: right
       &.responsive
-        position: relative
-        li
-          float: none
-          display: block
-          &.icon
-            position: absolute
-            right: 0
-            top: 0
-          a
+        ul
+          background-color: #262626
+          text-align: right
+          padding: 0 10px
+          li
+            padding-right: 0
+            width: 100%
             display: block
-            text-align: left
-
-
-// /* Remove margins and padding from the list, and add a black background color */
-// ul
-//   .topnav
-//     list-style-type: none
-//     margin: 0
-//     padding: 0
-//     overflow: hidden
-//     background-color: #000
-//     li
-//       float: left
-//       a
-//         display: inline-block
-//         color: #f2f2f2
-//         text-align: center
-//         padding: 14px 16px
-//         text-decoration: none
-//         transition: 0.3s
-//         font-size: 17px
-//         &:hover
-//           background-color: #111
-//       .icon
-//         display: none
+            &:last-child
+              margin-bottom: 10px
+            // a:hover
+            //   color: scale-color(red, $lightness: -20)
