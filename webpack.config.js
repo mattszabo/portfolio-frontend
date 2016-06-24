@@ -42,7 +42,7 @@ const common = {
       {
         test: /\.css$/,
         loaders: ['style', 'css'],
-        include: PATHS.styles
+        include: PATHS.app
       },
       {
         test: /\.ttf$/,
@@ -60,7 +60,8 @@ const common = {
       },
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('css!sass?indentedSyntax=true')
+        loader: ExtractTextPlugin.extract('css!sass?indentedSyntax=true'),
+        include: PATHS.app
       },
       {
         test: /\.scss$/,

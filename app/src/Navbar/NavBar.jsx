@@ -4,6 +4,8 @@ import $ from 'jquery'
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
 
+import './navbar.sass'
+
 // Renders the navbar items and also acts as the controller by handling
 // navbar item clicks that are passed up by the NavBarItem class
 class NavBar extends React.Component {
@@ -19,9 +21,9 @@ class NavBar extends React.Component {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
         if ($(document).scrollTop() > 0) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('nav').css('background-color', 'transparent');
+          $('nav').css('background-color', 'black');
         } else {
-          $('nav').css('background-color', '#262626');
+          $('nav').css('background-color', 'black');
         }
       });
     });
@@ -31,9 +33,17 @@ class NavBar extends React.Component {
     this.setState({selectedItem: itemId});
   }
 
+  navToggle() {
+    document.getElementsByClassName('navbar-links')[0]
+      .classList.toggle('responsive');
+  }
+
   render() {
     return(
-      <nav className='group'>
+      <nav>
+        <div className="icon">
+          <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
+        </div>
         <div className='navbar-links'>
           <ul>
             {this.state.navBarList.map((item) =>

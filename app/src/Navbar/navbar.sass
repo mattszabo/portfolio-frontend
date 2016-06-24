@@ -1,0 +1,56 @@
+$bg-color: black
+$font-color: scale-color(red, $lightness: 20)
+$dropdown-bg-color: #262626
+$active-link-color: gray
+nav
+  background-color: $bg-color
+  position: fixed
+  top: 0
+  width: 100%
+  color: $font-color
+  font-weight: 200
+  font-size: 2em
+.icon
+  display: none
+.navbar-links
+  ul
+    list-style-type: none
+    text-align: center
+    li
+      display: inline-block
+      padding-right: 10px
+      &:last-child
+        padding: 0
+      a
+        text-decoration: none
+        color: inherit
+      .active
+        color: $active-link-color
+        cursor: default
+
+@media only screen and (max-width:680px)
+  .icon
+    margin: 0 15px 0 5px
+    display: inline-block
+    float: right
+    a
+      text-decoration: none
+      color: inherit
+  .navbar-links
+    ul
+      padding: 0 10px
+      float: right
+      li
+        width: 100%
+      li:not(:first-child)
+        display: none
+      li:first-child
+        padding: 0
+    &.responsive
+      ul
+        background-color: $dropdown-bg-color
+        text-align: right
+        li
+          display: block
+          &:last-child
+            margin-bottom: 5px
