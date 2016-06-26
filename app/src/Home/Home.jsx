@@ -29,8 +29,8 @@ const Home = () => {
             s-91.428-0.085-93.925-0.168c-2.497-0.083-3.585-0.143-3.535-1.684c0.051-1.542,0.029-5.104,0.029-5.104H9.219z"/>
             </svg>
           </div>
-          <div className='parallax__layer .parallax__layer--iphone'>
-            <svg className='title' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <div className=''>
+            <svg className='title' version="1.1" id="iphone" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="200px" height="800px" viewBox="0 0 400 800" enable-background="new 0 0 400 800" xmlspace="preserve">
 <path d="M332.167,16H60c-30.667,5.333-42.04,36.667-42,56v658c0,24.75,19.75,56,59,56h237.75c47,1.25,67.25-36.25,67.25-55.75V65
 	C382,43.333,361.5,16,332.167,16z M199.5,45.5c2.485,0,4.5,1.679,4.5,3.75S201.985,53,199.5,53s-4.5-1.679-4.5-3.75
