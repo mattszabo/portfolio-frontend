@@ -10,6 +10,7 @@ nav
   color: $font-color
   font-weight: 200
   font-size: 2em
+  z-index: 999
 .icon
   display: none
 .navbar-links
@@ -21,12 +22,12 @@ nav
       padding-right: 10px
       &:last-child
         padding: 0
+      &.active
+        color: $active-link-color
+        cursor: default
       a
         text-decoration: none
         color: inherit
-      .active
-        color: $active-link-color
-        cursor: default
 
 @media only screen and (max-width:680px)
   .icon
@@ -42,10 +43,10 @@ nav
       float: right
       li
         width: 100%
-      li:not(:first-child)
         display: none
-      li:first-child
-        padding: 0
+        &.active
+          display: block
+          padding: 0
     &.responsive
       ul
         background-color: $dropdown-bg-color

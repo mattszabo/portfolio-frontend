@@ -1,0 +1,31 @@
+.parallax
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+  -webkit-perspective: 1px
+  perspective: 1px
+
+.parallax__layer
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.parallax__layer--iphone
+  -webkit-transform: translateZ(0)
+  transform: translateZ(0)
+
+.parallax__layer--laptop
+  -webkit-transform: translateZ(-1px)
+  transform: translateZ(-1px)
+
+.parallax__layer
+  padding: 70vh 0
+
+.title
+  position: absolute
+  left: 50%
+  top: 50%
+  -webkit-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)

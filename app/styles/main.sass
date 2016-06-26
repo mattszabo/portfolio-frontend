@@ -19,7 +19,7 @@ body
     &:hover
       color: red
       border-bottom: 1px solid red
-$pages: home about projects references contact
+$pages: about projects references contact
 @each $page in $pages
   .page-#{$page}
     color: darkgray
@@ -35,11 +35,6 @@ $pages: home about projects references contact
       margin-bottom: 1em
     li
       margin-left: 20px
-.page-home
-  margin: -15px 10px 10px 10px
-  text-align: center
-  img
-    height: auto
-    width: 100%
+
 .page-about
   text-align: justify
