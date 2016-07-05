@@ -11,9 +11,8 @@ export default class NavBarItem extends React.Component {
   render() {
     this._class = (this.props.isSelected === true) ? 'active' : '';
     return (
-      <li>
+      <li className = {this._class}>
         <a
-          className = {this._class}
           href      = {this.props.url}
           onClick   = {this._handleItemClick.bind(this)}
         >
