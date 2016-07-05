@@ -20,10 +20,10 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
-        if ($(document).scrollTop() > 0) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('nav').css('background-color', 'black');
+        if ($(document).scrollTop() > 50) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+          // $('.nav-bar').css('visibility', 'visible');
         } else {
-          $('nav').css('background-color', 'black');
+          // $('.nav-bar').css('visibility', 'hidden');
         }
       });
     });
@@ -40,7 +40,7 @@ class NavBar extends React.Component {
 
   render() {
     return(
-      <nav>
+      <nav className='nav-bar'>
         <div className="icon">
           <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
         </div>
