@@ -1,9 +1,12 @@
 import React from 'react'
 
+import './about.sass'
+
 const About = () => {
   return (
     <section className='page-about' id='about'>
       <h1> ABOUT </h1>
+      <img src={require('./images/hire-me.jpg')} />
       <p>
         I come from a DevOps background where I supported a Java application with an SQL backend, hosted on an an AWS EC2 app server and Oracle RDS instance. To be effective at that role I also utilised my knowledge of unix tools. I have been learning front end web development since the beginning of May 2016 without any prior knowledge of the process or technoliges involved.
       </p>

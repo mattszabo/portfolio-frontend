@@ -7,7 +7,7 @@ const Home = () => {
     <section className='page-home' id='home'>
       <div>
         <h2>Matt Szabo</h2>
-        <img src={require('./images/hire-me.jpg')} />
+
       </div>
     </section>
   );

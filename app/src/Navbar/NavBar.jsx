@@ -20,10 +20,10 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
-        if ($(document).scrollTop() > 50) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          // $('.nav-bar').css('visibility', 'visible');
+        if ($(document).scrollTop() > $(window).height() * 0.65) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+          $('.nav-bar').css('visibility', 'visible');
         } else {
-          // $('.nav-bar').css('visibility', 'hidden');
+          $('.nav-bar').css('visibility', 'hidden');
         }
       });
     });
