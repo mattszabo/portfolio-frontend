@@ -1,3 +1,10 @@
+@mixin effectState($state)
+    webkit-filter: $state
+    -moz-filter: $state
+    -ms-filter: $state
+    -o-filter: $state
+    filter: $state
+
 .page-home
   margin: 0
   padding: 0
@@ -12,6 +19,32 @@
     height: 15vh
     margin-top: 40vh
     fill: #777777
+    // stroke: #777777
+    // stroke-width: 12x
+    // stroke-linecap: butt
+    // stroke-linejoin: miter
+    cursor: default
+    webkit-transition: all .5s ease-out
+    -moz-transition: all .5s ease-out
+    -ms-transition: all .5s ease-out
+    -o-transition: all .5s ease-out
+    transition: all .5s ease-out
     &:hover
-      fill: #37b8eb
-      cursor: default
+      fill: #900812
+      -webkit-filter: drop-shadow( 3px 2px 1px #777777 )
+      -moz-filter: drop-shadow( 3px 2px 1px #777777 )
+      -ms-filter: drop-shadow( 3px 2px 1px #777777 )
+      -o-filter: drop-shadow( 3px 2px 1px #777777 )
+      filter: drop-shadow( 4px 2px 1px #777777 )
+      // @include effectState('drop-shadow( 3px 2px 1px #777777 )' )
+    &:active
+      webkit-transition: none
+      -moz-transition: none
+      -ms-transition: none
+      -o-transition: none
+      transition: none
+      -webkit-filter: none
+      -moz-filter: none
+      -ms-filter: none
+      -o-filter: none
+      filter: none
