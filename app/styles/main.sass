@@ -1,3 +1,5 @@
+$offwhite: #f4f4f4
+$white: #ffffff
 html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
   padding: 0
   border: 0
@@ -6,7 +8,7 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
   font-size: 100%
   font-family: "Helvetica Neue", Helvetica, sans-serif
 body
-  background: scale-color(gray, $lightness: -70)
+  background: $offwhite
 .footer
   background: scale-color(gray, $lightness: -70)
   padding: 20px
@@ -22,7 +24,7 @@ body
 $pages: about projects references contact
 @each $page in $pages
   .page-#{$page}
-    color: darkgray
+    color: #222
     margin: 10px
     padding-top: 30px
     h1
