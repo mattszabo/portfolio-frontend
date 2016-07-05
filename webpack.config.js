@@ -10,10 +10,7 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   app: path.join(__dirname, 'app'),
   build: path.join(__dirname, 'build'),
-  release: path.join(__dirname, 'build', 'release'),
-  styles: path.join(__dirname, 'app', 'styles'),
-  fonts: path.join(__dirname, 'app', 'styles', 'fonts'),
-  images: path.join(__dirname, 'app', 'images')
+  release: path.join(__dirname, 'build', 'release')
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -60,17 +57,18 @@ const common = {
       },
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract('css!sass?indentedSyntax=true'),
+        loaders: ['style', 'css', 'sass?indentedSyntax=true'],
         include: PATHS.app
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass')
+        loader: ExtractTextPlugin.extract('css!sass'),
+        include: PATHS.app
       },
       { test: /\.(jpe?g|png|gif|svg)$/i,
         loader: 'url-loader?limit=200000',
         // loader: 'file-loader?name=images/[name].[ext]',
-        include: PATHS.images
+        include: PATHS.app
       }
     ]
   },
