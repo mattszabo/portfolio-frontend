@@ -7,7 +7,7 @@ const Home = () => {
   return(
     <section className='page-home' id='home'>
       <div>
-        <h2>Matt Szabo</h2>
+        <h2>MATT SZABO</h2>
         <a href='#about'><DownArrow /></a>
       </div>
     </section>
