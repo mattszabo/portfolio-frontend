@@ -47,7 +47,7 @@ class Layout extends React.Component {
     return (
       <div>
         <Navbar />
-        <div className='content'>
+        <div>
           <Home       />
           <About      />
           <Projects   />
