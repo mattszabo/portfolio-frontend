@@ -1,14 +1,14 @@
 import React from 'react';
 
+import DownArrow from './svg/DownArrow';
 import './home.sass'
 
 const Home = () => {
   return(
     <section className='page-home' id='home'>
-      <div>
-        <h2>Matt Szabo</h2>
-        <img src={require('./images/hire-me.jpg')} />
-      </div>
+      <h1>mATT</h1>
+      <h1>sZAbo</h1>
+      <a href='#about'><DownArrow /></a>
     </section>
   );
 }

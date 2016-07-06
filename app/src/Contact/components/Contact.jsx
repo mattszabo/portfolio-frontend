@@ -1,8 +1,10 @@
 import React from 'react'
 
+import '../contact.sass'
+
 const Contact = () => (
   <section className='page-contact' id='contact'>
-    <h1>CONTACT</h1>
+    <h2>contact.</h2>
     <ul>
       <li>LinkedIn</li>
       <li>Git</li>

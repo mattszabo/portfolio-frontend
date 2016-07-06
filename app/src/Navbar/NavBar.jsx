@@ -12,7 +12,7 @@ class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedItem: 0,
+      selectedItem: 1,
       navBarList: NavBarData.getNavBarList()
     }
   }
@@ -20,10 +20,14 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
-        if ($(document).scrollTop() > 0) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('nav').css('background-color', 'black');
+        var distance = $('#about').offset().top,
+        $window = $(window);
+        if ( $window.scrollTop() >= distance ) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+          $('.nav-bar').css('position', 'fixed');
+          $('.nav-bar').css('margin-top', '0');
         } else {
-          $('nav').css('background-color', 'black');
+          $('.nav-bar').css('position', 'absolute');
+          $('.nav-bar').css('margin-top', '100vh');
         }
       });
     });
@@ -34,13 +38,13 @@ class NavBar extends React.Component {
   }
 
   navToggle() {
-    document.getElementsByClassName('navbar-links')[0]
-      .classList.toggle('responsive');
+    document.getElementsByClassName('nav-bar')[0]
+      .classList.toggle('dropdown');
   }
 
   render() {
     return(
-      <nav>
+      <nav className='nav-bar'>
         <div className="icon">
           <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
         </div>

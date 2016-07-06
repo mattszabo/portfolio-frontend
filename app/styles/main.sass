@@ -1,14 +1,13 @@
+@import 'reset.sass'
+@import 'fonts.sass'
+
 $offwhite: #f4f4f4
 $white: #ffffff
-html, body, h1, h2, h3, h4, p, div, ul, ol, li, a
-  padding: 0
-  border: 0
-  margin: 0
-  font: inherit
-  font-size: 100%
-  font-family: "Helvetica Neue", Helvetica, sans-serif
+html
+  font-size: 16px
 body
   background: $offwhite
+  font-family: "lora", serif
 .footer
   background: scale-color(gray, $lightness: -70)
   padding: 20px
@@ -21,22 +20,36 @@ body
     &:hover
       color: red
       border-bottom: 1px solid red
-$pages: about projects references contact
-@each $page in $pages
-  .page-#{$page}
-    color: #222
-    margin: 10px
-    padding-top: 30px
-    h1
-      font-weight: bold
-      border-bottom: 1px solid
-      text-align: left
-      margin-bottom: 10px
-      font-size: 1.5em
-    p
-      margin-bottom: 1em
-    li
-      margin-left: 20px
-
-.page-about
+h2
+  font-family: "istokweb", sans-serif
+  color: #900812
+  padding: 0 0 2rem .5rem
+  font-size: 2rem
+p
+  font-size: 1rem
+  padding-bottom: 1rem
   text-align: justify
+  hyphens: auto
+  -webkit-hyphens: auto
+  -webkit-hyphenate-character: "\2010"
+  -webkit-hyphenate-limit-after: 1
+  -webkit-hyphenate-limit-before: 1
+  -moz-hyphens: auto
+strong
+  font-weight: bold
+  letter-spacing: 1px
+ul
+  padding-left: 1rem
+  li
+    padding-bottom: .5rem
+    &:last-child
+      padding-bottom: 0
+    &::before
+      padding-left: 1rem
+      content: ''
+      display: inline-block
+      height: 15px
+      width: 15px
+      background-size: contain
+      background-repeat: no-repeat
+      background-image: url('../images/icon-arrow-right.png')

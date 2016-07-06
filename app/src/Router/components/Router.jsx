@@ -13,7 +13,7 @@ let history = useRouterHistory(createHashHistory)()
 
 const _Router = () => (
   <Router history={history}>
-    <Redirect from="/" to="/home" />
+    <Redirect from="/" to="home" />
     <Route path="/" component={ Layout }>
       <Route path="home"      component={ Home }      />
       <Route path="about"     component={ About }     />

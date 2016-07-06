@@ -1,25 +1,34 @@
 import React from 'react'
 
+import './about.sass'
+
 const About = () => {
   return (
     <section className='page-about' id='about'>
-      <h1> ABOUT </h1>
+      <h2> about matt. </h2>
       <p>
-        I come from a DevOps background where I supported a Java application with an SQL backend, hosted on an an AWS EC2 app server and Oracle RDS instance. To be effective at that role I also utilised my knowledge of unix tools. I have been learning front end web development since the beginning of May 2016 without any prior knowledge of the process or technoliges involved.
+        <img src={require('./images/hire-me.jpg')} />
+        I come from a DevOps background, where I supported a large Java application with an SQL backend, all hosted by Amazon on an AWS EC2 app server and Oracle RDS instance. To be effective at that role I utilised my <strong>Java</strong>, <strong>SQL</strong>, and <strong>UNIX tools</strong> knowledge and developed exceptional <strong>problem solving</strong> skills. Another key asset learned during my time in that role was the ability to <strong>rapidly learn</strong> new technolgies in an ever changing world of programming techniques and languages.
       </p>
       <p>
-        This single page app demonstates much of what I have learned so far. It is written in JS es6 (transpiled with babel) and uses react components and sass styling. For development I used webpack with hot module replacement, and for the build you see here I ran a production build - also with webpack - and served the resulting js and css on a nodejs express server, which resides on an AWS EC2 server housed in Sydney, Australia.
+        Since my time in DevOps concluded, I have started fresh with front end web development and its related technologies since the beginning of May, 2016.
       </p>
-
-      Spefically, since I began I have focussed on developing the following skills:
+      <p>
+        This single page app demonstates much of what I have learned so far. It was developed using <strong>webpack</strong>, <strong>git</strong>, <strong>npm</strong>, <strong>chrome dev tools</strong>, and <strong>React dev tools (for chrome)</strong>. It is written in <strong>JavaScript ES6</strong>, which was transpiled using <strong>babel</strong>, uses <strong>React</strong> components and <strong>Sass</strong> for styling. The app is also hosted on a <strong>Node.js</strong> express server, which resides on an AWS EC2 server housed in Sydney, Australia.
+      </p>
+      <p>
+        Spefically, since I began I have focussed on developing the following skills:
+      </p>
       <ul>
-        <li>JavaScript</li>
+        <li>JavaScript ES6</li>
         <li>CSS/Sass</li>
         <li>React</li>
-        <li>Webpack</li>
-        <li>Node/express</li>
-        <li>Git</li>
         <li>Redux</li>
+        <li>Webpack (w/ hot reloading)</li>
+        <li>Node.js</li>
+        <li>Git</li>
+        <li>React/redux/chrome dev tools</li>
+        <li>Mobile first design</li>
       </ul>
     </section>
   )

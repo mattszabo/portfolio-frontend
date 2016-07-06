@@ -1,12 +1,58 @@
+@mixin effectState($state)
+    webkit-filter: $state
+    -moz-filter: $state
+    -ms-filter: $state
+    -o-filter: $state
+    filter: $state
+
 .page-home
-  img
-    margin-top: 2em
-    height: auto
-    width: 100%
-    width: auto\9 /* ie8 */
-  h2
-    position: absolute
-    top: 85px
-    left: 20px
-    font-size: 2.4rem
-    color: darkgray
+  margin: 0
+  padding: 0
+  border: 0
+  height: 100vh
+  box-sizing: border-box
+  border: 3px solid #777777
+  h1
+    font-family: "phantom", sans-serif
+    font-weight: bold
+    text-align: center
+    font-size: 10vh
+    color: #777777
+    font-weight: 100
+    &:first-child
+      padding-top: 17vh
+      padding-bottom: 2vh
+  svg
+    display: block
+    height: 15vh
+    margin: 30vh auto 0 auto
+    fill: #777777
+    stroke: #777777
+    stroke-width: 15
+    cursor: default
+    webkit-transition: all .5s ease-out
+    -moz-transition: all .5s ease-out
+    -ms-transition: all .5s ease-out
+    -o-transition: all .5s ease-out
+    transition: all .5s ease-out
+    &:hover
+      fill: #900812
+      stroke: #900812
+      stroke-width: 10
+      -webkit-filter: drop-shadow( 4px 2px 1px #777777 )
+      -moz-filter: drop-shadow( 3px 2px 1px #777777 )
+      -ms-filter: drop-shadow( 3px 2px 1px #777777 )
+      -o-filter: drop-shadow( 3px 2px 1px #777777 )
+      filter: drop-shadow( 3px 2px 1px #777777 )
+      // @include effectState('drop-shadow( 3px 2px 1px #777777 )' )
+    &:active
+      webkit-transition: none
+      -moz-transition: none
+      -ms-transition: none
+      -o-transition: none
+      transition: none
+      -webkit-filter: drop-shadow( -1px -1px 1px #777777 )
+      -moz-filter: none
+      -ms-filter: none
+      -o-filter: none
+      filter: none
