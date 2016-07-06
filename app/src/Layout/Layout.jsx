@@ -48,21 +48,11 @@ class Layout extends React.Component {
       <div>
         <Navbar />
         <div className='content'>
-          <div className='page-home'>
-            <Home     />
-          </div>
-          <div className='page-about'>
-            <About    />
-          </div>
-          <div className='page-projects'>
-            <Projects />
-          </div>
-          <div className='page-references'>
-            <References   />
-          </div>
-          <div className='page-contact'>
-            <Contact  />
-          </div>
+          <Home       />
+          <About      />
+          <Projects   />
+          <References />
+          <Contact    />
         </div>
         <Footer />
       </div>

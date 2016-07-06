@@ -12,7 +12,7 @@ class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedItem: 0,
+      selectedItem: 1,
       navBarList: NavBarData.getNavBarList()
     }
   }
@@ -20,10 +20,14 @@ class NavBar extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
       $(window).scroll(function() { // callback for scroll event
-        if ($(document).scrollTop() > $(window).height() * 0.65) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('.nav-bar').css('visibility', 'visible');
+        var distance = $('#about').offset().top,
+        $window = $(window);
+        if ( $window.scrollTop() >= distance ) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+          $('.nav-bar').css('position', 'fixed');
+          $('.nav-bar').css('margin-top', '0');
         } else {
-          $('.nav-bar').css('visibility', 'hidden');
+          $('.nav-bar').css('position', 'absolute');
+          $('.nav-bar').css('margin-top', '100vh');
         }
       });
     });
@@ -34,8 +38,8 @@ class NavBar extends React.Component {
   }
 
   navToggle() {
-    document.getElementsByClassName('navbar-links')[0]
-      .classList.toggle('responsive');
+    document.getElementsByClassName('nav-bar')[0]
+      .classList.toggle('dropdown');
   }
 
   render() {
