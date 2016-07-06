@@ -1,8 +1,10 @@
 import React from 'react'
 
+import '../references.sass'
+
 const References = () => (
   <section className='page-references' id='references'>
-    <h1>REFERENCES</h1>
+    <h2>references.</h2>
     <ul>
       <li>Justin Wearne: Manager at Shine Technologes</li>
       <li>Someone else</li>

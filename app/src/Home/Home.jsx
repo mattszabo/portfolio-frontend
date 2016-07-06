@@ -6,7 +6,8 @@ import './home.sass'
 const Home = () => {
   return(
     <section className='page-home' id='home'>
-      <h2>MATT SZABO</h2>
+      <h1>mATT</h1>
+      <h1>sZAbo</h1>
       <a href='#about'><DownArrow /></a>
     </section>
   );

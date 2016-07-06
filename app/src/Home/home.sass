@@ -10,22 +10,25 @@
   padding: 0
   border: 0
   height: 100vh
-  h2
+  box-sizing: border-box
+  border: 3px solid #777777
+  h1
+    font-family: "phantom", sans-serif
+    font-weight: bold
     text-align: center
-    padding-top: 20vh
-    font-size: 7vh
+    font-size: 10vh
     color: #777777
     font-weight: 100
+    &:first-child
+      padding-top: 17vh
+      padding-bottom: 2vh
   svg
     display: block
     height: 15vh
-    margin: 40vh auto 0 auto
-    // margin-top: 40vh
+    margin: 30vh auto 0 auto
     fill: #777777
-    // stroke: #777777
-    // stroke-width: 12x
-    // stroke-linecap: butt
-    // stroke-linejoin: miter
+    stroke: #777777
+    stroke-width: 15
     cursor: default
     webkit-transition: all .5s ease-out
     -moz-transition: all .5s ease-out
@@ -34,11 +37,13 @@
     transition: all .5s ease-out
     &:hover
       fill: #900812
-      -webkit-filter: drop-shadow( 3px 2px 1px #777777 )
+      stroke: #900812
+      stroke-width: 10
+      -webkit-filter: drop-shadow( 4px 2px 1px #777777 )
       -moz-filter: drop-shadow( 3px 2px 1px #777777 )
       -ms-filter: drop-shadow( 3px 2px 1px #777777 )
       -o-filter: drop-shadow( 3px 2px 1px #777777 )
-      filter: drop-shadow( 4px 2px 1px #777777 )
+      filter: drop-shadow( 3px 2px 1px #777777 )
       // @include effectState('drop-shadow( 3px 2px 1px #777777 )' )
     &:active
       webkit-transition: none
@@ -46,7 +51,7 @@
       -ms-transition: none
       -o-transition: none
       transition: none
-      -webkit-filter: none
+      -webkit-filter: drop-shadow( -1px -1px 1px #777777 )
       -moz-filter: none
       -ms-filter: none
       -o-filter: none

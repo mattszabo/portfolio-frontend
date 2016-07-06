@@ -1,16 +1,15 @@
 $bg-color: #900812
 $font-color: #f4f4f4
-$dropdown-bg-color: #262626
-$active-link-color: gray
+$dropdown-bg-color: #363636
+$active-link-color: #900812
 .nav-bar
+  font-family: "istokweb", serif
   margin-top: 100vh
-  // visibility: hidden
-  // background-color: $bg-color
+  background-color: $dropdown-bg-color
   position: absolute
   top: 0
   width: 100%
   color: $font-color
-  font-weight: 200
   font-size: 2rem
   z-index: 999
   .icon
@@ -21,20 +20,20 @@ $active-link-color: gray
       text-align: center
       li
         display: inline-block
-        padding-right: 10px
-        &:last-child
-          padding: 0
+        // padding-right: 10px
         &.active
           color: $active-link-color
           cursor: default
         a
           text-decoration: none
           color: inherit
+        &::before
+          background-image: none
 
 @media only screen and (max-width:680px)
   .nav-bar
     .icon
-      margin: 0 15px 0 5px
+      // margin: 0 15px 0 5px
       display: inline-block
       float: right
       a
@@ -42,38 +41,18 @@ $active-link-color: gray
         color: inherit
     .navbar-links
     ul
-      padding: 0 10px
+      // padding: 0 10px
       float: right
       display: none
+      text-align: right
       li
         width: 100%
         display: none
         &.active
           display: block
-          padding: 0
+          // padding: 0
     &.dropdown
       ul
         background-color: $dropdown-bg-color
         text-align: right
         display: block
-        li
-          &:last-child
-            margin-bottom: 5px
-// .nav li ul {
-//     position:absolute
-//     left:0
-//     top:36px
-//     z-index:1
-//     max-height:0
-//     overflow:hidden
-//     -webkit-transform:perspective(400) rotate3d(1,0,0,-90deg)
-//     -webkit-transform-origin:50% 0
-//     -webkit-transition:350ms
-//     -moz-transition:350ms
-//     -o-transition:350ms
-//     transition:350ms
-// }
-// .nav ul > li:hover ul {
-//     max-height:1000px
-//     -webkit-transform:perspective(400) rotate3d(0,0,0,0)
-// }
