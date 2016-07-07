@@ -9,7 +9,7 @@ export default class NavBarItem extends React.Component {
   }
 
   render() {
-    this._class = (this.props.isSelected === true) ? 'active' : '';
+    this._class = (this.props.isSelected === true) ? 'nav-active' : '';
     return (
       <li className = {this._class}>
         <a

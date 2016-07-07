@@ -1,6 +1,6 @@
 .project-carousel
   font-size: 14px
-  width: 100px
+  width: 80vw
   position: relative
   margin: 1em
   border: 1px solid #ccc
@@ -10,30 +10,33 @@
   margin: 0
   padding: 0
   li
-    font-size: 100px
+    font-size: 10px
     margin: 0
-    padding: 0
+    padding: 0 0 10px 0
     width: 100%
     list-style: none
     text-align: center
   .button
     border: none
     display: none
-.active
-  height: 130px
+.carousel-active
+  height: 80vh
   li
     position: absolute
-    top: 200px
+    top: 80vh
     &.current
-      top: 30px
+      top: 10vh
+      font-size: 300px
   .button-area
     padding: 5px 0
     background: #EEE
     text-align: center
     z-index: 10
     position: relative
-  .button
-    display: block
+  button
+    width: 30vw
+    height: 5vh
+    display: inline-block
 .offscreen
   position: absolute
   left: -2000px

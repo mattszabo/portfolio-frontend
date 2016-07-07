@@ -1,6 +1,7 @@
 import React from 'react';
-import Carousel from '../../Carousel/Carousel';
 
+import SingleProject from './SingleProject';
+import Carousel from '../../Carousel/Carousel';
 import '../projects.sass'
 
 class Projects extends React.Component {
@@ -34,12 +35,9 @@ class Projects extends React.Component {
           <li>This porfolio: responsive design/jquery</li>
         </ul>
         <Carousel>
-          <li>1</li>
-          <li>2</li>
-          <li className='current'>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          <SingleProject title={"1"} />
+          <SingleProject title={"2"} isCurrent={true}/>
+          <SingleProject title={"3"} />
         </Carousel>
       </section>
     )
