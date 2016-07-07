@@ -53,7 +53,11 @@ const common = {
       },
       {
         test: /\.sass$/,
-        loaders: ['style', 'css', 'sass?indentedSyntax=true'],
+        loaders: [
+          'style',
+          'css?sourceMap',
+          'sass?indentedSyntax=true?outputStyle=expanded&sourceMap=true&sourceMapContents=true'
+        ],
         include: PATHS.app
       },
       {
