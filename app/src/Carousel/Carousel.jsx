@@ -29,22 +29,21 @@ class Carousel extends React.Component {
     });
   };
   render() {
-    let buttonClass = this.props.buttonStyle || 'button-top';
-    console.log(buttonClass);
+    let buttonClass = this.props.buttonStyle || 'button-bottom';
     return (
-      <div>
-        <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex}>
-          {this.props.children}
-        </SwipeableViews>
-        <div className='dots'>
-          <div className={buttonClass}>
-            <button className='button-prev' onClick={this.prevButtonClick}>
-              &lt;<span className='offscreen'>Previous</span>
-            </button>
-            <button className='button-next' onClick={this.nextButtonClick}>
-              <span className='offscreen'>Next</span>&gt;
-            </button>
-          </div>
+      <div className='carousel-container'>
+        <div classNamee='carousel-content'>
+          <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex}>
+            {this.props.children}
+          </SwipeableViews>
+        </div>
+        <div className={buttonClass}>
+          <button className='button-prev' onClick={this.prevButtonClick}>
+            &lt;<span className='offscreen'>Previous</span>
+          </button>
+          <button className='button-next' onClick={this.nextButtonClick}>
+            <span className='offscreen'>Next</span>&gt;
+          </button>
         </div>
       </div>
     );
