@@ -5,16 +5,8 @@ import Carousel from '../../Carousel/Carousel';
 import '../projects.sass'
 
 class Projects extends React.Component {
-  onChange(e) {
-    console.log(e);
-  }
-  onClickItem(e) {
-    console.log(e);
-  }
-  onClickThumb(e) {
-    console.log(e);
-  }
   render() {
+
     return (
       <section className='page-projects' id='projects'>
         <h2>proJEcTs</h2>
