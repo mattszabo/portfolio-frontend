@@ -5,7 +5,7 @@ import './about.sass'
 const About = () => {
   return (
     <section className='page-about' id='about'>
-      <h2> about matt. </h2>
+      <h2>AbouT</h2>
       <p>
         <img src={require('./images/hire-me.jpg')} />
         I come from a DevOps background, where I supported a large Java application with an SQL backend, all hosted by Amazon on an AWS EC2 app server and Oracle RDS instance. To be effective at that role I utilised my <strong>Java</strong>, <strong>SQL</strong>, and <strong>UNIX tools</strong> knowledge and developed exceptional <strong>problem solving</strong> skills. Another key asset learned during my time in that role was the ability to <strong>rapidly learn</strong> new technolgies in an ever changing world of programming techniques and languages.

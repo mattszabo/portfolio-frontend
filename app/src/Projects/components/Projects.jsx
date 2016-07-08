@@ -17,7 +17,7 @@ class Projects extends React.Component {
   render() {
     return (
       <section className='page-projects' id='projects'>
-        <h2>projects.</h2>
+        <h2>proJEcTs</h2>
         <p>
           In order to learn, I started a series of git projects. While each project focuses on a spefic skillset, they also had a secondary focus on creating a functional development environment.
         </p>
@@ -35,9 +35,9 @@ class Projects extends React.Component {
           <li>This porfolio: responsive design/jquery</li>
         </ul>
         <Carousel>
-          <SingleProject title={"1"} />
+          <SingleProject title={"1"} isCurrent={false}/>
           <SingleProject title={"2"} isCurrent={true}/>
-          <SingleProject title={"3"} />
+          <SingleProject title={"3"} isCurrent={false}/>
         </Carousel>
       </section>
     )

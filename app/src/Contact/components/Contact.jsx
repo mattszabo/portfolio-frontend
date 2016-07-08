@@ -4,7 +4,7 @@ import '../contact.sass'
 
 const Contact = () => (
   <section className='page-contact' id='contact'>
-    <h2>contact.</h2>
+    <h2>conTAcT</h2>
     <ul>
       <li>LinkedIn</li>
       <li>Git</li>
