@@ -1,0 +1,42 @@
+.project-carousel
+  font-size: 14px
+  width: 80vw
+  position: relative
+  margin: 1em
+  border: 1px solid #ccc
+  box-shadow: 2px 2px 10px #ccc
+  overflow: hidden
+.project-carousel-content
+  margin: 0
+  padding: 0
+  li
+    font-size: 10px
+    margin: 0
+    padding: 0 0 10px 0
+    width: 100%
+    list-style: none
+    text-align: center
+  .button
+    border: none
+    display: none
+.carousel-active
+  height: 80vh
+  li
+    position: absolute
+    top: 80vh
+    &.current
+      top: 10vh
+      font-size: 300px
+  .button-area
+    padding: 5px 0
+    background: #EEE
+    text-align: center
+    z-index: 10
+    position: relative
+  button
+    width: 30vw
+    height: 5vh
+    display: inline-block
+.offscreen
+  position: absolute
+  left: -2000px

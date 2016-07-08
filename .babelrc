@@ -9,13 +9,15 @@
         "react-hmre"
       ],
       "plugins": [
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "transform-class-properties"
       ]
     },
     "build": {
       "plugins": [
         "transform-react-constant-elements",
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        "transform-class-properties"
       ]
     }
   }
