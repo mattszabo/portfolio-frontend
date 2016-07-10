@@ -2,9 +2,10 @@ import React, { PropTypes } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 
 import './carousel.sass';
+import Pagination from './Pagination';
 
 class Carousel extends React.Component {
-  componentWillMount() {
+  componentWillMount = () => {
     this.setState({ index: 1 })
   }
   prevButtonClick = () => {
@@ -29,21 +30,24 @@ class Carousel extends React.Component {
     });
   };
   render() {
-    let buttonClass = this.props.buttonStyle || 'button-bottom';
+    const paginationStyle = this.props.paginationStyle || 'dots';
+
     return (
       <div className='carousel-container'>
-        <div classNamee='carousel-content'>
-          <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex}>
+        <div className='carousel-content'>
+          <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex} resistance={true}>
             {this.props.children}
           </SwipeableViews>
         </div>
-        <div className={buttonClass}>
-          <button className='button-prev' onClick={this.prevButtonClick}>
-            &lt;<span className='offscreen'>Previous</span>
-          </button>
-          <button className='button-next' onClick={this.nextButtonClick}>
-            <span className='offscreen'>Next</span>&gt;
-          </button>
+        <div className='carousel-pagination'>
+          <ol>
+            <Pagination
+              pages={this.props.children}
+              paginationStyle={paginationStyle}
+              onClick={this.handleChangeIndex}
+              currentId={this.state.index}
+            />
+          </ol>
         </div>
       </div>
     );
@@ -55,7 +59,7 @@ Carousel.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  buttonStyle: PropTypes.string
+  paginationStyle: PropTypes.string
 }
 
 export default Carousel;

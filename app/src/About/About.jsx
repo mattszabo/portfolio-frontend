@@ -1,4 +1,5 @@
 import React from 'react'
+// import SwipeableViews from 'react-swipeable-views';
 
 import Carousel from '../Carousel/Carousel'
 import './about.sass'
@@ -7,10 +8,10 @@ const About = () => {
   return (
     <section className='page-about' id='about'>
       <h2>AbouT</h2>
-      <Carousel buttonStyle='button-side'>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+      <Carousel buttonStyle='carousel-dots carousel-buttons'>
+        <div style={{height: '50px'}}>1</div>
+        <div style={{height: '50px'}}>2</div>
+        <div style={{height: '50px'}}>3</div>
       </Carousel>
     </section>
   )
