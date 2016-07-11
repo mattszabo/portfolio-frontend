@@ -2,10 +2,12 @@ import React from 'react';
 
 const AboutPage1 = () => {
   return (
-    <div>
+    <div className='aboutPage1'>
       <img className='img-portrait' src={require('../images/hire-me.jpg')} />
-      <p>Matt Szabo: Frontend developer looking for new opportunities</p>
-      <p>(Swipe or click the dots below to learn more)</p>
+      <p>Matt Szabo: <em>Frontend developer</em></p>
+      <div className='flash'>
+        <p>( Swipe or click the dots below to learn more. )</p>
+      </div>
     </div>
   );
 }

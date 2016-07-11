@@ -16,7 +16,7 @@ class Projects extends React.Component {
       <section className='page-projects' id='projects'>
         <h2>proJEcTs</h2>
         <p>
-          These are the projects I have worked on since beginning web developemnt. I have listed them in the order so you can see a timeline of progress. They are all running on basic Node.js express servers hosted on an Amazon EC2 instance.
+          <em>How I got the necessary skills to build this website.</em>
         </p>
         <Carousel startingSlide={1}>
           <div style={style}><AngularProject /></div>
