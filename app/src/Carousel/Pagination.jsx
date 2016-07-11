@@ -6,26 +6,26 @@ class Pagination extends React.Component {
     super(props);
   }
   handleClick(i) {
-    // e.preventDefault();
     console.log('index', i);
     this.props.onClick(i);
   }
   render() {
     return (
       <div>
-        {this.props.pages.map((page, i) => {
-          // console.log('page: ', page)
-          const _class = className({
-            active: i === this.props.currentId
-          })
-          return (
-            <li key={i} index={i}>
-              <a className={_class} onClick={this.handleClick.bind(this, i)}>
-                .
-              </a>
-            </li>
-          )
-        })}
+        <ol>
+          {this.props.pages.map((page, i) => {
+            const _class = className({
+              active: i === this.props.currentId
+            })
+            return (
+              <li key={i} index={i}>
+                <a className={_class} onClick={this.handleClick.bind(this, i)}>
+                  .
+                </a>
+              </li>
+            )
+          })}
+        </ol>
       </div>
     )
   }
