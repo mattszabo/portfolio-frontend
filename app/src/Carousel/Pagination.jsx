@@ -19,8 +19,10 @@ class Pagination extends React.Component {
             })
             return (
               <li key={i} index={i}>
-                <a className={_class} onClick={this.handleClick.bind(this, i)}>
-                  .
+                <a onClick={this.handleClick.bind(this, i)}>
+                  <svg className={_class} height="10" width="10">
+                    <circle cx="5" cy="5" r="4" />
+                  </svg>
                 </a>
               </li>
             )

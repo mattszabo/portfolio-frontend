@@ -3,6 +3,7 @@ import React from 'react';
 const AboutPage2 = () => {
   return (
     <div className='about-page'>
+        <h3>Skills</h3>
         <p>
           I began learning how to develop for the web at the beginning of May 2016. Since then I have focussed my efforts towards the following skills:
         </p>
