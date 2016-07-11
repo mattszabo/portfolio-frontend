@@ -5,13 +5,17 @@ import Carousel from '../Carousel/Carousel'
 import './about.sass'
 
 const About = () => {
+  const style = {
+    height: '70vh'
+  }
   return (
     <section className='page-about' id='about'>
       <h2>AbouT</h2>
-      <Carousel buttonStyle='carousel-dots carousel-buttons'>
-        <div style={{height: '400px'}}><AboutPage1 /></div>
-        <div style={{height: '400px'}}><AboutPage2 /></div>
-        <div style={{height: '400px'}}><AboutPage3 /></div>
+      <Carousel startingSlide={1}>
+        <div style={style}><AboutPage0 /></div>
+        <div style={style}><AboutPage1 /></div>
+        <div style={style}><AboutPage2 /></div>
+        <div style={style}><AboutPage3 /></div>
       </Carousel>
     </section>
   )
@@ -19,18 +23,25 @@ const About = () => {
 
 export default About
 
-const AboutPage1 = () => {
+const AboutPage0 = () => {
+  return (
+    <div>
+      <img src={require('./images/hire-me.jpg')} />
+      <p>Matt Szabo: Frontend developer looking for new opportunities</p>
+      <p>(Swipe or click the dots to learn more)</p>
+    </div>
+  );
+}
 
+const AboutPage1 = () => {
   return (
     <div className='about-page'>
-      <h3>Where I am</h3>
-      <img src={require('./images/hire-me.jpg')} />
         <p>
-          I began learning how to develop for the web at the beginning of May 2016. Since then I have focussed my learning towards the following skills:
+          I began learning how to develop for the web at the beginning of May 2016. Since then I have focussed my efforts towards the following skills:
         </p>
         <ul>
           <li>JavaScript with a focus on ES6</li>
-          <li>CSS/Sass</li>
+          <li>CSS, Sass, and SVG</li>
           <li>React</li>
           <li>Redux</li>
           <li>Webpack with hot module replacement</li>
@@ -44,34 +55,44 @@ const AboutPage1 = () => {
 }
 
 const AboutPage2 = () => {
-  const style={
-    width: '100px',
-    height: '100%',
-    marginTop: '1rem'
-  }
   return (
     <div className='about-page'>
-      <h3>Where I've been</h3>
-      <img style={style} src={require('./images/hire-me.jpg')} />
+      <h3>My background</h3>
       <p>
-        I Come from a DevOps background, where I supported a large Java application with an SQL backend all hosted Amazon's AWS architecture. To be effective at that role I utilised my <strong>Java</strong>, <strong>SQL</strong>, and <strong>UNIX tools</strong> knowledge and developed exceptional <strong>problem solving</strong> skills. Another key asset learned during my time in that role was the ability to <strong>rapidly learn</strong> new technolgies in an ever changing world of programming techniques and languages.
+        I graduated from Computer Science at Monash University and began work in development and operations (DevOps). My most notable experience in this field is my previous position at Shine Technologes where I worked for 5 years. There I supported a large Java application with an SQL backend all hosted on Amazon's AWS architecture. To be effective at the role I utilised and improved on the following skills:
+      </p>
+      <ul>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>UNIX tools</li>
+        <li>AWS cloud management</li>
+        <li>Exceptional problem solving</li>
+      </ul>
+      <p>
+         Another key asset learned during my time in that role was the ability to rapidly learn and understand new technolgies in an ever changing world of programming techniques, frameworks and languages.
       </p>
     </div>
   );
 }
 
 const AboutPage3 = () => {
-  const style={
-    width: '100px',
-    height: '100%',
-    marginTop: '1rem'
-  }
   return (
     <div className='about-page'>
-      <h3>About this page</h3>
-      <img style={style} src={require('./images/hire-me.jpg')} />
+      <h3>About this portfolio</h3>
       <p>
-        This single page app demonstates much of what I have learned so far. It was developed using <strong>webpack</strong>, <strong>git</strong>, <strong>npm</strong>, <strong>chrome dev tools</strong>, and <strong>React dev tools (for chrome)</strong>. It is written in <strong>JavaScript ES6</strong>, which was transpiled using <strong>babel</strong>, uses <strong>React</strong> components and <strong>Sass</strong> for styling. The app is also hosted on a <strong>Node.js</strong> express server, which resides on an AWS EC2 server housed in Sydney, Australia.
+        This single page app demonstates much of what I have learned so far.
+      </p>
+      <h4>Development environment</h4>
+      <p>
+        The app was developed using webpack (configured with hot module replacement), git & github for source control, npm for package management and basic command line tasks (start & build), chrome dev tools, and React dev tools for debugging.
+      </p>
+      <h4>Coding</h4>
+      <p>
+        The app uses React components written in JavaScript ES6 and JSX, which was transpiled using babel. Sass was also used for styling and you can see my use of SVG for the arrow on the home screen.
+      </p>
+      <h4>Hosting</h4>
+      <p>
+        The app is also hosted on a <strong>Node.js</strong> express server, which resides on an AWS EC2 server housed in Sydney, Australia.
       </p>
     </div>
   );

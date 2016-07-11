@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 
 class Carousel extends React.Component {
   componentWillMount = () => {
-    this.setState({ index: this.props.index || 0 })
+    this.setState({ index: this.props.startingSlide - 1 || 0 })
   }
   prevButtonClick = () => {
     let numItems = this.props.children.length;
@@ -58,7 +58,7 @@ Carousel.propTypes = {
     PropTypes.node
   ]),
   paginationStyle: PropTypes.string,
-  index: PropTypes.number
+  startingSlide: PropTypes.number
 }
 
 export default Carousel;
