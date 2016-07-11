@@ -2,20 +2,25 @@
   margin: 0
   padding: 0
   border: 0
-  height: 50vh
+  height: 80vh
   width: 100vw
   position: relative
   border: 1px solid #ccc
-  box-shadow: inset -2px -2px 10px #ccc
   overflow: hidden
   .carousel-content
-    // min-height: 500px
+    padding: 0
+    margin: 0
   .carousel-pagination
     ol
+      text-align: center
       li
         display: inline-block
-        font-size: 3rem
+        font-size: 1rem
         a
-          color: inherit
-          &.active
-            font-size: 4rem
+          padding: 0 1rem
+    svg
+      fill: #f4f4f4
+      stroke: #777777
+      stroke-width: 2px
+      &.active
+        fill: #777777

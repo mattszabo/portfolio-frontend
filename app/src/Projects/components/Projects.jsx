@@ -27,14 +27,14 @@ class Projects extends React.Component {
           <li>This porfolio: responsive design/jquery</li>
         </ul>
         <Carousel>
-          <div  className='p1'>
-            <SingleProject title={'1'}/>
+          <div style={{height: '100px'}} className='p1'>
+            <SingleProject title={'1'} />
           </div>
           <div style={{height: '150px'}} className='p2'>
-            <SingleProject />
+            <SingleProject title={'2'} />
           </div>
           <div style={{height: '250px'}} className='p3'>
-            <SingleProject />
+            <SingleProject title={'3'} />
           </div>
         </Carousel>
       </section>

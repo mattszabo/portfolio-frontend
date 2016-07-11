@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 
 class Carousel extends React.Component {
   componentWillMount = () => {
-    this.setState({ index: 1 })
+    this.setState({ index: this.props.startingSlide - 1 || 0 })
   }
   prevButtonClick = () => {
     let numItems = this.props.children.length;
@@ -40,14 +40,12 @@ class Carousel extends React.Component {
           </SwipeableViews>
         </div>
         <div className='carousel-pagination'>
-          <ol>
-            <Pagination
-              pages={this.props.children}
-              paginationStyle={paginationStyle}
-              onClick={this.handleChangeIndex}
-              currentId={this.state.index}
-            />
-          </ol>
+          <Pagination
+            pages={this.props.children}
+            paginationStyle={paginationStyle}
+            onClick={this.handleChangeIndex}
+            currentId={this.state.index}
+          />
         </div>
       </div>
     );
@@ -59,7 +57,8 @@ Carousel.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  paginationStyle: PropTypes.string
+  paginationStyle: PropTypes.string,
+  startingSlide: PropTypes.number
 }
 
 export default Carousel;
