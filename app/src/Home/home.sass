@@ -1,3 +1,5 @@
+@import '../../styles/constants.sass'
+
 @mixin effectState($state)
     webkit-filter: $state
     -moz-filter: $state
@@ -14,8 +16,8 @@
     display: block
     height: 15vh
     margin: 30vh auto 0 auto
-    fill: #555555
-    stroke: #555555
+    fill: $darkgray
+    stroke: $darkgray
     stroke-width: 15
     cursor: default
     webkit-transition: all .5s ease-out
@@ -27,19 +29,19 @@
       fill: #900812
       stroke: #900812
       stroke-width: 10
-      -webkit-filter: drop-shadow( 4px 2px 1px #555555 )
-      -moz-filter: drop-shadow( 3px 2px 1px #555555 )
-      -ms-filter: drop-shadow( 3px 2px 1px #555555 )
-      -o-filter: drop-shadow( 3px 2px 1px #555555 )
-      filter: drop-shadow( 3px 2px 1px #555555 )
-      // @include effectState('drop-shadow( 3px 2px 1px #555555 )' )
+      -webkit-filter: drop-shadow( 4px 2px 1px $darkgray )
+      -moz-filter: drop-shadow( 3px 2px 1px $darkgray )
+      -ms-filter: drop-shadow( 3px 2px 1px $darkgray )
+      -o-filter: drop-shadow( 3px 2px 1px $darkgray )
+      filter: drop-shadow( 3px 2px 1px $darkgray )
+      // @include effectState('drop-shadow( 3px 2px 1px $darkgray )' )
     &:active
       webkit-transition: none
       -moz-transition: none
       -ms-transition: none
       -o-transition: none
       transition: none
-      -webkit-filter: drop-shadow( -1px -1px 1px #555555 )
+      -webkit-filter: drop-shadow( -1px -1px 1px $darkgray )
       -moz-filter: none
       -ms-filter: none
       -o-filter: none
