@@ -1,39 +1,33 @@
 import React, { PropTypes } from 'react';
-import $ from 'jquery'
+import Scroll from 'react-scroll';
 
-import Navbar from '../Navbar/Navbar';
+import Navbar       from '../Navbar/Navbar';
+import Home         from '../Home/Home';
+import About        from '../About/About';
+import Projects     from '../Projects/Projects';
+import References   from '../References/components/References';
+import Contact      from '../Contact/components/Contact';
+
+const { Element, Events } = Scroll;
 
 class Layout extends React.Component {
-
   componentDidMount() {
-    var page = $('html, body');
-
-    $('a[href*="#"]:not([href="#"])').click(function(e) {
-
-      // stop auto scroll animation if the user manually scrolls during animation
-      // note: has some side effect. e.g. two finger touch on track pad will interrupt
-      page.on('scroll wheel DOMMouseScroll mousewheel touchmove', function() {
-        page.stop();
-      });
-
-      // when there are multiple nav clicks we only want to action the most
-      // recent, so we stop any other scroll animation before preceeding
-      page.stop();
-
-      let hash = this.hash
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target ? target : $('[name=' + target.slice(1) +']');
-        if (target) {
-          page.animate({
-            scrollTop: target.offset().top
-          }, 750, function() {
-            location.hash = hash;
-          });
-          e.preventDefault();
-        }
-      }
+    Events.scrollEvent.register('begin', () => {
+      console.log('begin', arguments);
     });
+
+    Events.scrollEvent.register('end', () => {
+      console.log('end', arguments);
+    })
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
+  }
+
+  componentWillUnmount() {
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
   }
 
   render() {
@@ -41,7 +35,21 @@ class Layout extends React.Component {
       <div className='layout'>
         <Navbar />
         <div>
-          {this.props.children}
+          <Element name='page0'>
+            <Home       />
+          </Element>
+          <Element name='page1'>
+            <About      />
+          </Element>
+          <Element name='page2'>
+            <Projects   />
+          </Element>
+          <Element name='page3'>
+            <References />
+          </Element>
+          <Element name='page4'>
+            <Contact    />
+          </Element>
         </div>
       </div>
     );
