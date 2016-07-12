@@ -1,42 +1,48 @@
 @import 'normalise.sass'
 @import 'reset.sass'
 @import 'fonts.sass'
-
-$offwhite: #f4f4f4
-$white: #ffffff
-$navbarHeight: 2rem
+@import 'constants.sass'
 
 html
   font-size: 16px
 body
   background: $offwhite
   font-family: "lora", serif
-  color: #555555
+  color: $darkgray
 .layout
   height: 500vh
 .page-home, .page-about, .page-projects, .page-references, .page-contact
   height: 100vh
   padding-top: $navbarHeight
+.page-home
+  padding: 0
+  height: 100vh
+  box-sizing: border-box
+  border: 4px solid #555555
 .nav-bar
-  height: 2rem
-  font-size: 2rem
+  height: $navbarHeight
+  font-size: $navbarFontSize
+  position: absolute
+  margin-top: 100vh
+.carousel-container
+  // height: 90vh
 h1
   font-family: "phantom", sans-serif
   font-weight: bold
   text-align: center
-  font-size: 10vh
-  color: #555555
+  font-size: $headingFontLarge
+  // color: #555555
   font-weight: 100
   letter-spacing: 5px
 h2
   font-family: "phantom", sans-serif
-  color: #900812
+  color: $darkred
   padding: .5rem 0 1rem 1rem
   font-size: 2rem
   letter-spacing: 5px
 h3
   font-family: "phantom", sans-serif
-  color: #900812
+  color: $darkred
   font-size: 1.6rem
 p
   font-size: 1rem
