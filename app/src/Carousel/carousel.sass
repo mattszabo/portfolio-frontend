@@ -1,20 +1,13 @@
+@import '../../styles/constants.sass'
 .carousel-container
-  margin: 0
-  padding: 0
-  border: 0
-  height: 80vh
-  width: 100vw
-  position: relative
-  border: 1px solid #ccc
-  overflow: hidden
-  .carousel-content
-    padding: 0
-    margin: 0
+  height: 85vh
+.carousel-content
+  height: 90%
 .carousel-pagination
-  margin-top: 10px
+  height: 10%
   ol
     margin: 0 auto
-    padding-top: 1rem
+    padding: 1rem 0
     text-align: center
     li
       display: inline-block
@@ -22,10 +15,10 @@
       svg
         padding: 0 1rem
         fill: #f4f4f4
-        stroke: #555555
+        stroke: $darkgray
         stroke-width: 2px
         &.active
-          fill: #555555
+          fill: $darkgray
           stroke-width: 5px
           -webkit-animation-name: bubble
           -webkit-animation-duration: .4s

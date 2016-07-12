@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery'
+import className from 'classname';
 
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
@@ -13,52 +14,79 @@ class NavBar extends React.Component {
     super();
     this.state = {
       selectedItem: 1,
+      dropdown: false,
       navBarList: NavBarData.getNavBarList()
     }
   }
-
   componentDidMount() {
-    $(document).ready(function(){
-      $(window).scroll(function() { // callback for scroll event
-        var distance = $('#about').offset().top,
-        $window = $(window);
-        if ( $window.scrollTop() >= distance ) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
-          $('.nav-bar').css('position', 'fixed');
-          $('.nav-bar').css('margin-top', '0');
-        } else {
-          $('.nav-bar').css('position', 'absolute');
-          $('.nav-bar').css('margin-top', '100vh');
-        }
-      });
+    window.addEventListener('scroll', this.handleNavClick);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleNavClick);
+  }
+  handleNavClick = (e) => {
+    e.preventDefault();
+    $(window).scroll(function() { // callback for scroll event
+      var distance = $(window).height() - 1,
+      $window = $(window);
+      if ( $window.scrollTop() >= distance ) {
+        $('.nav-bar').css('position', 'fixed');
+        $('.nav-bar').css('margin-top', '0');
+      } else {
+        $('.nav-bar').css('position', 'absolute');
+        $('.nav-bar').css('margin-top', '100vh');
+      }
     });
   }
 
   _updateItemSelection(itemId) {
-    this.setState({selectedItem: itemId});
+    // work around for bug that occurs when
+    if(itemId === 0){
+      this.setState({
+        dropdown: false,
+        selectedItem: 1
+      })
+    } else {
+      this.setState({
+        selectedItem: itemId
+      });
+    }
   }
 
-  navToggle() {
-    document.getElementsByClassName('nav-bar')[0]
-      .classList.toggle('dropdown');
+  navToggle = () => {
+    this.setState({
+      dropdown: !this.state.dropdown
+    })
   }
 
   render() {
+    const _class = className({
+      'nav-bar': true,
+      'dropdown': this.state.dropdown
+    })
+    console.log(_class);
     return(
-      <nav className='nav-bar'>
+      <nav className={_class}>
         <div className="icon">
-          <a href='javascript:void(0);' onClick={this.navToggle}>&#9776;</a>
+          <a onClick={this.navToggle}>&#9776;</a>
         </div>
         <div className='navbar-links'>
           <ul>
-            {this.state.navBarList.map((item) =>
-              <NavBarItem
-                key = {item.id}
-                url = {item.url}
-                onClick = {this._updateItemSelection.bind(this, item.id)}
-                isSelected={(this.state.selectedItem === item.id)}
-              >
-                {item.text}
-              </NavBarItem>
+            {this.state.navBarList.map((item) => {
+              const _class = className({
+                active: this.state.selectedItem === item.id
+              })
+              return (
+                <NavBarItem
+                  key = {item.id}
+                  url = {item.url}
+                  onClick = {this._updateItemSelection.bind(this, item.id)}
+                  className={_class}
+                  >
+                  {item.text}
+                </NavBarItem>
+              )
+            }
             )}
           </ul>
         </div>

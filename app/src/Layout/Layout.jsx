@@ -1,14 +1,7 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import $ from 'jquery'
 
 import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
-
-import Home         from '../Home/Home';
-import About        from '../About/About';
-import Projects     from '../Projects/Projects';
-import References   from '../References/components/References';
-import Contact      from '../Contact/components/Contact';
 
 class Layout extends React.Component {
 
@@ -45,19 +38,21 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='layout'>
         <Navbar />
         <div>
-          <Home       />
-          <About      />
-          <Projects   />
-          <References />
-          <Contact    />
+          {this.props.children}
         </div>
-        <Footer />
       </div>
     );
   }
+}
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(React.PropTypes.node),
+    PropTypes.node
+  ])
 }
 
 export default Layout;
