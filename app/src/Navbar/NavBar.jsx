@@ -40,9 +40,11 @@ class NavBar extends React.Component {
   }
 
   _updateItemSelection(itemId) {
+    // work around for bug that occurs when
     if(itemId === 0){
       this.setState({
-        dropdown: false
+        dropdown: false,
+        selectedItem: 1
       })
     } else {
       this.setState({
