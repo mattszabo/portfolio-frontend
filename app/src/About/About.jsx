@@ -1,13 +1,12 @@
-import React from 'react'
-// import SwipeableViews from 'react-swipeable-views';
+import React from 'react';
 
-import Carousel from '../Carousel/Carousel'
-import AboutPage1 from './pages/AboutPage1'
-import AboutPage2 from './pages/AboutPage2'
-import AboutPage3 from './pages/AboutPage3'
-import AboutPage4 from './pages/AboutPage4'
-import AboutPage5 from './pages/AboutPage5'
-import './about.sass'
+import Carousel from '../Carousel/Carousel';
+import AboutPage1 from './pages/AboutPage1';
+import AboutPage2 from './pages/AboutPage2';
+import AboutPage3 from './pages/AboutPage3';
+import AboutPage4 from './pages/AboutPage4';
+import AboutPage5 from './pages/AboutPage5';
+import './about.sass';
 
 const About = () => {
   const style = {
@@ -24,7 +23,7 @@ const About = () => {
         <div style={style}><AboutPage5 /></div>
       </Carousel>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;
