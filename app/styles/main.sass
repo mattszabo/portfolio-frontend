@@ -4,24 +4,22 @@
 
 $offwhite: #f4f4f4
 $white: #ffffff
+$navbarHeight: 2rem
+
 html
   font-size: 16px
 body
   background: $offwhite
   font-family: "lora", serif
   color: #555555
-.footer
-  background: scale-color(gray, $lightness: -70)
-  padding: 20px
-  font-size: 20px
-  text-align: center
-  a
-    text-decoration: none
-    font-weight: 200
-    color: scale-color(red, $lightness: 20)
-    &:hover
-      color: red
-      border-bottom: 1px solid red
+.layout
+  height: 500vh
+.page-home, .page-about, .page-projects, .page-references, .page-contact
+  height: 100vh
+  padding-top: $navbarHeight
+.nav-bar
+  height: 2rem
+  font-size: 2rem
 h1
   font-family: "phantom", sans-serif
   font-weight: bold
@@ -33,7 +31,7 @@ h1
 h2
   font-family: "phantom", sans-serif
   color: #900812
-  padding: 0 0 2rem .5rem
+  padding: .5rem 0 1rem 1rem
   font-size: 2rem
   letter-spacing: 5px
 h3
@@ -42,7 +40,7 @@ h3
   font-size: 1.6rem
 p
   font-size: 1rem
-  padding-bottom: 1rem
+  // padding-bottom: 1rem
   text-align: justify
   hyphens: auto
   -webkit-hyphens: auto
@@ -54,10 +52,10 @@ strong
   font-weight: bold
   letter-spacing: 1px
 ul
-  padding-left: 1rem
+  // padding-left: 1rem
   list-style: square inside none
-  padding-bottom: 1rem
+  // padding-bottom: 1rem
   li
-    padding-bottom: .5rem
+    // padding-bottom: .5rem
 em
   font-style: italic

@@ -22,7 +22,7 @@ class NavBar extends React.Component {
       $(window).scroll(function() { // callback for scroll event
         var distance = $('#about').offset().top,
         $window = $(window);
-        if ( $window.scrollTop() >= distance ) { // check if user has scrolled more than 0 from top of the browser window (need to build on this code for transition animation)
+        if ( $window.scrollTop() >= distance ) {
           $('.nav-bar').css('position', 'fixed');
           $('.nav-bar').css('margin-top', '0');
         } else {
