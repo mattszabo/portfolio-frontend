@@ -19,8 +19,8 @@ const Home = () => {
         smooth={true}
         duration={500}
       >
-      <DownArrow />
-    </Link>
+        <DownArrow />
+      </Link>
     </section>
   );
 }

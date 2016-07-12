@@ -1,11 +1,11 @@
 import React from 'react';
+import $ from 'jquery';
 import className from 'classname';
 
 import NavBarData from './NavBarData';
 import NavBarItem from './NavBarItem';
 
 import './navbar.sass'
-
 // Renders the navbar items and also acts as the controller by handling
 // navbar item clicks that are passed up by the NavBarItem class
 class NavBar extends React.Component {
@@ -17,7 +17,19 @@ class NavBar extends React.Component {
       isVisible: false
     }
   }
-
+  componentWillMount() {
+    $(window).scroll(function() { // callback for scroll event
+      var distance = $(window).height() - 1,
+      $window = $(window);
+      if ( $window.scrollTop() >= distance ) {
+        $('.nav-bar').css('position', 'fixed');
+        $('.nav-bar').css('margin-top', '0');
+      } else {
+        $('.nav-bar').css('position', 'absolute');
+        $('.nav-bar').css('margin-top', '100vh');
+      }
+    });
+  }
   dropdownToggle = () => {
     this.setState({
       dropdown: !this.state.dropdown
@@ -30,7 +42,6 @@ class NavBar extends React.Component {
       'dropdown': this.state.dropdown,
       'visible': this.state.isVisible
     })
-
     return(
       <nav className={_class}>
         <div className="icon">
