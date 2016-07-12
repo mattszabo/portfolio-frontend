@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router';
 
 // Renders an individual navbar item and also acts as the
 // controller by handling input (clicking the navbar item)
@@ -9,9 +8,8 @@ export default class NavBarItem extends React.Component {
   }
 
   render() {
-    this._class = (this.props.isSelected === true) ? 'nav-active' : '';
     return (
-      <li className = {this._class}>
+      <li className = {this.props.className}>
         <a
           href      = {this.props.url}
           onClick   = {this._handleItemClick.bind(this)}
@@ -26,6 +24,6 @@ export default class NavBarItem extends React.Component {
 NavBarItem.propTypes = {
   url: React.PropTypes.string.isRequired,
   children: React.PropTypes.string.isRequired,
-  isSelected: React.PropTypes.bool.isRequired,
-  onClick: React.PropTypes.func.isRequired
+  onClick: React.PropTypes.func.isRequired,
+  className: React.PropTypes.string
 }
