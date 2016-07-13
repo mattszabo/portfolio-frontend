@@ -1,13 +1,11 @@
-$bg-color: #900812
-$font-color: #f4f4f4
-$dropdown-bg-color: #363636
-$active-link-color: #900812
+@import '../../styles/constants.sass'
+
 .nav-bar
   width: 100%
   z-index: 999
   font-family: "istokweb", serif
-  background-color: $dropdown-bg-color
-  color: $font-color
+  background-color: $darkgray
+  color: $offwhite
   .icon
     display: none
   .navbar-links
@@ -17,15 +15,17 @@ $active-link-color: #900812
       li
         display: inline-block
         &.nav-active
-          color: $active-link-color
+          color: $darkred
           cursor: default
         a
           text-decoration: none
           color: inherit
         &::before
           background-image: none
+.active
+  color: $darkred !important
 
-@media only screen and (max-width:680px)
+@media only screen and (max-width:375px)
   .nav-bar
     .icon
       display: inline-block
@@ -45,7 +45,7 @@ $active-link-color: #900812
           display: block
     &.dropdown
       ul
-        background-color: $dropdown-bg-color
+        background-color: $darkgray
         text-align: right
         display: block
         webkit-transition: all .5s ease-out

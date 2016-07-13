@@ -11,26 +11,24 @@ class Pagination extends React.Component {
   }
   render() {
     return (
-      <div>
-        <ol>
-          {this.props.pages.map((page, i) => {
-            const _class = className({
-              active: i === this.props.currentId
-            })
-            return (
-              <li key={i} index={i}>
-                <svg
-                  id='dot'
-                  onClick={this.handleClick.bind(this, i)}
-                  className={_class}
-                  height="20" width="20">
-                  <circle cx="10" cy="10" r="4" />
-                </svg>
-              </li>
-            )
-          })}
-        </ol>
-      </div>
+      <ol>
+        {this.props.pages.map((page, i) => {
+          const _class = className({
+            active: i === this.props.currentId
+          })
+          return (
+            <li key={i} index={i}>
+              <svg
+                id='dot'
+                onClick={this.handleClick.bind(this, i)}
+                className={_class}
+                height="20" width="20">
+                <circle cx="10" cy="10" r="4" />
+              </svg>
+            </li>
+          )
+        })}
+      </ol>
     )
   }
 }

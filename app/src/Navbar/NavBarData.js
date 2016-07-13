@@ -9,8 +9,8 @@ export default class NavBarData {
         {id: 0, url: '#home'      , text: 'HOME'       },
         {id: 1, url: '#about'     , text: 'ABOUT'      },
         {id: 2, url: '#projects'  , text: 'PROJECTS'   },
-        {id: 5, url: '#references', text: 'REFERENCES' },
-        {id: 6, url: '#contact'   , text: 'CONTACT'    }
+        {id: 3, url: '#references', text: 'REFERENCES' },
+        {id: 4, url: '#contact'   , text: 'CONTACT'    }
     ];
   }
 }
