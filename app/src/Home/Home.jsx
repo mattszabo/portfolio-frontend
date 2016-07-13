@@ -13,11 +13,11 @@ const Home = () => {
       <h1>sZAbo</h1>
       <Link
         activeClass='active'
-        className='page0-arrow'
+        className='page0'
         to='page1'
-        spy={true}
         smooth={true}
         duration={500}
+        isDynamic={true}
       >
         <DownArrow />
       </Link>

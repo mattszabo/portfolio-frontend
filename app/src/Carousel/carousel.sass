@@ -1,16 +1,21 @@
 @import '../../styles/constants.sass'
 .carousel-container
-  height: 85vh
+  height: 80vh
+  border-top: 1px solid $darkgray
 .carousel-content
   height: 90%
+  border-bottom: 1px solid $darkgray
 .carousel-pagination
   height: 10%
+  border-bottom: 1px solid $darkgray
   ol
     margin: 0 auto
-    padding: 1rem 0
     text-align: center
+    display: flex
+    height: 100%
+    align-items: center
     li
-      display: inline-block
+      flex: 1
       font-size: 1rem
       svg
         padding: 0 1rem
