@@ -41,10 +41,12 @@ h2
 h3
   font-family: "phantom", sans-serif
   color: $darkred
-  font-size: 1.6rem
+  font-size: 4vh
+  padding: 2vh
 p
   font-size: 1rem
   text-align: justify
+  padding: 2vh
   hyphens: auto
   -webkit-hyphens: auto
   -webkit-hyphenate-character: "\2010"
@@ -56,6 +58,16 @@ strong
   letter-spacing: 1px
 ul
   list-style: square inside none
-  li
 em
   font-style: italic
+@media screen and (-webkit-device-pixel-ratio:3)
+  .nav-bar
+    font-size: 8vh
+    height: 8vh
+  h2
+    padding-top: 4vh
+    font-size: 7vh
+@media only screen and (min-width:376px)
+  .nav-bar
+    font-size: 3vh
+    height: 3vh

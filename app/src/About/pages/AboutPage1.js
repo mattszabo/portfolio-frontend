@@ -4,10 +4,7 @@ const AboutPage1 = () => {
   return (
     <div className='about-page'>
       <img className='img-portrait' src={require('../images/hire-me.jpg')} />
-      <p>Matt Szabo: <em>Frontend developer</em></p>
-      <div className='flash'>
-        <p>( Swipe or click the dots below to learn more. )</p>
-      </div>
+      <div className='image-text'>Matt Szabo: <em>Frontend React Developer</em></div>
     </div>
   );
 }
