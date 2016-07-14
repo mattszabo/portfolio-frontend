@@ -11,34 +11,44 @@
   .active
     color: $darkred !important
 
-@media only screen and (max-width:375px)
+@media only screen and (max-width:435px)
   .nav-bar
-    font-size: 6vh
     height: 6vh
-    text-align: left
+    text-align: right
     .icon
       display: block
-      text-align: right
+      // text-align: right
+      font-size: 5vh
+      padding: .6vh 1vh 0 0
     .navbar-links
-      transform: translateX(100vw)
+      transform: translateX(50vw)
       webkit-transition: all .5s ease-out
       -moz-transition: all .5s ease-out
       -ms-transition: all .5s ease-out
       -o-transition: all .5s ease-out
       transition: all .5s ease-out
       ul
+        display: inline-block
+        float: right
         background-color: $darkgray
+        width: 50vw
         li
           font-size: 4vh
           width: 100%
-          padding-left: 3vw
+          margin-right: 10px
+          padding: 1vh 0
+          border-bottom: 1px solid gray
           &:first-child
+            margin-top: 3px
             border-top: 1px solid $offwhite
-            padding-top: 1vh
           &:last-child
-            height: 100vh
+            margin-bottom: 100vh
+            border-bottom: 1px solid $offwhite
+            padding-bottom: 1vh
+          a
+            padding-right: 1vh
       &.pushout
-        transform: translateX(45vw)
+        transform: translateX(0vw)
         webkit-transition: all .5s ease-out
         -moz-transition: all .5s ease-out
         -ms-transition: all .5s ease-out
@@ -46,6 +56,8 @@
         transition: all .5s ease-out
 @media screen and (-webkit-device-pixel-ratio:3)
   .nav-bar
-
-@media only screen and (min-width:376px)
+    .icon
+      font-size: 5vh
+      // padding: .6vh 1vh 0 0
+@media only screen and (min-width:436px)
   .nav-bar
