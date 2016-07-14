@@ -38,33 +38,34 @@ class NavBar extends React.Component {
 
   render() {
     const _class = className({
-      'nav-bar': true,
-      'dropdown': this.state.dropdown,
-      'visible': this.state.isVisible
+      'nav-content': true,
+      'dropdown': this.state.dropdown
     })
     return(
-      <nav className={_class}>
-        <div className="icon">
-          <a onClick={this.dropdownToggle}>&#9776;</a>
-        </div>
-        <div className='navbar-links'>
-          <ul>
-            {this.state.navBarList.map((item) => {
-              const _class = className(
-                'page'+item.id
-              );
-              return (
-                <NavBarItem
-                  key       = {item.id}
-                  url       = {item.url}
-                  className = {_class}
-                  >
-                  {item.text}
-                </NavBarItem>
-              )
-            }
-            )}
-          </ul>
+      <nav className='nav-bar'>
+        <div className={_class}>
+          <div className="icon">
+            <a onClick={this.dropdownToggle}>&#9776;  MENU</a>
+          </div>
+          <div className='navbar-links'>
+            <ul>
+              {this.state.navBarList.map((item) => {
+                const _class = className(
+                  'page'+item.id
+                );
+                return (
+                  <NavBarItem
+                    key       = {item.id}
+                    url       = {item.url}
+                    className = {_class}
+                    >
+                    {item.text}
+                  </NavBarItem>
+                )
+              }
+              )}
+            </ul>
+          </div>
         </div>
       </nav>
     );

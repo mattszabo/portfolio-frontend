@@ -8,48 +8,54 @@
   color: $offwhite
   .icon
     display: none
-  .navbar-links
-    ul
-      list-style-type: none
-      text-align: center
-      li
-        display: inline-block
-        &.nav-active
-          color: $darkred
-          cursor: default
-        a
-          text-decoration: none
-          color: inherit
-        &::before
-          background-image: none
-.active
-  color: $darkred !important
+  .active
+    color: $darkred !important
 
 @media only screen and (max-width:375px)
   .nav-bar
-    .icon
-      display: inline-block
-      float: right
-      a
-        text-decoration: none
-        color: inherit
-    .navbar-links
-    ul
-      float: right
-      display: none
-      text-align: right
-      li
-        width: 100%
-        display: none
-        &.nav-active
-          display: block
-    &.dropdown
+    font-size: 5vh
+    height: 5vh
+    text-align: left
+    .nav-content
+      transform: translateX(100vw)
+      webkit-transition: all .5s ease-out
+      -moz-transition: all .5s ease-out
+      -ms-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      transition: all .5s ease-out
+      .icon
+        transform: translateX(-10vw)
+        display: block
+        height: 5vh
+        a
+          text-decoration: none
+          color: inherit
       ul
         background-color: $darkgray
-        text-align: right
-        display: block
+        li
+          font-size: 4vh
+          width: 100%
+          padding-left: 3vw
+          &:first-child
+            border-top: 1px solid $offwhite
+            padding-top: 1vh
+          &:last-child
+            height: 100vh
+      &.dropdown
+        transform: translateX(45vw)
         webkit-transition: all .5s ease-out
         -moz-transition: all .5s ease-out
         -ms-transition: all .5s ease-out
         -o-transition: all .5s ease-out
         transition: all .5s ease-out
+@media screen and (-webkit-device-pixel-ratio:3)
+  .nav-bar
+    font-size: 5vh
+    height: 5vh
+  h2
+    padding-top: 4vh
+    font-size: 7vh
+@media only screen and (min-width:376px)
+  .nav-bar
+    font-size: 3vh
+    height: 3vh
