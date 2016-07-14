@@ -39,34 +39,32 @@ class NavBar extends React.Component {
 
   render() {
     const _class = className({
-      'nav-content': true,
+      'navbar-links': true,
       'pushout': this.state.pushout
     })
     return(
       <nav className='nav-bar'>
+        <div className="icon">
+          <a onClick={this.pushoutToggle}>&#9776;</a>
+        </div>
         <div className={_class}>
-          <div className="icon">
-            <a onClick={this.pushoutToggle}>&#9776;</a>
-          </div>
-          <div className='navbar-links'>
-            <ul>
-              {this.state.navBarList.map((item) => {
-                const _class = className(
-                  'page'+item.id
-                );
-                return (
-                  <NavBarItem
-                    key       = {item.id}
-                    url       = {item.url}
-                    className = {_class}
-                    >
-                    {item.text}
-                  </NavBarItem>
-                )
-              }
-              )}
-            </ul>
-          </div>
+          <ul>
+            {this.state.navBarList.map((item) => {
+              const _class = className(
+                'page'+item.id
+              );
+              return (
+                <NavBarItem
+                  key       = {item.id}
+                  url       = {item.url}
+                  className = {_class}
+                  >
+                  {item.text}
+                </NavBarItem>
+              )
+            }
+            )}
+          </ul>
         </div>
       </nav>
     );
