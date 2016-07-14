@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 
-import './carousel.sass';
 import Pagination from './Pagination';
+import './carousel.sass';
 
 class Carousel extends React.Component {
   componentWillMount = () => {
@@ -28,7 +28,21 @@ class Carousel extends React.Component {
     this.setState({
       index: index
     });
-  };
+  }
+  slideLeft = () => {
+    const { index } = this.state;
+    const newIndex = index === 0 ? index : index - 1
+    this.setState({
+      index: newIndex
+    })
+  }
+  slideRight = () => {
+    const { index } = this.state;
+    const newIndex = index === this.props.children.length - 1 ? index : index + 1
+    this.setState({
+      index: newIndex
+    })
+  }
   render() {
     const paginationStyle = this.props.paginationStyle || 'dots';
 
@@ -46,6 +60,10 @@ class Carousel extends React.Component {
             onClick={this.handleChangeIndex}
             currentId={this.state.index}
           />
+        </div>
+        <div className='carousel-buttons'>
+          <span className='left-button' onClick={this.slideLeft}>&lt;</span>
+          <span className='right-button' onClick={this.slideRight}>&gt;</span>
         </div>
       </div>
     );
