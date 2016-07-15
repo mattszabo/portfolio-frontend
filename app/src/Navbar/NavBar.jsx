@@ -1,5 +1,5 @@
-import React from 'react';
-import $ from 'jquery';
+import React, { PropTypes } from 'react';
+// import $ from 'jquery';
 import className from 'classname';
 
 import NavBarData from './NavBarData';
@@ -12,42 +12,42 @@ class NavBar extends React.Component {
   constructor() {
     super();
     this.state = {
-      dropdown: false,
+      pushout: false,
       navBarList: NavBarData.getNavBarList(),
       isVisible: false
     }
   }
   componentWillMount() {
-    $(window).scroll(function() { // callback for scroll event
-      var distance = $(window).height() - 1,
-      $window = $(window);
-      if ( $window.scrollTop() >= distance ) {
-        $('.nav-bar').css('position', 'fixed');
-        $('.nav-bar').css('margin-top', '0');
-      } else {
-        $('.nav-bar').css('position', 'absolute');
-        $('.nav-bar').css('margin-top', '100vh');
-      }
-    });
+    // $(window).scroll(function() { // callback for scroll event
+    //   var distance = $(window).height() - 1,
+    //   $window = $(window);
+    //   if ( $window.scrollTop() >= distance ) {
+    //     $('.nav-bar').css('position', 'fixed');
+    //     $('.nav-bar').css('margin-top', '0');
+    //   } else {
+    //     $('.nav-bar').css('position', 'absolute');
+    //     $('.nav-bar').css('margin-top', '100vh');
+    //   }
+    // });
   }
-  dropdownToggle = () => {
+  pushoutToggle = () => {
     this.setState({
-      dropdown: !this.state.dropdown
+      pushout: !this.state.pushout
     })
+    this.props.togglePushEffect();
   }
 
   render() {
     const _class = className({
-      'nav-bar': true,
-      'dropdown': this.state.dropdown,
-      'visible': this.state.isVisible
+      'navbar-links': true,
+      'pushout': this.state.pushout
     })
     return(
-      <nav className={_class}>
+      <nav className='nav-bar'>
         <div className="icon">
-          <a onClick={this.dropdownToggle}>&#9776;</a>
+          <a onClick={this.pushoutToggle}>&#9776;</a>
         </div>
-        <div className='navbar-links'>
+        <div className={_class}>
           <ul>
             {this.state.navBarList.map((item) => {
               const _class = className(
@@ -69,6 +69,10 @@ class NavBar extends React.Component {
       </nav>
     );
   }
+}
+
+NavBar.propTypes = {
+  togglePushEffect: PropTypes.func.isRequired
 }
 
 export default NavBar

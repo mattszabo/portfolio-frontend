@@ -8,48 +8,56 @@
   color: $offwhite
   .icon
     display: none
-  .navbar-links
-    ul
-      list-style-type: none
-      text-align: center
-      li
-        display: inline-block
-        &.nav-active
-          color: $darkred
-          cursor: default
-        a
-          text-decoration: none
-          color: inherit
-        &::before
-          background-image: none
-.active
-  color: $darkred !important
+  .active
+    color: $darkred !important
 
-@media only screen and (max-width:375px)
+@media only screen and (max-width:435px)
   .nav-bar
+    height: 6vh
+    text-align: right
     .icon
-      display: inline-block
-      float: right
-      a
-        text-decoration: none
-        color: inherit
+      display: block
+      // text-align: right
+      font-size: 5vh
+      padding: .6vh 1vh 0 0
     .navbar-links
-    ul
-      float: right
-      display: none
-      text-align: right
-      li
-        width: 100%
-        display: none
-        &.nav-active
-          display: block
-    &.dropdown
+      transform: translateX(50vw)
+      webkit-transition: all .5s ease-out
+      -moz-transition: all .5s ease-out
+      -ms-transition: all .5s ease-out
+      -o-transition: all .5s ease-out
+      transition: all .5s ease-out
       ul
+        display: inline-block
+        float: right
         background-color: $darkgray
-        text-align: right
-        display: block
+        width: 50vw
+        li
+          font-size: 4vh
+          width: 100%
+          margin-right: 10px
+          padding: 1vh 0
+          border-bottom: 1px solid gray
+          &:first-child
+            margin-top: 3px
+            border-top: 1px solid $offwhite
+          &:last-child
+            margin-bottom: 100vh
+            border-bottom: 1px solid $offwhite
+            padding-bottom: 1vh
+          a
+            padding-right: 1vh
+      &.pushout
+        transform: translateX(0vw)
         webkit-transition: all .5s ease-out
         -moz-transition: all .5s ease-out
         -ms-transition: all .5s ease-out
         -o-transition: all .5s ease-out
         transition: all .5s ease-out
+@media screen and (-webkit-device-pixel-ratio:3)
+  .nav-bar
+    .icon
+      font-size: 5vh
+      // padding: .6vh 1vh 0 0
+@media only screen and (min-width:436px)
+  .nav-bar
