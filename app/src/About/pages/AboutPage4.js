@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage4 = () => {
   return (
-    <div className='about-page'>
+    <div className='subpage-about'>
       <h3>About this portfolio</h3>
       <p>
         This single page app demonstates much of what I have learned so far.

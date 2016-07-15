@@ -2,14 +2,14 @@ import React from 'react';
 
 const AboutPage2 = () => {
   return (
-    <div className='about-page'>
+    <div className='subpage-about'>
         <h3>Skills</h3>
         <p>
-          I began learning how to develop for the web at the beginning of May 2016. Since then I have focussed my efforts towards the following skills:
+          At the bginning of May 2016 I began learning how to develop for the web. Since that time I have focussed my efforts towards learning the following skills:
         </p>
         <ul>
-          <li>JavaScript with a focus on ES6</li>
-          <li>CSS, Sass, and SVG</li>
+          <li>JavaScript (babel transpiled ES6)</li>
+          <li>CSS/CSS3, Sass, and SVG</li>
           <li>React</li>
           <li>Redux</li>
           <li>Webpack with hot module replacement</li>
