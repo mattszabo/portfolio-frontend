@@ -66,7 +66,7 @@ const common = {
         include: PATHS.app
       },
       { test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'url-loader?limit=200000',
+        loader: 'url-loader?limit=2000000',
         // loader: 'file-loader?name=images/[name].[ext]',
         include: PATHS.app
       },
