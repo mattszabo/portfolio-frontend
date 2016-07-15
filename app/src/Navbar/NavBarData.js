@@ -6,11 +6,11 @@ export default class NavBarData {
 
   static getNavBarList() {
     return [
-        {id: 0, url: '#home'      , text: 'HOME'       },
-        {id: 1, url: '#about'     , text: 'ABOUT'      },
-        {id: 2, url: '#projects'  , text: 'PROJECTS'   },
-        {id: 3, url: '#references', text: 'REFERENCES' },
-        {id: 4, url: '#contact'   , text: 'CONTACT'    }
+        {id: 0, url: '#home'      , text: 'home'       },
+        {id: 1, url: '#about'     , text: 'AbouT'      },
+        {id: 2, url: '#projects'  , text: 'projecTs'   },
+        {id: 3, url: '#references', text: 'references' },
+        {id: 4, url: '#contact'   , text: 'conTAcT'    }
     ];
   }
 }
