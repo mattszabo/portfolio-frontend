@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPage3 = () => {
   return (
     <div className='subpage-about'>
-      <h3>My background</h3>
+      <h3>my bAckground</h3>
       <p>
         I graduated from Computer Science at Monash University and began work in development and operations (DevOps). My most notable experience in this field is my previous position at Shine Technologes where I worked for 5 years. There I supported a large Java application with an SQL backend all hosted on Amazon's AWS architecture. To be effective at the role I utilised and improved on the following skills:
       </p>
