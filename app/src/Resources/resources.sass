@@ -11,15 +11,41 @@
   color: $offwhite
   p
     padding: 2vh 6vw
+    &.resrouces-hint
+      text-align: center
   ul
-    // padding: 2vh 0 2vw 6vw
+    list-style-type: disc
     li
       text-align: justify
       padding: 1vh 6vw
-      list-style-type: disc
       &:first-child
         padding-top: 2vh
       a
-        color: inherit
-        text-decoration: underline
-        padding: 0 .3rem
+        color: $darkblue
+        text-decoration: none
+        font-weight: bold
+        &::before
+          content: '\00a0'
+        &::after
+          content: '\00a0'
+    &.resource-topics
+      list-style-type: none
+      text-align: center
+      #jslogo
+        transform: translateY(.25rem)
+        padding-left: .5rem
+      #csslogo
+        transform: translateY(-2rem)
+      li
+        padding: 1vh 1vw
+        display: inline-block
+        &:first-child
+  svg
+    stroke-width: 24px
+  h3
+    margin: 2rem auto 0
+    padding: 0 0 1vh 0
+    text-align: center
+    width: 30vw
+    border-top: 1px solid $offwhite
+    border-bottom: 1px solid $offwhite
