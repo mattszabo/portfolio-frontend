@@ -2,12 +2,10 @@
 
 .page-about
   display: block
-  background-image: linear-gradient(rgba(55, 55, 55, 0.1),rgba(55, 55, 55, 0.1)), url('./images/landscape@2x.jpg')
+  background-image: url('./images/nature.jpg')
   background-repeat: no-repeat
-  background-size: 220vh
-  background-color: #fff
-  background-position: 50% 0%
-  background-blend-mode: luminosity
+  background-size: 155vh
+  background-position: 0 100%
 .subpage-about
   text-align: center
   height: 100%
@@ -35,6 +33,7 @@
         padding-top: 5vh
   p
     padding-top: 5vh
-@media only screen and (max-width:435px)
+@media only screen and (min-width:436px)
   .page-about
-    background-position: 60% 100%
+    background-size: 100vw
+    background-position: 0 100%
