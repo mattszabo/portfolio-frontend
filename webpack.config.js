@@ -65,7 +65,7 @@ const common = {
         loader: ExtractTextPlugin.extract('css!sass'),
         include: PATHS.app
       },
-      { test: /\.(jpe?g|png|gif|svg)$/i,
+      { test: /\.(jpe?g|png|gif)$/i,
         loader: 'url-loader?limit=2000000',
         // loader: 'file-loader?name=images/[name].[ext]',
         include: PATHS.app

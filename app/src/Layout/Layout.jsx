@@ -6,7 +6,7 @@ import Navbar       from '../Navbar/Navbar';
 import Home         from '../Home/Home';
 import About        from '../About/About';
 import Projects     from '../Projects/Projects';
-import References   from '../References/components/References';
+import Resources   from '../Resources/Resources';
 import Contact      from '../Contact/components/Contact';
 
 import './layout.sass';
@@ -53,19 +53,19 @@ class Layout extends React.Component {
         <Navbar togglePushEffect={this.toggleNavPushEffect} />
         <div className={_class}>
           <Element name='page0'>
-            <Home       />
+            <Home      />
           </Element>
           <Element name='page1'>
-            <About      />
+            <About     />
           </Element>
           <Element name='page2'>
-            <Projects   />
+            <Projects  />
           </Element>
           <Element name='page3'>
-            <References />
+            <Resources />
           </Element>
           <Element name='page4'>
-            <Contact    />
+            <Contact   />
           </Element>
         </div>
       </div>
