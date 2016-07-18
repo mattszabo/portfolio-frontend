@@ -91,7 +91,6 @@ class ResourceLinks extends React.Component {
         </h3>
         <ul>
           {links.map((link, index) => {
-            console.log('index: ', index);
             if( link.topic === this.props.topicToDisplay ){
               return (
                 <li key={index}>
