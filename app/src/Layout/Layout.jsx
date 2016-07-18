@@ -7,7 +7,7 @@ import Home         from '../Home/Home';
 import About        from '../About/About';
 import Projects     from '../Projects/Projects';
 import Resources   from '../Resources/Resources';
-import Contact      from '../Contact/components/Contact';
+import Contact      from '../Contact/Contact';
 
 import './layout.sass';
 

@@ -1,1 +1,30 @@
+@import '../../styles/constants.sass'
+
 .page-contact
+  background-image: url('./images/texturetastic_gray_@2X.png')
+  background-repeat: repeat
+  background-size: 100%
+  ul
+    margin-top: 33vh
+    list-style-type: none
+    padding-left: 2vw
+    text-align: center
+    li
+      display: inline-block
+      padding: 3vw
+      color: rgba($darkgray, 0.8)
+      font-size: 3rem
+      font-weight: bold
+      text-shadow: 1px 4px 6px #ddd, 0 0 0 #000, 1px 4px 6px #ddd
+      &::-moz-selection
+        background: #5af
+        color: #fff
+        text-shadow: none
+      &::selection
+        background: #5af
+        color: #fff
+        text-shadow: none
+      &:first-child
+        padding-right: 1rem
+  h2
+    visibility: hidden
