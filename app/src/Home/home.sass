@@ -9,9 +9,9 @@
 
 .page-home
   display: block
-  background-image: url('./images/laptop.jpg')
+  background-image: url('./images/mobile-laptop.jpg')
   background-repeat: no-repeat
-  background-size: 150vh
+  background-size: 100vw 100vh
   background-position: 50% 100%
   h1
     color: $offwhite
@@ -62,7 +62,11 @@
       -ms-filter: drop-shadow( -1px -1px 1px $darkgray )
       -o-filter: drop-shadow( -1px -1px 1px $darkgray )
       filter: drop-shadow( -1px -1px 1px $darkgray )
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+  background-image: url('./images/mobile-laptop@2x.jpg')
 @media only screen and (min-width:436px)
   .page-home
-    background-size: 100%
-    background-position: 50% 30%
+    background-image: url('./images/large-laptop.jpg')
+    background-size: 100% 100%
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    background-image: url('./images/large-laptop@2x.jpg')
