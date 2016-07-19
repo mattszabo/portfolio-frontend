@@ -66,8 +66,8 @@ const common = {
         include: PATHS.app
       },
       { test: /\.(jpe?g|png|gif)$/i,
-        loader: 'url-loader?limit=1024&name=images/[name].[ext]',
-        // loader: 'file-loader?name=images/[name].[ext]',
+        // loader: 'url-loader?limit=1024&name=images/[name].[ext]',
+        loader: 'url?name=./images/[name].[ext]',
         include: PATHS.app
       },
       { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]', include: PATHS.app },
