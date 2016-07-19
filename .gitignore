@@ -15,6 +15,7 @@ build/release/*.css
 build/release/*.jpg
 build/release/*.map
 build/release/*.svg
+build/release/images
 
 # Dependency directory
 node_modules
