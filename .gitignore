@@ -12,10 +12,9 @@ pids
 #build files
 build/release/*.js
 build/release/*.css
-build/release/*.jpg
 build/release/*.map
-build/release/*.svg
 build/release/images
+build/release/public
 
 # Dependency directory
 node_modules
