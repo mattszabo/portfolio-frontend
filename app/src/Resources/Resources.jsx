@@ -17,7 +17,7 @@ class Resources extends React.Component {
   render() {
     return (
       <section className='page-resources' id='resources'>
-        <h2>rEsourcEs</h2>
+        <h2>resources</h2>
         <div className='resources-content'>
           <p className='resrouces-hint'>
             (Click the logos to change topic)
