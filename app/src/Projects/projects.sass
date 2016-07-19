@@ -2,16 +2,21 @@
 
 .page-projects
   display: block
-  background-image: url('./images/project@2x.jpg')
+  background-image: url('./images/mobile-project.jpg')
   background-repeat: no-repeat
-  background-size: 150vh
-  background-position: 90% 100%
+  background-size: 100vw 100vh
   color: white
-  // background-color: #fff
-  // background-blend-mode: multiply
   ul
     li
       padding-left: 3vw
 @media only screen and (min-width:436px)
   .page-projects
     background-size: 100%
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    background-image: url('./images/mobile-project@2x.jpg')
+@media only screen and (min-width:436px)
+  .page-projects
+    background-image: url('./images/large-project.jpg')
+    background-size: 100% 100%
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    background-image: url('./images/large-project@2x.jpg')

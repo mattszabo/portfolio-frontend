@@ -18,25 +18,24 @@ class Resources extends React.Component {
     return (
       <section className='page-resources' id='resources'>
         <h2>rEsourcEs</h2>
-        <p>
-          Other than Code School and Stack Overflow, there were a few other reasources that helped me out. Maybe they'll help you too.
-        </p>
-        <p className='resrouces-hint'>
-          (Click on the logos below to change the topic being displayed)
-        </p>
-        <ul className='resource-topics'>
-          <li onClick={this.displayLinks.bind(this, 'react')}>
-            <ReactLogo    /></li>
-          <li onClick={this.displayLinks.bind(this, 'redux')}>
-            <ReduxLogo    /></li>
-          <li onClick={this.displayLinks.bind(this, 'webpack')}>
-            <WebpackLogo  /></li>
-          <li onClick={this.displayLinks.bind(this, 'js')}>
-            <JSLogo       /></li>
-          <li onClick={this.displayLinks.bind(this, 'css')}>
-            <CSS3Logo     /></li>
-        </ul>
-        <ResourceLinks topicToDisplay={this.state.topicToDisplay} />
+        <div className='resources-content'>
+          <p className='resrouces-hint'>
+            (Click the logos to change topic)
+          </p>
+          <ul className='resource-topics'>
+            <li onClick={this.displayLinks.bind(this, 'react')}>
+              <ReactLogo    /></li>
+            <li onClick={this.displayLinks.bind(this, 'redux')}>
+              <ReduxLogo    /></li>
+            <li onClick={this.displayLinks.bind(this, 'webpack')}>
+              <WebpackLogo  /></li>
+            <li onClick={this.displayLinks.bind(this, 'js')}>
+              <JSLogo       /></li>
+            <li onClick={this.displayLinks.bind(this, 'css')}>
+              <CSS3Logo     /></li>
+          </ul>
+          <ResourceLinks topicToDisplay={this.state.topicToDisplay} />
+        </div>
       </section>
     );
   }

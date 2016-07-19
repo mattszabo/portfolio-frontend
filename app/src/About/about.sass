@@ -2,12 +2,11 @@
 
 .page-about
   display: block
-  background-image: linear-gradient(rgba(55, 55, 55, 0.1),rgba(55, 55, 55, 0.1)), url('./images/landscape@2x.jpg')
+  background-image: url('./images/mobile-nature.jpg')
   background-repeat: no-repeat
-  background-size: 220vh
-  background-color: #fff
-  background-position: 50% 0%
-  background-blend-mode: luminosity
+  background-size: 100vw 100vh
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    background-image: url('./images/mobile-nature@2x.jpg')
 .subpage-about
   text-align: center
   height: 100%
@@ -35,6 +34,9 @@
         padding-top: 5vh
   p
     padding-top: 5vh
-@media only screen and (max-width:435px)
+@media only screen and (min-width:436px)
   .page-about
-    background-position: 60% 100%
+    background-image: url('./images/large-nature.jpg')
+    // background-size: 100% 100%
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    background-image: url('./images/large-nature@2x.jpg')
