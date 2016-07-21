@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <section className='page-projects' id='projects'>
       <h2>projects</h2>
-      <Carousel startingSlide={2}>
+      <Carousel startingSlide={1}>
         <div style={style}><MainPage /></div>
         <div style={style}><AngularProject /></div>
         <div style={style}><ReactProject /></div>
