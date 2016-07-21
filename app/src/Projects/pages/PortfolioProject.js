@@ -8,7 +8,7 @@ const PortfolioProject = () => {
         <a href="https://github.com/wekilledit/portfolio-frontend">GitHub</a>
       </p>
       <p>
-        <a href="http://localhost:8080/">Website</a>
+        <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3300/">Website</a>
       </p>
       <p>
         Description: This project focuses on responsive mobile first web development and React. The site was designed with smart phones and laptops in mind. If you're on a computer, try resizing the browser window to see what it might look like on a mobile device.

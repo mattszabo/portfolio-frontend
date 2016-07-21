@@ -8,7 +8,7 @@ const AngularProject = () => {
         <a href="https://github.com/wekilledit/angular-website">GitHub</a>
       </p>
       <p>
-        <a href="http://localhost:3000/#/mytodo">Website</a>
+        <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3000/#/mytodo">Website</a>
       </p>
       <p>
         Description: This was the first piece of web development I was exposed to. It began with a tutorial on how to generate a yeoman angular boilerplate and create a todo list, which I continued experimenting with afterwards.
