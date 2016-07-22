@@ -12,7 +12,7 @@ const ReactProject = () => {
         <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3100"><WebIcon /></a>
       </p>
       <p>
-        Description: This project focuses on React.
+        This project focussed more on the development environment as well as utilizing React components. The main focus was understanding webpack and babel (enough) to have a responsive dev environment that would speed up development.
       </p>
       <p>
         This project exposed me to:
