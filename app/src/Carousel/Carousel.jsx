@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 
 import Pagination from './Pagination';
+import Arrow from './Arrow';
 import './carousel.sass';
 
 class Carousel extends React.Component {
@@ -62,8 +63,12 @@ class Carousel extends React.Component {
           />
         </div>
         <div className='carousel-buttons'>
-          <span className='left-button' onClick={this.slideLeft}>&lt;</span>
-          <span className='right-button' onClick={this.slideRight}>&gt;</span>
+          <span className='left-button' onClick={this.slideLeft}>
+            <Arrow />
+          </span>
+          <span className='right-button' onClick={this.slideRight}>
+            <Arrow />
+          </span>
         </div>
       </div>
     );
