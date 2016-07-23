@@ -65,9 +65,7 @@
       border: none
     .right-button
       float: right
-    &:hover
-      cursor: pointer
-      stroke: $darkgray
+
 @-webkit-keyfames bubblebig
   0%
    stroke-width: 2px
@@ -99,11 +97,20 @@
 @media only screen and (min-width:436px)
   .carousel-container
     .carousel-buttons
+      .left-button
+        padding-left: 5vw
+      .right-button
+        padding-right: 5vw
       span
         svg
           width: 100px
           height: 100px
-          padding-left: 5vw
+          // padding-left: 5vw
+          &:hover
+            stroke: $darkgray
+            // stroke-width: 20px
+            // fill: $darkgray
+            cursor: pointer
     .carousel-pagination
       ol
         li
