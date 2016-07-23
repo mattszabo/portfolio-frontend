@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPage2 = () => {
   return (
     <div className='subpage-about'>
-        <h3>Skills</h3>
+        <h3>my skills</h3>
         <p>
           At the bginning of May 2016 I began learning how to develop for the web. Since that time I have focussed my efforts towards learning the following skills:
         </p>

@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPage4 = () => {
   return (
     <div className='subpage-about'>
-      <h3>AbouT This porTfoLio</h3>
+      <h3>This porTfoLio</h3>
       <p>
         This responsive single page app demonstates much of what I have learned so far.
       </p>
