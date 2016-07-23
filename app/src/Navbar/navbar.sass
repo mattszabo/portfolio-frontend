@@ -19,9 +19,9 @@
       // text-align: right
       font-size: 5vh
       padding: 1vh 1vw 0 1vw
-      text-shadow: #000 1px 1px 1px
+      // text-shadow: #000 1px 1px 1px
     .navbar-links
-      transform: translateX(187px)
+      transform: translateX(200px)
       webkit-transition: all .5s ease-out
       -moz-transition: all .5s ease-out
       -ms-transition: all .5s ease-out
@@ -32,21 +32,21 @@
         display: inline-block
         float: right
         background-color: $darkgray
-        width: 50vw
+        width: 200px
         li
-          font-size: 4vh
+          font-size: 2rem
           width: 100%
           margin-right: 10px
-          padding: 1vh 0
+          padding: 10px 0 5px 0
           border-bottom: 1px solid gray
           letter-spacing: 3px
           -webkit-background-clip: text
           -moz-background-clip: text
           background-clip: text
-          text-shadow: #000 1px 1px 1px
-          font-weight: bold
+          // text-shadow: #000 1px 1px 1px
+          // font-weight: bold
           &:first-child
-            padding-top: 3px
+            // padding-top: 3px
             border-top: 1px solid $offwhite
           &:last-child
             margin-bottom: 100vh
@@ -56,8 +56,8 @@
             padding-right: 1vh
       &.pushout
         .active
-          text-shadow: #000 1px 1px 2px
-        transform: translateX(-3px)
+          // text-shadow: #000 1px 1px 2px
+        transform: translateX(0px)
         webkit-transition: all .5s ease-out
         -moz-transition: all .5s ease-out
         -ms-transition: all .5s ease-out
@@ -76,3 +76,15 @@
               margin-top: 1.5vh
 @media only screen and (min-width:436px)
   .nav-bar
+    background: rgba($darkgray, 0.8)
+    padding: 1rem 0
+    .navbar-links
+      ul
+        background: none
+        list-style-type: none
+        text-align: center
+        color: black
+        font-size: 3rem
+        li
+          display: inline-block
+          padding: .5rem 1vw 0

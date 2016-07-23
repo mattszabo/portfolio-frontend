@@ -9,6 +9,7 @@ body
   background: $offwhite
   font-family: "lora", serif
   color: $darkgray
+  font-size: 2.5vh
 .layout
   height: 500vh
 .page-home, .page-about, .page-projects, .page-resources, .page-contact
@@ -16,13 +17,11 @@ body
   padding-top: $navbarHeight
   box-sizing: border-box
   border: 3px solid $darkgray
-  border-bottom: 0
+  border-top: 0
 .page-home
   padding-top: 0
   height: 100vh
   box-sizing: border-box
-.page-contact
-  border-bottom: 3px solid $darkgray
 .nav-bar
   position: fixed
   top: 0
@@ -38,8 +37,8 @@ h2
   font-family: "phantom", sans-serif
   font-weight: bold
   color: $darkblue
-  padding: 2vh 3vw
-  margin: 0 3vw
+  padding: 2vh 4vw
+  margin: 0 6vw
   font-size: 5vh
   letter-spacing: 5px
   // border-bottom: 1px solid black
@@ -55,11 +54,11 @@ h3
   text-align: left
 h4
   font-family: "phantom", sans-serif
-  font-size: 2.5vh
+  font-size: 3vh
   text-align: left
-  padding-left: 3vw
+  padding: 4vh 0 0 3vw
 p
-  font-size: 1rem
+  // font-size: 2.5vh
   text-align: justify
   padding: 2vh 3.5vw
   hyphens: auto
@@ -83,6 +82,3 @@ em
     padding-top: 4vh
     font-size: 7vh
 @media only screen and (min-width:436px)
-  .nav-bar
-    font-size: 3vh
-    height: 3vh
