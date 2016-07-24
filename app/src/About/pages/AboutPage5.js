@@ -5,7 +5,7 @@ const AboutPage5 = () => {
     <div className='subpage-about'>
       <h3>hobbies</h3>
       <img className='img-skateboard' src={require('../images/k-grind-nollie-shuvit.jpg')} />
-      <ul>
+      <ul className='hobbies'>
         <li>
           Skateboarding
         </li>
