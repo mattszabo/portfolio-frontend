@@ -8,7 +8,9 @@ class Contact extends React.Component {
   constructor() {
     super();
     this.state = {
-      contactName: ''
+      contactName: '',
+      contactEmail: '',
+      contactMessage: ''
     }
     console.log('state: ', this.state)
   }
@@ -18,11 +20,31 @@ class Contact extends React.Component {
     })
     console.log('state: ', this.state)
   }
+  handleEmailChange = (e) => {
+    this.setState({
+      contactEmail: e.target.value
+    })
+  }
+  handleMessageChange = (e) => {
+    this.setState({
+      contactMessage: e.target.value
+    })
+  }
   render() {
     const contactNameClass = className({
       'input': true,
       'input-styled': true,
       'input-filled': this.state.contactName.length > 0
+    })
+    const contactEmailClass = className({
+      'input': true,
+      'input-styled': true,
+      'input-filled': this.state.contactEmail.length > 0
+    })
+    const contactMessageClass = className({
+      'input': true,
+      'input-styled': true,
+      'input-filled': this.state.contactMessage.length > 0
     })
     return (
       <section className='page-contact' id='contact'>
@@ -35,17 +57,40 @@ class Contact extends React.Component {
           </ul>
         </div>
         <form className='contact-email'>
-          <span className={contactNameClass}>
+          <div className={contactNameClass}>
             <input
               className='input-field input-field-styled'
               type="text"
-              id="input-1"
+              id="contact-name"
               onChange={this.handleContactNameChange}
             />
-          <label className="input-label input-label-styled" htmlFor="contact-name">
+            <label className="input-label input-label-styled" htmlFor="contact-name">
               <span className="input-label-content input-label-content-styled">Contact Name</span>
             </label>
-          </span>
+          </div>
+          <div className={contactEmailClass}>
+            <input
+              className='input-field input-field-styled'
+              type="text"
+              id="contact-email"
+              onChange={this.handleEmailChange}
+            />
+            <label className="input-label input-label-styled" htmlFor="contact-email">
+              <span className="input-label-content input-label-content-styled">Email Address</span>
+            </label>
+          </div>
+          <div className={contactMessageClass}>
+            <input
+              className='input-field input-field-styled'
+              type="ggd"
+              id="contact-message"
+              onChange={this.handleMessageChange}
+            />
+          <label className="input-label input-label-styled" htmlFor="contact-message">
+              <span className="input-label-content input-label-content-styled">Message</span>
+            </label>
+          </div>
+          <input type="submit" value="Send" />
         </form>
       </section>
     )
