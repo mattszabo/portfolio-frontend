@@ -1,17 +1,17 @@
 @import '../../styles/constants.sass'
 
 .page-contact
-  position: relative
+  // position: relative
   background-image: url('./images/texturetastic_gray_@2X.png')
   background-repeat: repeat
   background-size: 50%
-  text-align: center
-  ul
-    list-style-type: none
-    text-align: center
-    li
-      margin: 0
-      display: inline-block
+  // text-align: center
+  // ul
+  //   list-style-type: none
+  //   text-align: center
+  //   li
+  //     margin: 0
+  //     display: inline-block
   .contact-email
     visibility: hidden
 
@@ -21,99 +21,92 @@
     background-size: 25%
     .contact-email
       visibility: visible
-      text-align: left
       .input
-      	position: relative
-      	z-index: 1
-      	display: inline-block
-      	margin: 1em
-      	max-width: 350px
-      	width: calc(100% - 2em)
-      	vertical-align: top
+        position: relative
+        z-index: 1
+        display: inline-block
+        margin: 1rem
+        max-width: 350px
+        width: calc(100% - 2rem)
+        vertical-align: top
       .input-field
-      	position: relative
-      	display: block
-      	float: right
-      	padding: 0.8em
-      	width: 60%
-      	border: none
-      	border-radius: 0
-      	// background: blue
-      	color: green
-      	-webkit-appearance: none; /* for box shadows to show on iOS */
+        top: .2rem
+        left: 1.3rem
+        position: relative
+        display: block
+        float: right
+        // padding: .5rem
+        width: 60%
+        border: none
+        border-radius: 0
+        // background: rgba(blue, .2) !important
+        color: black
+        -webkit-appearance: none /* for box shadows to show on iOS */
       .input-field:focus
-      	outline: none
+        outline: none
+        // background: red !important
       .input-label
-      	display: inline-block
-      	float: right
-      	padding: 0 1em
-      	width: 40%
-      	color: black
-      	font-weight: bold
-      	font-size: 70.25%
-      	-webkit-font-smoothing: antialiased
+        display: inline-block
+        float: right
+        padding: 0 1rem
+        width: 40%
+        color: black
+        font-weight: bold
+        font-size: 70.25%
+        -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
-      	-webkit-touch-callout: none
-      	-webkit-user-select: none
-      	-khtml-user-select: none
-      	-moz-user-select: none
-      	-ms-user-select: none
-      	user-select: none
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
       .input-label-content
-      	position: relative
-      	display: block
-      	padding: 1.6em 0
-      	width: 100%
-
+        position: relative
+        display: block
+        padding: 1rem 0
+        width: 100%
       .input-styled
-        margin: 4em 1em 1em
-
+        margin: 2rem 1rem 1rem
       .input-field-styled
-      	padding: 0.4em 0.25em
-      	width: 100%
-      	background: transparent
-      	// color: red !important
-      	font-size: 1.55em
-
+        margin-left: 1rem
+        padding: 0.4rem 0.25rem
+        width: 100%
+        background: transparent
+        // color: red !important
+        font-size: 1.55rem
       .input-label-styled
-      	position: absolute
-      	width: 100%
-      	text-align: left
-      	pointer-events: none
-
+        position: absolute
+        width: 100%
+        text-align: left
+        pointer-events: none
       .input-label-content-styled
-      	-webkit-transition: -webkit-transform 0.3s
-      	transition: transform 0.3s
-
+        -webkit-transition: -webkit-transform 0.3s
+        transition: transform 0.3s
       .input-label-styled::before,
       .input-label-styled::after
-      	content: ''
-      	position: absolute
-      	left: 0
-      	z-index: -1
-      	width: 100%
-      	height: 4px
-      	background: black
-      	-webkit-transition: -webkit-transform 0.3s
-      	transition: transform 0.3s
-
+        content: ''
+        position: absolute
+        left: 0
+        z-index: -1
+        width: 100%
+        height: 4px
+        background: $darkgray
+        -webkit-transition: -webkit-transform 0.3s
+        transition: transform 0.3s
       .input-label-styled::before
-      	top: 0
-
+        top: 0
       .input-label-styled::after
-      	bottom: 0
-
+        bottom: 0
       .input-field-styled:focus + .input-label-styled .input-label-content-styled,
       .input-filled .input-label-content-styled
-      	-webkit-transform: translate3d(0, -90%, 0)
-      	transform: translate3d(0, -90%, 0)
-
+        -webkit-transform: translate3d(0, -90%, 0)
+        transform: translate3d(0, -80%, 0)
       .input-field-styled:focus + .input-label-styled::before,
       .input-filled .input-label-styled::before
-      	-webkit-transform: translate3d(0, -0.5em, 0)
-      	transform: translate3d(0, -0.5em, 0)
-
+        -webkit-transform: translate3d(0, -0.2rem, 0)
+        transform: translate3d(0, -0.2rem, 0)
       .input-field-styled:focus + .input-label-styled::after,
       .input-filled .input-label-styled::after
-      	-webkit-transform: translate3d(0, 0.5em, 0)
-      	transform: translate3d(0, 0.5em, 0)
+        -webkit-transform: translate3d(0, 0.2rem, 0)
+        transform: translate3d(0, 0.2rem, 0)
