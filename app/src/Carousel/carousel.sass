@@ -2,20 +2,13 @@
 .carousel-container
   height: 80vh
   box-sizing: border-box
-  // border: 1px solid $darkgray
   position: relative
   .carousel-content
     padding: 0 10vw
-    // margin: 0 10vw
-    // height: 90%
-    // box-sizing: border-box
-    // background-color: rgba(.1,.1,.1,.3)
   .carousel-pagination
     margin: 0 10vw
     height: 10%
     box-sizing: border-box
-    // border-top: 1px solid $offwhite
-    // border-bottom: 1px solid $offwhite
     ol
       margin: 0 auto
       text-align: center
@@ -48,9 +41,6 @@
     clear: right
     span
       color: $offwhite
-      // font-family: sans-serif
-      // font-size: 5vw
-      // font-weight: 100
       background: transparent
       svg
         stroke: $offwhite
@@ -58,42 +48,39 @@
         width: 50px
         height: 50px
     .left-button
+      background: none
+      border: none
       svg
         -webkit-transform: rotate(180deg)
         transform: rotate(180deg)
-      background: none
-      border: none
+        &#Layer_2
+          padding: 0
     .right-button
       float: right
+      svg
+        &#Layer_2
+          padding: 0
 
 @-webkit-keyfames bubblebig
   0%
    stroke-width: 2px
-  50%
-    stroke-width: 12px
-  100%
-    stroke-width: 8px
+  60%
+    stroke-width: 13px
 @keyframes bubblebig
   0%
    stroke-width: 2px
-  50%
-    stroke-width: 12px
-  100%
-    stroke-width: 8px
+  60%
+    stroke-width: 13px
 @-webkit-keyfames bubblemsall
   0%
    stroke-width: 2px
-  50%
+  60%
     stroke-width: 10px
-  100%
-    stroke-width: 6px
 @keyframes bubblesmall
   0%
    stroke-width: 2px
-  50%
+  60%
     stroke-width: 10px
-  100%
-    stroke-width: 6px
 @media only screen and (min-width:436px)
   .carousel-container
     .carousel-buttons
@@ -105,11 +92,8 @@
         svg
           width: 100px
           height: 100px
-          // padding-left: 5vw
           &:hover
             stroke: $darkgray
-            // stroke-width: 20px
-            // fill: $darkgray
             cursor: pointer
     .carousel-pagination
       ol
@@ -118,7 +102,7 @@
             stroke-width: 4px
             &.active
               fill: $offwhite
-              stroke-width: 12px
+              stroke-width: 11px
               -webkit-animation-name: bubblebig
               -webkit-animation-duration: .4s
               -webkit-animation-timing-function: linear

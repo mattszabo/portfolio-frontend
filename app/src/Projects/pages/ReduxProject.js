@@ -6,8 +6,8 @@ import { WebIcon } from '../../Icons/Icons';
 const ReduxProject = () => {
   return (
     <div>
-      <h3>I'm Redux</h3>
-      <p>
+      <h3>redux counters</h3>
+      <p className='project-icons'>
         <a href="https://github.com/wekilledit/react-redux-website"><GitHubLogo /></a>
         <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3220"><WebIcon /></a>
       </p>

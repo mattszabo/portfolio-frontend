@@ -4,16 +4,18 @@ const AboutPage5 = () => {
   return (
     <div className='subpage-about'>
       <h3>hobbies</h3>
-      <img className='img-skateboard' src={require('../images/k-grind-nollie-shuvit.jpg')} />
-      <ul>
-        <li>
-          Skateboarding
-        </li>
-        <li>Live music</li>
-        <li>Coding</li>
-        <li>Futsal</li>
-        <li>Nature walks</li>
-      </ul>
+      <div className='about-hobbies'>
+        <img className='img-skateboard' src={require('../images/k-grind-nollie-shuvit.jpg')} />
+        <ul>
+          <li>
+            Skateboarding
+          </li>
+          <li>Live music</li>
+          <li>Coding</li>
+          <li>Futsal</li>
+          <li>Nature walks</li>
+        </ul>
+      </div>
     </div>
   );
 }
