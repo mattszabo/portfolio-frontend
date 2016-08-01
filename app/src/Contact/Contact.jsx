@@ -12,13 +12,11 @@ class Contact extends React.Component {
       contactEmail: '',
       contactMessage: ''
     }
-    console.log('state: ', this.state)
   }
   handleContactNameChange = (e) => {
     this.setState({
       contactName: e.target.value
     })
-    console.log('state: ', this.state)
   }
   handleEmailChange = (e) => {
     this.setState({
@@ -51,11 +49,17 @@ class Contact extends React.Component {
         <h2>conTAcT</h2>
         <div className='contact-icons'>
           <ul>
-            <li><LinkedInLogo /></li>
-            <li><GitHubLogo /></li>
-            <li><GmailLogo /></li>
+            <li><a href='http://www.linkedin.com/in/szabomatt'><LinkedInLogo /></a></li>
+            <li><a href='https://github.com/wekilledit'><GitHubLogo /></a></li>
+            <li><a href='mailto:szabo.matthew@gmail.com'><GmailLogo /></a></li>
           </ul>
         </div>
+        <p className='mobile-hidden'>
+          To email Matt at szabo.matthew@gmail.com, either click the gmail icon above or fill out the details below
+        </p>
+        <p className='mobile-visible'>
+          To email Matt at szabo.matthew@gmail.com, click the gmail icon above
+        </p>
         <form className='contact-email'>
           <div className={contactNameClass}>
             <input

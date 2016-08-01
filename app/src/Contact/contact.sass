@@ -5,13 +5,21 @@
   background-image: url('./images/texturetastic_gray_@2X.png')
   background-repeat: repeat
   background-size: 50%
-  // text-align: center
-  // ul
-  //   list-style-type: none
-  //   text-align: center
-  //   li
-  //     margin: 0
-  //     display: inline-block
+  text-align: center
+  ul
+    margin-top: 30vh
+    list-style-type: none
+    text-align: center
+    li
+      margin: 0
+      display: inline-block
+      padding-right: 1rem
+  p
+    text-align: center
+    &.mobile-hidden
+      visibility: hidden
+    &.mobile-visible
+      visibility: visible
   .contact-email
     visibility: hidden
 
@@ -19,9 +27,17 @@
 @media only screen and (min-width:436px)
   .page-contact
     background-size: 25%
+    ul
+      margin-top: 0
+    p
+      &.mobile-hidden
+        visibility: visible
+      &.mobile-visible
+        visibility: hidden
     .contact-email
       visibility: visible
       .input
+        cursor: pointer !important
         position: relative
         z-index: 1
         display: inline-block
