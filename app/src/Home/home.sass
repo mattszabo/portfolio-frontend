@@ -16,11 +16,11 @@
   background-position: 50% 100%
   h1
     color: $offwhite
-    -webkit-filter: drop-shadow( 2px 2px 5px $darkgray )
-    -moz-filter: drop-shadow( 2px 2px 5px $darkgray )
-    -ms-filter: drop-shadow( 2px 2px 5px $darkgray )
-    -o-filter: drop-shadow( 2px 2px 5px $darkgray )
-    filter: drop-shadow( 2px 2px 5px $darkgray )
+    -webkit-filter: drop-shadow( 0px 0px 10px $darkgray )
+    -moz-filter: drop-shadow( 0px 0px 10px $darkgray )
+    -ms-filter: drop-shadow( 0px 0px 10px $darkgray )
+    -o-filter: drop-shadow( 0px 0px 10px $darkgray )
+    filter: drop-shadow( 0px 0px 10px $darkgray )
     &:first-child
       padding-top: 14vh
       padding-bottom: 2vh
@@ -33,28 +33,17 @@
     margin-top: 40vh
     fill: $offwhite
     stroke: $offwhite
-    stroke-width: 15
-    -webkit-filter: drop-shadow( 1px 1px 1px black )
-    -moz-filter: drop-shadow( 1px 1px 5px $darkgray )
-    -ms-filter: drop-shadow( 1px 1px 5px $darkgray )
-    -o-filter: drop-shadow( 1px 1px 5px $darkgray )
-    filter: drop-shadow( 1px 1px 5px $darkgray )
-    // cursor: default
+    stroke-width: 13
+    -webkit-filter: drop-shadow( 0px 0px 1px $darkgray )
+    -moz-filter: drop-shadow( 0px 0px 1px $darkgray )
+    -ms-filter: drop-shadow( 0px 0px 1px $darkgray )
+    -o-filter: drop-shadow( 0px 0px 1px $darkgray )
+    filter: drop-shadow( 0px 0px 1px $darkgray )
     webkit-transition: all .3s ease-out
     -moz-transition: all .3s ease-out
     -ms-transition: all .3s ease-out
     -o-transition: all .3s ease-out
     transition: all .3s ease-out
-    &:hover
-      fill: $offwhite
-      stroke: $offwhite
-      stroke-width: 10
-      -webkit-filter: drop-shadow( 1px 1px 1px red )
-      -moz-filter: drop-shadow( 1px 1px 5px $darkblue )
-      -ms-filter: drop-shadow( 1px 1px 5px $darkblue )
-      -o-filter: drop-shadow( 1px 1px 5px $darkblue )
-      filter: drop-shadow( 1px 1px 5px $darkblue )
-      // @include effectState('drop-shadow( 3px 2px 1px $darkgray )' )
     &:active
       webkit-transition: none
       -moz-transition: none
@@ -72,5 +61,16 @@
   .page-home
     background-image: url('./images/large-laptop.jpg')
     background-size: 100% 100%
+    svg
+      &:hover
+        fill: $offwhite
+        stroke: $offwhite
+        stroke-width: 10
+        -webkit-filter: drop-shadow( -3px -2px 1px $darkgray )
+        -moz-filter: drop-shadow( -1px -1px 1px $darkgray )
+        -ms-filter: drop-shadow( -1px -1px 1px $darkgray )
+        -o-filter: drop-shadow( -1px -1px 1px $darkgray )
+        filter: drop-shadow( -1px -1px 1px $darkgray )
+        // @include effectState('drop-shadow( 3px 2px 1px $darkgray )' )
   @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
     background-image: url('./images/large-laptop@2x.jpg')
