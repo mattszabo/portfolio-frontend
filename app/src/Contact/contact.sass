@@ -17,11 +17,14 @@
   p
     text-align: center
     &.mobile-hidden
-      visibility: hidden
+      // visibility: hidden
+      display: none
     &.mobile-visible
-      visibility: visible
+      // visibility: visible
+      display: block
   .contact-email
-    visibility: hidden
+    // visibility: hidden
+    display: none
 
 
 @media only screen and (min-width:436px)
@@ -31,11 +34,14 @@
       margin-top: 0
     p
       &.mobile-hidden
-        visibility: visible
+        // visibility: visible
+        display: block
       &.mobile-visible
-        visibility: hidden
+        // visibility: hidden
+        display: none
     .contact-email
-      visibility: visible
+      // visibility: visible
+      display: block
       .input
         cursor: pointer !important
         position: relative
@@ -84,7 +90,7 @@
         padding: 1rem 0
         width: 100%
       .input-styled
-        margin: 2rem 1rem 1rem
+        margin: 2rem 2rem 1rem
       .input-field-styled
         margin-left: 1rem
         padding: 0.4rem 0.25rem
@@ -127,3 +133,21 @@
       .input-filled .input-label-styled::after
         -webkit-transform: translate3d(0, 0.2rem, 0)
         transform: translate3d(0, 0.2rem, 0)
+      .contact-message
+        display: block
+        margin: 2rem auto 0
+        text-align: center
+        .input-field-styled:focus + .input-label-styled::after,
+        .input-filled .input-label-styled::after
+          -webkit-transform: translate3d(0, 15rem, 0)
+          transform: translate3d(0, 15rem, 0)
+        &.input-field-styled:focus + .input-label-styled::after,
+        &.input-filled .input-label-styled::after
+          -webkit-transform: translate3d(0, 15rem, 0)
+          transform: translate3d(0, 15rem, 0)
+        .input-field
+          height: 18rem
+        textarea
+          resize: none
+      .contact-submit
+        display: block

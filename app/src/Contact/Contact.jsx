@@ -28,6 +28,9 @@ class Contact extends React.Component {
       contactMessage: e.target.value
     })
   }
+  handleSubmit = (e) => {
+    e.preventDefault();
+  }
   render() {
     const contactNameClass = className({
       'input': true,
@@ -40,6 +43,7 @@ class Contact extends React.Component {
       'input-filled': this.state.contactEmail.length > 0
     })
     const contactMessageClass = className({
+      'contact-message': true,
       'input': true,
       'input-styled': true,
       'input-filled': this.state.contactMessage.length > 0
@@ -60,7 +64,10 @@ class Contact extends React.Component {
         <p className='mobile-visible'>
           To email Matt at szabo.matthew@gmail.com, click the gmail icon above
         </p>
-        <form className='contact-email'>
+        <form
+          className='contact-email'
+          onSubmit={this.handleSubmit}
+        >
           <div className={contactNameClass}>
             <input
               className='input-field input-field-styled'
@@ -84,17 +91,20 @@ class Contact extends React.Component {
             </label>
           </div>
           <div className={contactMessageClass}>
-            <input
+            <textarea
               className='input-field input-field-styled'
-              type="ggd"
-              id="contact-message"
+              name="description"
               onChange={this.handleMessageChange}
             />
           <label className="input-label input-label-styled" htmlFor="contact-message">
               <span className="input-label-content input-label-content-styled">Message</span>
             </label>
           </div>
-          <input type="submit" value="Send" />
+          <input
+            className='contact-submit'
+            type="submit"
+            value="Send"
+          />
         </form>
       </section>
     )
