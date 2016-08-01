@@ -12,7 +12,7 @@ class Contact extends React.Component {
     }
     console.log('state: ', this.state)
   }
-  handleNameChange = (e) => {
+  handleContactNameChange = (e) => {
     this.setState({
       contactName: e.target.value
     })
@@ -21,8 +21,8 @@ class Contact extends React.Component {
   render() {
     const contactNameClass = className({
       'input': true,
-      'input--haruki': true,
-      'input--filled': this.state.contactName.length > 0
+      'input-styled': true,
+      'input-filled': this.state.contactName.length > 0
     })
     return (
       <section className='page-contact' id='contact'>
@@ -37,13 +37,13 @@ class Contact extends React.Component {
         <form className='contact-email'>
           <span className={contactNameClass}>
             <input
-              className='input__field input__field--haruki'
+              className='input-field input-field-styled'
               type="text"
               id="input-1"
-              onChange={this.handleNameChange}
+              onChange={this.handleContactNameChange}
             />
-            <label className="input__label input__label--haruki" htmlFor="input-1">
-              <span className="input__label-content input__label-content--haruki">First Name</span>
+          <label className="input-label input-label-styled" htmlFor="contact-name">
+              <span className="input-label-content input-label-content-styled">Contact Name</span>
             </label>
           </span>
         </form>

@@ -6,8 +6,9 @@
   background-repeat: no-repeat
   background-size: 100vw 100vh
   color: white
-  svg
-    margin-right: 1rem
+  .project-icons
+    svg
+      margin-right: 1rem
   ul
     li
       padding-left: 3vw
@@ -34,14 +35,15 @@
     background-size: 100% 100%
     background-color: rgba(white, 1)
     background-blend-mode: luminosity
-    p
-      &.project-icons
-        a
-          &:hover
-            -webkit-filter: drop-shadow( 0px 0px 1px $offwhite )
-            -moz-filter: drop-shadow( 0px 0px 1px $offwhite )
-            -ms-filter: drop-shadow( 0px 0px 1px $offwhite )
-            -o-filter: drop-shadow( 0px 0px 1px $offwhite )
-            filter: drop-shadow( 0px 0px 1px $offwhite )
+    .project-icons
+      padding-left: 3vw
+      padding-top: 1vh
+      a
+        &:hover
+          -webkit-filter: drop-shadow( 0px 0px 1px $offwhite )
+          -moz-filter: drop-shadow( 0px 0px 1px $offwhite )
+          -ms-filter: drop-shadow( 0px 0px 1px $offwhite )
+          -o-filter: drop-shadow( 0px 0px 1px $offwhite )
+          filter: drop-shadow( 0px 0px 1px $offwhite )
   @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
     background-image: url('./images/large-project@2x.jpg')

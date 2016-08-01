@@ -6,9 +6,9 @@ const PortfolioProject = () => {
   return (
     <div>
       <h3>this portfolio</h3>
-      <p className='project-icons'>
+      <div className='project-icons'>
         <a href="https://github.com/wekilledit/portfolio-frontend"><GitHubLogo /></a>
-      </p>
+      </div>
       <p>
         This project focuses on responsive mobile first web development and React. The site was designed for a smart phone like the iphone 6 and was then adapted for larger screens. This was mostly achieved by using the vh and vw style units.
       </p>

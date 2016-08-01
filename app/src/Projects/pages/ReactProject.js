@@ -7,10 +7,10 @@ const ReactProject = () => {
   return (
     <div>
       <h3>reAct nAvigAtion tAbs</h3>
-      <p className='project-icons'>
+      <div className='project-icons'>
         <a href="https://github.com/wekilledit/react-website"><GitHubLogo /></a>
         <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3100"><WebIcon /></a>
-      </p>
+      </div>
       <p>
         This project focussed more on the development environment as well as utilizing React components. The main focus was understanding webpack and babel (enough) to have a responsive dev environment that would speed up development.
       </p>
