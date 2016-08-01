@@ -30,6 +30,12 @@ class Contact extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    if (this.isContactReadyToSubmit()) {
+      console.log('valid submit');
+    }
+  }
+  isContactReadyToSubmit = () => {
+    return (this.state.contactName &&  this.state.contactEmail && this.state.contactMessage)
   }
   render() {
     const contactNameClass = className({
@@ -47,6 +53,10 @@ class Contact extends React.Component {
       'input': true,
       'input-styled': true,
       'input-filled': this.state.contactMessage.length > 0
+    })
+    const submitButtonClass = className({
+      'contact-submit': true,
+      active: this.isContactReadyToSubmit()
     })
     return (
       <section className='page-contact' id='contact'>
@@ -101,7 +111,7 @@ class Contact extends React.Component {
             </label>
           </div>
           <input
-            className='contact-submit'
+            className={submitButtonClass}
             type="submit"
             value="Send"
           />

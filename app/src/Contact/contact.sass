@@ -35,6 +35,8 @@
       &.mobile-visible
         display: none
     .contact-email
+      width: 650px
+      margin: 0 auto
       display: block
       .input
         cursor: pointer !important
@@ -153,5 +155,18 @@
           font-size: 1rem
       .contact-submit
         display: block
-        margin: 0 auto
+        margin: 0 80%
         margin-top: 22rem
+        outline: 0
+        // background: none
+        border: none
+        background: gray
+        color: rgba($offwhite, 0.1)
+        width: 90px
+        height: 45px
+        &:active
+          background: white
+          border: none
+        &.active
+          color: red
+          background: rgba($offwhite, 1)
