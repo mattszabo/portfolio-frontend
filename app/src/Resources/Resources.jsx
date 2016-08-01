@@ -19,7 +19,7 @@ class Resources extends React.Component {
       <section className='page-resources' id='resources'>
         <h2>resources</h2>
         <div className='resources-content'>
-          <p className='resrouces-hint'>
+          <p className='resources-hint'>
             (Click the logos to change topic)
           </p>
           <ul className='resource-topics'>
