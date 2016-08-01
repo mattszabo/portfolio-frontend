@@ -8,6 +8,7 @@
     filter: $state
 
 .page-home
+  text-align: center
   display: block
   background-image: url('./images/mobile-laptop.jpg')
   background-repeat: no-repeat
@@ -21,31 +22,34 @@
     -o-filter: drop-shadow( 2px 2px 5px $darkgray )
     filter: drop-shadow( 2px 2px 5px $darkgray )
     &:first-child
-      padding-top: 10vh
+      padding-top: 14vh
       padding-bottom: 2vh
   svg
-    display: block
-    height: 15vh
-    margin: 40vh auto 0 auto
+    display: inline-block
+    height: 12vh
+    margin: 0
+    padding: 0
+    border: 0
+    margin-top: 40vh
     fill: $offwhite
     stroke: $offwhite
     stroke-width: 15
-    -webkit-filter: drop-shadow( 1px 1px 5px black )
+    -webkit-filter: drop-shadow( 1px 1px 1px black )
     -moz-filter: drop-shadow( 1px 1px 5px $darkgray )
     -ms-filter: drop-shadow( 1px 1px 5px $darkgray )
     -o-filter: drop-shadow( 1px 1px 5px $darkgray )
     filter: drop-shadow( 1px 1px 5px $darkgray )
-    cursor: default
+    // cursor: default
     webkit-transition: all .3s ease-out
     -moz-transition: all .3s ease-out
     -ms-transition: all .3s ease-out
     -o-transition: all .3s ease-out
     transition: all .3s ease-out
     &:hover
-      fill: #offwhite
-      stroke: #offwhite
+      fill: $offwhite
+      stroke: $offwhite
       stroke-width: 10
-      -webkit-filter: drop-shadow( 1px 1px 5px $darkblue )
+      -webkit-filter: drop-shadow( 1px 1px 1px red )
       -moz-filter: drop-shadow( 1px 1px 5px $darkblue )
       -ms-filter: drop-shadow( 1px 1px 5px $darkblue )
       -o-filter: drop-shadow( 1px 1px 5px $darkblue )

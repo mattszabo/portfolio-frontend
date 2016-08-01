@@ -6,7 +6,7 @@ const PortfolioProject = () => {
   return (
     <div>
       <h3>I'm the Portfolio</h3>
-      <p>
+      <p className='project-icons'>
         <a href="https://github.com/wekilledit/portfolio-frontend"><GitHubLogo /></a>
       </p>
       <p>

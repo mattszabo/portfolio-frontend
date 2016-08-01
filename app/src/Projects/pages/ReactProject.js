@@ -7,7 +7,7 @@ const ReactProject = () => {
   return (
     <div>
       <h3>React tabs</h3>
-      <p>
+      <p className='project-icons'>
         <a href="https://github.com/wekilledit/react-website"><GitHubLogo /></a>
         <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3100"><WebIcon /></a>
       </p>
