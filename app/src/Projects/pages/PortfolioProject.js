@@ -22,6 +22,8 @@ const PortfolioProject = () => {
         <li>Responsive design</li>
         <li>jQuery</li>
         <li>Sass</li>
+        <li>Ajax</li>
+        <li>More Node.js</li>
       </ul>
     </div>
   )
