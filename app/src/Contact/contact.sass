@@ -1,26 +1,214 @@
 @import '../../styles/constants.sass'
 
 .page-contact
-  position: relative
-  background-image: url('./images/texturetastic_gray_@2X.png')
-  background-repeat: repeat
-  background-size: 50%
+  background-color: rgba(#999, 1) !important
+  text-align: center
   ul
+    margin-top: 30vh
     list-style-type: none
     text-align: center
     li
       margin: 0
-      padding: 0 .5rem
       display: inline-block
-      &:first-child
-        padding-right: 1rem
-  svg
-    opacity: .8
-  .contact-icons
-    margin: 20vh auto
-    padding-top: 90px
-    width: 310px
-    height: 140px
+      padding-right: 1rem
+  p
+    text-align: center
+    &.mobile-hidden
+      display: none
+    &.mobile-visible
+      display: block
+  .contact-email
+    display: none
+
 @media only screen and (min-width:436px)
   .page-contact
     background-size: 25%
+    ul
+      margin-top: 0
+    p
+      &.mobile-hidden
+        display: block
+      &.mobile-visible
+        display: none
+    p + p
+      // color: red
+      margin: 0
+      padding-top: 0
+    .contact-email
+      width: 650px
+      margin: 0 auto
+      display: block
+      .input
+        cursor: pointer !important
+        position: relative
+        z-index: 1
+        display: inline-block
+        max-width: 225px
+        width: calc(100% - 2rem)
+        vertical-align: top
+        margin-left: 0
+      .input-field
+        top: .2rem
+        left: 1.3rem
+        position: relative
+        display: block
+        float: right
+        padding: .5rem
+        width: 60%
+        border: none
+        border-radius: 0
+        color: black
+        -webkit-appearance: none /* for box shadows to show on iOS */
+      .input-field:focus
+        outline: none
+      .input-label
+        display: inline-block
+        float: right
+        padding: 0 1rem
+        // width: 15%
+        color: black
+        font-weight: bold
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+      .input-label-content
+        position: relative
+        display: block
+        padding: 1rem 0
+        // width: 100%
+        color: rgba($darkgray, 0.7)
+      .input-styled
+        margin: 2rem 2rem 1rem 2rem
+        &:first-child
+          margin-left: 0
+      .input-field-styled
+        padding: 0.7rem 0.25rem
+        width: 100%
+        background: transparent
+      .input-label-styled
+        position: absolute
+        width: 100%
+        text-align: left
+        pointer-events: none
+      .input-label-content-styled
+        -webkit-transition: -webkit-transform 0.3s
+        transition: transform 0.3s
+      .input-label-styled::before,
+      .input-label-styled::after
+        content: ''
+        position: absolute
+        left: 0
+        z-index: -1
+        width: 100%
+        height: 4px
+        background: $darkgray
+        -webkit-transition: -webkit-transform 0.3s
+        transition: transform 0.3s
+      .input-label-styled::before
+        top: 0
+      .input-label-styled::after
+        bottom: 0
+      .input-field-styled:focus + .input-label-styled .input-label-content-styled,
+      .input-filled .input-label-content-styled
+        color: $darkblue
+        -webkit-transform: translate3d(0, -90%, 0)
+        transform: translate3d(0, -80%, 0)
+      .input-field-styled:focus + .input-label-styled::before,
+      .input-filled .input-label-styled::before
+        -webkit-transform: translate3d(0, -0.2rem, 0)
+        transform: translate3d(0, -0.2rem, 0)
+      .input-field-styled:focus + .input-label-styled::after,
+      .input-filled .input-label-styled::after
+        -webkit-transform: translate3d(0, 0.2rem, 0)
+        transform: translate3d(0, 0.2rem, 0)
+      .contact-message
+        display: block
+        margin: 2rem auto 0
+        text-align: center
+        width: 520px
+        .input-field-styled:focus + .input-label-styled::after,
+        .input-filled .input-label-styled::after
+          -webkit-transform: translate3d(0, 15rem, 0)
+          transform: translate3d(0, 15rem, 0)
+        &.input-field-styled:focus + .input-label-styled::after,
+        &.input-filled .input-label-styled::after
+          -webkit-transform: translate3d(0, 15rem, 0)
+          transform: translate3d(0, 15rem, 0)
+        .input-field
+          height: 16rem
+          left: 63%
+        .input-label
+          width: 515px
+          left: -72%
+        textarea
+          resize: none
+          width: 510px
+          margin: 0 auto
+      .contact-submit
+        width: 550px
+        display: inline-block
+        margin: 2rem 0 0 0
+        p
+          display: none
+          width: 65%
+          color: #c0392b
+          padding: 0
+          float: left
+        .submit-btn
+          float: right
+          display: block
+          outline: 0
+          width: 33%
+          height: 45px
+          -webkit-font-smoothing: antialiased
+          background-color: inherit
+          font-size: 1.4rem
+          font-weight: 100
+          text-decoration: none
+          user-select: none
+          letter-spacing: 1px
+          color: gray
+          text-transform: uppercase
+          border: none
+          cursor: default
+          webkit-transition: all .3s ease-out
+          -moz-transition: all .3s ease-out
+          -ms-transition: all .3s ease-out
+          -o-transition: all .3s ease-out
+          transition: all .3s ease-out
+        &:hover
+          p
+            display: inline-block
+        &.active
+          .submit-btn
+            cursor: pointer
+            color: $darkgray
+            border: 2px solid $darkgray
+            -webkit-box-shadow: 1px 1px 0px 0px black
+            -moz-box-shadow: 1px 1px 0px 0px black
+            -ms-box-shadow: 1px 1px 0px 0px black
+            -o-box-shadow: 1px 1px 0px 0px black
+            box-shadow: 1px 1px 0px 0px black
+            webkit-transition: all .1s ease-out
+            -moz-transition: all .1s ease-out
+            -ms-transition: all .1s ease-out
+            -o-transition: all .1s ease-out
+            transition: all .1s ease-out
+          &:active
+            .submit-btn
+              &:active
+                -webkit-box-shadow: 0px 0px 0px 0px black
+                -moz-box-shadow: 0px 0px 0px 0px black
+                -ms-box-shadow: 0px 0px 0px 0px black
+                -o-box-shadow: 0px 0px 0px 0px black
+                box-shadow: 0px 0px 0px 0px black
+          &:hover
+            p
+              display: none
+            .submit-btn
+              background: rgba($darkblue, 0.6)
