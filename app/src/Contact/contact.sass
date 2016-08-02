@@ -3,7 +3,7 @@
 .page-contact
   // position: relative
   // background-image: url('./images/texturetastic_gray_@2X.png')
-  background-color: rgba(gray, .7) !important
+  background-color: rgba(#999, 1) !important
   // background-blend-mode: luminosity
   // background-repeat: repeat
   // background-size: 50%
@@ -73,7 +73,7 @@
         width: 40%
         color: black
         font-weight: bold
-        font-size: 70%
+        // font-size: 70%
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         -webkit-touch-callout: none
@@ -93,11 +93,11 @@
         margin: 2rem 2rem 1rem
       .input-field-styled
         margin-left: 1rem
-        padding: 0.4rem 0.25rem
+        padding: 0.7rem 0.25rem
         width: 100%
         background: transparent
         // color: red !important
-        font-size: 1.55rem
+        // font-size: 1.55rem
       .input-label-styled
         position: absolute
         width: 100%
@@ -159,53 +159,75 @@
           margin: 0 auto
           font-size: 1rem
       .contact-submit
-        display: block
-        margin: 0 70%
-        margin-top: 1rem
-        // padding-bottom: 10rem
-        outline: 0
-        // background: inherit
-        // border: 2px solid rgba(gray, .7)
-        // color: rgba($offwhite, 0.1)
-        width: 160px
-        height: 45px
-        // -webkit-transition: all 0.3s
-        // -moz-transition: all 0.3s
-        // transition: all 0.3s
-        // &:active
-        //   border: none
-        // &.active
-        //   color: $darkblue
-        //   border: 2px solid $darkblue
-        //   &:active
-        //     background: rgba(gray, .7) !important
-        // &:hover
-        //   border: 1px solid $darkblue
-        display: inline-block
-        -webkit-font-smoothing: antialiased
-        background-color: inherit
-        font-size: 1.4rem
-        font-weight: 100
-        text-decoration: none
-        user-select: none
-        letter-spacing: 1px
-        color: gray
-        padding: 10px 20px
-        text-transform: uppercase
-        border: none
-        cursor: default
-        webkit-transition: all .3s ease-out
-        -moz-transition: all .3s ease-out
-        -ms-transition: all .3s ease-out
-        -o-transition: all .3s ease-out
-        transition: all .3s ease-out
-        &:active
+        .submit-btn
+          display: block
+          margin: 0 70%
+          margin-top: 1rem
+          // padding-bottom: 10rem
+          outline: 0
+          // background: inherit
+          // border: 2px solid rgba(gray, .7)
+          // color: rgba($offwhite, 0.1)
+          width: 160px
+          height: 45px
+          // -webkit-transition: all 0.3s
+          // -moz-transition: all 0.3s
+          // transition: all 0.3s
+          // &:active
+          //   border: none
+          // &.active
+          //   color: $darkblue
+          //   border: 2px solid $darkblue
+          //   &:active
+          //     background: rgba(gray, .7) !important
+          // &:hover
+          //   border: 1px solid $darkblue
+          display: inline-block
+          -webkit-font-smoothing: antialiased
+          background-color: inherit
+          font-size: 1.4rem
+          font-weight: 100
+          text-decoration: none
+          user-select: none
+          letter-spacing: 1px
+          color: gray
+          padding: 10px 20px
+          text-transform: uppercase
           border: none
+          cursor: default
+          webkit-transition: all .3s ease-out
+          -moz-transition: all .3s ease-out
+          -ms-transition: all .3s ease-out
+          -o-transition: all .3s ease-out
+          transition: all .3s ease-out
+        // &:active
+        //   .submit-btn
+        //     border: none
         &.active
-          cursor: pointer
-          color: $darkgray
-          border: 2px solid $darkgray
+          .submit-btn
+            cursor: pointer
+            color: $darkgray
+            border: 2px solid $darkgray
+            -webkit-box-shadow: 1px 1px 0px 0px black
+            -moz-box-shadow: 1px 1px 0px 0px black
+            -ms-box-shadow: 1px 1px 0px 0px black
+            -o-box-shadow: 1px 1px 0px 0px black
+            box-shadow: 1px 1px 0px 0px black
+            webkit-transition: all .1s ease-out
+            -moz-transition: all .1s ease-out
+            -ms-transition: all .1s ease-out
+            -o-transition: all .1s ease-out
+            transition: all .1s ease-out
           &:active
-            background: rgba(gray, .7)
+            .submit-btn
+              &:active
+                // border-style: solid
+                // background: rgba(gray, .7)
+                -webkit-box-shadow: 0px 0px 0px 0px black
+                -moz-box-shadow: 0px 0px 0px 0px black
+                -ms-box-shadow: 0px 0px 0px 0px black
+                -o-box-shadow: 0px 0px 0px 0px black
+                box-shadow: 0px 0px 0px 0px black
           &:hover
-            background: rgba($darkblue, 0.6)
+            .submit-btn
+              background: rgba($darkblue, 0.6)

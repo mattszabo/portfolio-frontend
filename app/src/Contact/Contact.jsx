@@ -110,11 +110,13 @@ class Contact extends React.Component {
               <span className="input-label-content input-label-content-styled">Message</span>
             </label>
           </div>
-          <input
-            className={submitButtonClass}
-            type="submit"
-            value="Send"
-          />
+          <div className={submitButtonClass}>
+            <input
+              className='submit-btn'
+              type="submit"
+              value="Send"
+            />
+        </div>
         </form>
       </section>
     )
