@@ -37,7 +37,32 @@ class Contact extends React.Component {
   isContactReadyToSubmit = () => {
     return (this.state.contactName &&  this.state.contactEmail && this.state.contactMessage)
   }
+  printHelpText() {
+    let helpText = 'Please fill out the sections: ';
+    let comma = false;
+    if(!this.state.contactName) {
+      helpText += 'Contact Name'
+      comma = true
+    }
+    if(!this.state.contactEmail) {
+      if (comma) {
+        helpText += ', '
+      }
+      helpText += 'Email Address'
+      comma = true //redundant if alreadt true, could use better logic
+    }
+    if(!this.state.contactMessage) {
+      if(comma) {
+        helpText += ', '
+      }
+      helpText += 'Message'
+    }
+    return (
+      helpText + '.'
+    )
+  }
   render() {
+    const hText = this.printHelpText();
     const contactNameClass = className({
       'input': true,
       'input-styled': true,
@@ -111,6 +136,7 @@ class Contact extends React.Component {
             </label>
           </div>
           <div className={submitButtonClass}>
+            <p>{hText}</p>
             <input
               className='submit-btn'
               type="submit"
