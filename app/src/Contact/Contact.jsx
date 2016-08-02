@@ -150,7 +150,7 @@ class Contact extends React.Component {
         <p className='mobile-hidden'>
           Send an email to szabo.matthew@gmail.com right from here.
         </p>
-        <p>
+        <p className='mobile-hidden'>
           Tip: If the send button at the bottom is grayed out, hover over it for help.
         </p>
         <p className='mobile-visible'>
