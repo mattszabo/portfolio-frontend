@@ -3,7 +3,7 @@
 .page-contact
   input:-webkit-autofill
     transition: background-color 9999s ease-in-out 0s
-  background-color: rgba(#999, 1) !important
+  background-color: #7f8c8d !important
   text-align: center
   ul
     margin-top: 30vh
@@ -59,7 +59,7 @@
         width: 60%
         border: none
         border-radius: 0
-        color: black
+        color: $darkgray
         -webkit-appearance: none /* for box shadows to show on iOS */
       .input-field:focus
         outline: none
@@ -68,7 +68,7 @@
         float: right
         padding: 0 1rem
         // width: 15%
-        color: black
+        // color: black
         font-weight: bold
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
@@ -83,7 +83,7 @@
         display: block
         padding: 1rem 0
         // width: 100%
-        color: rgba($darkgray, 0.7)
+        color: rgba($darkgray, 0.6)
       .input-styled
         margin: 2rem 2rem 1rem 2rem
         &:first-child
@@ -117,7 +117,8 @@
         bottom: 0
       .input-field-styled:focus + .input-label-styled .input-label-content-styled,
       .input-filled .input-label-content-styled
-        color: $darkblue
+        color: $darkgray
+        font-size: 110%
         -webkit-transform: translate3d(0, -90%, 0)
         transform: translate3d(0, -80%, 0)
       .input-field-styled:focus + .input-label-styled::before,
