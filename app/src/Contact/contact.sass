@@ -1,12 +1,7 @@
 @import '../../styles/constants.sass'
 
 .page-contact
-  // position: relative
-  // background-image: url('./images/texturetastic_gray_@2X.png')
   background-color: rgba(#999, 1) !important
-  // background-blend-mode: luminosity
-  // background-repeat: repeat
-  // background-size: 50%
   text-align: center
   ul
     margin-top: 30vh
@@ -25,7 +20,6 @@
   .contact-email
     display: none
 
-
 @media only screen and (min-width:436px)
   .page-contact
     background-size: 25%
@@ -36,6 +30,10 @@
         display: block
       &.mobile-visible
         display: none
+    p + p
+      // color: red
+      margin: 0
+      padding-top: 0
     .contact-email
       width: 650px
       margin: 0 auto
@@ -45,11 +43,10 @@
         position: relative
         z-index: 1
         display: inline-block
-        margin: 10rem
         max-width: 225px
         width: calc(100% - 2rem)
         vertical-align: top
-        // margin: 1rem
+        margin-left: 0
       .input-field
         top: .2rem
         left: 1.3rem
@@ -60,20 +57,17 @@
         width: 60%
         border: none
         border-radius: 0
-        // background: rgba(blue, .2) !important
         color: black
         -webkit-appearance: none /* for box shadows to show on iOS */
       .input-field:focus
         outline: none
-        // background: red !important
       .input-label
         display: inline-block
         float: right
         padding: 0 1rem
-        width: 40%
+        // width: 15%
         color: black
         font-weight: bold
-        // font-size: 70%
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
         -webkit-touch-callout: none
@@ -86,18 +80,16 @@
         position: relative
         display: block
         padding: 1rem 0
-        width: 100%
-        // color: red
+        // width: 100%
         color: rgba($darkgray, 0.7)
       .input-styled
-        margin: 2rem 2rem 1rem
+        margin: 2rem 2rem 1rem 2rem
+        &:first-child
+          margin-left: 0
       .input-field-styled
-        margin-left: 1rem
         padding: 0.7rem 0.25rem
         width: 100%
         background: transparent
-        // color: red !important
-        // font-size: 1.55rem
       .input-label-styled
         position: absolute
         width: 100%
@@ -148,7 +140,7 @@
           -webkit-transform: translate3d(0, 15rem, 0)
           transform: translate3d(0, 15rem, 0)
         .input-field
-          height: 17rem
+          height: 16rem
           left: 70%
         .input-label
           width: 515px
@@ -157,48 +149,22 @@
           resize: none
           width: 510px
           margin: 0 auto
-          font-size: 1rem
       .contact-submit
         width: 550px
         display: inline-block
-        margin: 1rem 0 0 1.5rem
+        margin: 2rem 0 0 1.5rem
         p
           display: none
           width: 65%
-          // float: left
-          // margin-left: 27px
           color: #c0392b
           padding: 0
           float: left
-        // &:hover
-        //   p
-        //     display: inline-block
         .submit-btn
           float: right
-          margin: 0 0rem
-          padding: 0
           display: block
-          // margin: 0 50px
-          // padding-bottom: 10rem
           outline: 0
-          // background: inherit
-          // border: 2px solid rgba(gray, .7)
-          // color: rgba($offwhite, 0.1)
           width: 33%
           height: 45px
-          // -webkit-transition: all 0.3s
-          // -moz-transition: all 0.3s
-          // transition: all 0.3s
-          // &:active
-          //   border: none
-          // &.active
-          //   color: $darkblue
-          //   border: 2px solid $darkblue
-          //   &:active
-          //     background: rgba(gray, .7) !important
-          // &:hover
-          //   border: 1px solid $darkblue
-          // display: inline-block
           -webkit-font-smoothing: antialiased
           background-color: inherit
           font-size: 1.4rem
@@ -207,7 +173,6 @@
           user-select: none
           letter-spacing: 1px
           color: gray
-          padding: 10px 20px
           text-transform: uppercase
           border: none
           cursor: default
@@ -216,9 +181,6 @@
           -ms-transition: all .3s ease-out
           -o-transition: all .3s ease-out
           transition: all .3s ease-out
-        // &:active
-        //   .submit-btn
-        //     border: none
         &:hover
           p
             display: inline-block
@@ -240,8 +202,6 @@
           &:active
             .submit-btn
               &:active
-                // border-style: solid
-                // background: rgba(gray, .7)
                 -webkit-box-shadow: 0px 0px 0px 0px black
                 -moz-box-shadow: 0px 0px 0px 0px black
                 -ms-box-shadow: 0px 0px 0px 0px black

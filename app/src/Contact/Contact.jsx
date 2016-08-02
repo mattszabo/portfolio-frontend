@@ -35,27 +35,47 @@ class Contact extends React.Component {
     }
   }
   isContactReadyToSubmit = () => {
-    return (this.state.contactName &&  this.state.contactEmail && this.state.contactMessage)
+    return (
+      this.state.contactName &&
+      this.state.contactMessage &&
+      this.isValidEmail()
+    )
+  }
+  isValidEmail = () => {
+    let isValid = false;
+    let email = this.state.contactEmail;
+    if(email) {
+      let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      isValid = re.test(email);
+    }
+    return (
+      isValid
+    )
   }
   printHelpText() {
     let helpText = 'Please fill out the sections: ';
     let comma = false;
     if(!this.state.contactName) {
-      helpText += 'Contact Name'
+      helpText += '\nContact Name'
       comma = true
     }
     if(!this.state.contactEmail) {
       if (comma) {
         helpText += ', '
       }
-      helpText += 'Email Address'
-      comma = true //redundant if alreadt true, could use better logic
+      helpText += '\nEmail Address'
+      comma = true //redundant if already true, could use better logic
+    } else if (!this.isValidEmail()) {
+      if (comma) {
+        helpText += ', '
+      }
+      helpText += '\nEmail Address (not valid)'
     }
     if(!this.state.contactMessage) {
       if(comma) {
         helpText += ', '
       }
-      helpText += 'Message'
+      helpText += '\nMessage'
     }
     return (
       helpText + '.'
@@ -94,10 +114,13 @@ class Contact extends React.Component {
           </ul>
         </div>
         <p className='mobile-hidden'>
-          To email Matt at szabo.matthew@gmail.com, either click the gmail icon above or fill out the details below
+          Send an email to szabo.matthew@gmail.com right from here.
+        </p>
+        <p>
+          Tip: If the send button at the bottom is grayed out, hover over it for help.
         </p>
         <p className='mobile-visible'>
-          To email Matt at szabo.matthew@gmail.com, click the gmail icon above
+          To send an email to szabo.matthew@gmail.com, click the gmail icon above
         </p>
         <form
           className='contact-email'
