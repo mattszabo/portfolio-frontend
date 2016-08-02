@@ -15,17 +15,17 @@ class Contact extends React.Component {
   }
   handleContactNameChange = (e) => {
     this.setState({
-      contactName: e.target.value
+      contactName: e.target.value.trim()
     })
   }
   handleEmailChange = (e) => {
     this.setState({
-      contactEmail: e.target.value
+      contactEmail: e.target.value.trim()
     })
   }
   handleMessageChange = (e) => {
     this.setState({
-      contactMessage: e.target.value
+      contactMessage: e.target.value.trim()
     })
   }
   handleSubmit = (e) => {
