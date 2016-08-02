@@ -62,7 +62,7 @@ app.post('/api/emails', function(req, res) {
       console.log(stderr)
     }
     var emailBody = 'From: ' + newEmail.contactName + '\n\nMessage:\n\n' + newEmail.contactMessage
-    exec('echo \"' + emailBody + '\" | mail -s \"Portfolio Contact\" szabo.matthew@gmail.com', puts);
+    exec('echo \"' + emailBody + '\" | mail -s \"Portfolio Contact\" example@email.com', puts);
   // });
 });
 
