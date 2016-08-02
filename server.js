@@ -3,11 +3,12 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var exec = require('child_process').exec;
 var app = express();
 
 var EMAILS_FILE = path.join(__dirname, 'emails.json');
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3300));
 
 app.use('/', express.static('' + __dirname + ''));
 
@@ -25,30 +26,44 @@ app.use(function(req, res, next) {
 })
 
 app.post('/api/emails', function(req, res) {
-  fs.readFile(EMAILS_FILE, function(err, data) {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-    var emails = JSON.parse(data);
-    // NOTE: In a real implementation, we would likely rely on a database or
-    // some other approach (e.g. UUIDs) to ensure a globally unique id. We'll
-    // treat Date.now() as unique-enough for our purposes.
+  // fs.readFile(EMAILS_FILE, function(err, data) {
+  //   if (err) {
+  //     console.error(err);
+  //     process.exit(1);
+  //   }
+  //   console.log('data:', req);
+  //   var emails = JSON.parse(data);
+  //   // NOTE: In a real implementation, we would likely rely on a database or
+  //   // some other approach (e.g. UUIDs) to ensure a globally unique id. We'll
+  //   // treat Date.now() as unique-enough for our purposes.
+    // var emails = JSON.parse({})
+
+    // create the new email from body. this is essentailly the same data with an id
     var newEmail = {
       id: Date.now(),
-      contactName: req.body.contactEmail.contactName,
-      contactEmail: req.body.contactEmail.contactMessage,
-      contactMessage: req.body.contactEmail.contactMessage
+      contactName: req.body.contactName,
+      contactEmail: req.body.contactEmail,
+      contactMessage: req.body.contactMessage
     };
-    emails.push(newEmail);
-    fs.writeFile(EMAILS_FILE, JSON.stringify(emails, null, 4), function(err) {
+    // emails.push(newEmail);
+    // write to file. not necessary really.
+    fs.writeFile(EMAILS_FILE, JSON.stringify(newEmail, null, 4), function(err) {
       if (err) {
-        console.error(err);
+        console.error('err: ', err);
+        console.error('newEmail: ', newEmail);
         process.exit(1);
       }
-      res.json(emails);
+      res.json(newEmail);
     });
-  });
+
+    //lets send an email
+    function puts(error, stdout, stderr) {
+      console.log(stdout)
+      console.log(stderr)
+    }
+    var emailBody = 'From: ' + newEmail.contactName + '\n\nMessage:\n\n' + newEmail.contactMessage
+    exec('echo \"' + emailBody + '\" | mail -s \"Portfolio Contact\" szabo.matthew@gmail.com', puts);
+  // });
 });
 
 app.listen(app.get('port'), function() {

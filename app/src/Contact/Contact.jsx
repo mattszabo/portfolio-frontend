@@ -16,7 +16,7 @@ class Contact extends React.Component {
   }
   handleContactNameChange = (e) => {
     this.setState({
-      contactName: e.target.value.trim()
+      contactName: e.target.value
     })
   }
   handleEmailChange = (e) => {
@@ -26,7 +26,7 @@ class Contact extends React.Component {
   }
   handleMessageChange = (e) => {
     this.setState({
-      contactMessage: e.target.value.trim()
+      contactMessage: e.target.value
     })
   }
   handleSubmit = (e) => {
