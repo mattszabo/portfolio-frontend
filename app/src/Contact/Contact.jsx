@@ -1,5 +1,6 @@
 import React from 'react'
 import className from 'classname';
+import $ from 'jquery';
 
 import { GmailLogo, GitHubLogo, LinkedInLogo } from './ContactLogos'
 import './contact.sass'
@@ -32,6 +33,38 @@ class Contact extends React.Component {
     e.preventDefault();
     if (this.isContactReadyToSubmit()) {
       console.log('valid submit');
+
+      //build email object
+      const contactEmailSubmission = {
+        contactName: this.state.contactName,
+        contactEmail: this.state.contactEmail,
+        contactMessage: this.state.contactMessage
+      }
+      $.ajax({
+        url: '/api/emails',
+        dataType: 'json',
+        type: 'POST',
+        data: contactEmailSubmission,
+        success: () => {
+          this.setState({
+            sentEmailSuccess: true
+          })
+        },
+        error: (xhr, status, err) => {
+          this.setState({
+            sentEmailSuccess: false
+          });
+          console.error('/api/emails/', status, err.toString());
+        }
+      });
+      console.log(contactEmailSubmission);
+
+      //reset form
+      this.setState({
+        contactName: '',
+        contactEmail: '',
+        contactMessage: ''
+      })
     }
   }
   isContactReadyToSubmit = () => {
@@ -131,6 +164,7 @@ class Contact extends React.Component {
               className='input-field input-field-styled'
               type="text"
               id="contact-name"
+              value={this.state.contactName}
               onChange={this.handleContactNameChange}
             />
             <label className="input-label input-label-styled" htmlFor="contact-name">
@@ -142,6 +176,7 @@ class Contact extends React.Component {
               className='input-field input-field-styled'
               type="text"
               id="contact-email"
+              value={this.state.contactEmail}
               onChange={this.handleEmailChange}
             />
             <label className="input-label input-label-styled" htmlFor="contact-email">
@@ -152,6 +187,7 @@ class Contact extends React.Component {
             <textarea
               className='input-field input-field-styled'
               name="description"
+              value={this.state.contactMessage}
               onChange={this.handleMessageChange}
             />
           <label className="input-label input-label-styled" htmlFor="contact-message">
