@@ -103,6 +103,7 @@ class Contact extends React.Component {
         helpText += ', '
       }
       helpText += '\nEmail Address (not valid)'
+      comma = true
     }
     if(!this.state.contactMessage) {
       if(comma) {
