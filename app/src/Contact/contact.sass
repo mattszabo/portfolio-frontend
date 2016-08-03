@@ -218,3 +218,36 @@ $contactRed: #E75A4D
               display: none
             .submit-btn
               background: rgba($darkblue, 0.6)
+    &.email-sent
+      .contact-email
+        .input-label-content
+          color: $darkblue
+        .contact-submit
+          .submit-btn
+          &:hover
+            p
+              padding-top: 1rem
+              color: $darkblue
+          &.active
+            .submit-btn
+              cursor: default
+              color: gray
+              border: none
+              -webkit-box-shadow: 0px 0px 0px 0px black
+              -moz-box-shadow: 0px 0px 0px 0px black
+              -ms-box-shadow: 0px 0px 0px 0px black
+              -o-box-shadow: 0px 0px 0px 0px black
+              box-shadow: 0px 0px 0px 0px black
+            &:active
+              .submit-btn
+                &:active
+                  -webkit-box-shadow: 0px 0px 0px 0px black
+                  -moz-box-shadow: 0px 0px 0px 0px black
+                  -ms-box-shadow: 0px 0px 0px 0px black
+                  -o-box-shadow: 0px 0px 0px 0px black
+                  box-shadow: 0px 0px 0px 0px black
+            &:hover
+              p
+                display: inline-block
+              .submit-btn
+                background: inherit
