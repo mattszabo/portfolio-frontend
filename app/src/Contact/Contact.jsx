@@ -9,6 +9,7 @@ class Contact extends React.Component {
   constructor() {
     super();
     this.state = {
+      isEmailSent: false,
       contactName: '',
       contactEmail: '',
       contactMessage: ''
@@ -47,31 +48,24 @@ class Contact extends React.Component {
         data: contactEmailSubmission,
         success: () => {
           this.setState({
-            sentEmailSuccess: true
+            isEmailSent: true,
+            contactName: '',
+            contactEmail: '',
+            contactMessage: ''
           })
         },
         error: (xhr, status, err) => {
-          this.setState({
-            sentEmailSuccess: false
-          });
           console.error('/api/emails/', status, err.toString());
         }
       });
-      console.log(contactEmailSubmission);
-
-      //reset form
-      this.setState({
-        contactName: '',
-        contactEmail: '',
-        contactMessage: ''
-      })
     }
   }
   isContactReadyToSubmit = () => {
     return (
       this.state.contactName &&
       this.state.contactMessage &&
-      this.isValidEmail()
+      this.isValidEmail() &&
+      !this.state.isEmailSent
     )
   }
   isValidEmail = () => {
@@ -88,35 +82,42 @@ class Contact extends React.Component {
   printHelpText() {
     let helpText = 'Please fill out the sections: ';
     let comma = false;
-    if(!this.state.contactName) {
-      helpText += '\nContact Name'
-      comma = true
-    }
-    if(!this.state.contactEmail) {
-      if (comma) {
-        helpText += ', '
+    if(!this.state.isEmailSent) {
+      if(!this.state.contactName) {
+        helpText += '\nContact Name'
+        comma = true
       }
-      helpText += '\nEmail Address'
-      comma = true //redundant if already true, could use better logic
-    } else if (!this.isValidEmail()) {
-      if (comma) {
-        helpText += ', '
+      if(!this.state.contactEmail) {
+        if (comma) {
+          helpText += ', '
+        }
+        helpText += '\nEmail Address'
+        comma = true //redundant if already true, could use better logic
+      } else if (!this.isValidEmail()) {
+        if (comma) {
+          helpText += ', '
+        }
+        helpText += '\nEmail Address (not valid)'
+        comma = true
       }
-      helpText += '\nEmail Address (not valid)'
-      comma = true
-    }
-    if(!this.state.contactMessage) {
-      if(comma) {
-        helpText += ', '
+      if(!this.state.contactMessage) {
+        if(comma) {
+          helpText += ', '
+        }
+        helpText += '\nMessage'
       }
-      helpText += '\nMessage'
+      return (
+        helpText + '.'
+      )
     }
-    return (
-      helpText + '.'
-    )
+    return 'Email delivered.'
   }
   render() {
     const hText = this.printHelpText();
+    const pageContactClass = className({
+      'email-sent': this.state.isEmailSent,
+      'page-contact': true
+    })
     const contactNameClass = className({
       'input': true,
       'input-styled': true,
@@ -138,7 +139,7 @@ class Contact extends React.Component {
       active: this.isContactReadyToSubmit()
     })
     return (
-      <section className='page-contact clearfix' id='contact'>
+      <section className={pageContactClass} id='contact'>
         <h2>conTAcT</h2>
         <div className='contact-icons'>
           <ul>
