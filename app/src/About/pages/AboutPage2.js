@@ -5,7 +5,7 @@ const AboutPage2 = () => {
     <div className='subpage-about'>
         <h3>my skills</h3>
         <p>
-          At the bginning of May 2016 I began learning how to develop for the web. Since that time I have focussed my efforts towards learning the following skills:
+          At the bginning of May 2016 I started learning how to develop for the web. Since then I have focussed my efforts towards learning the following skills:
         </p>
         <ul>
           <li>JavaScript ES6</li>
@@ -15,6 +15,7 @@ const AboutPage2 = () => {
           <li>Redux</li>
           <li>Webpack</li>
           <li>Node.js</li>
+          <li>Ajax</li>
           <li>Git & GitHub</li>
           <li>Browser dev tools (Chrome/React/Redux)</li>
           <li>Responsive & mobile first design</li>
