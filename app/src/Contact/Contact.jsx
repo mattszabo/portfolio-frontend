@@ -9,6 +9,7 @@ class Contact extends React.Component {
   constructor() {
     super();
     this.state = {
+      isEmailSendTestAvailable: true,
       isEmailSent: false,
       contactName: '',
       contactEmail: '',
@@ -48,6 +49,7 @@ class Contact extends React.Component {
         data: contactEmailSubmission,
         success: () => {
           this.setState({
+            isEmailSendTestAvailable: false,
             isEmailSent: true,
             contactName: '',
             contactEmail: '',
@@ -112,6 +114,13 @@ class Contact extends React.Component {
     }
     return 'Email delivered.'
   }
+  handleSentCheckbox = () => {
+    if(this.state.isEmailSendTestAvailable) {
+      this.setState({
+        isEmailSent: !this.state.isEmailSent
+      })
+    }
+  }
   render() {
     const hText = this.printHelpText();
     const pageContactClass = className({
@@ -154,6 +163,7 @@ class Contact extends React.Component {
         <p className='mobile-visible'>
           To send an email to szabo.matthew@gmail.com, click the gmail icon above
         </p>
+        <p> <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate email sent state to see what the form looks like after sending an email</p>
         <form
           className='contact-email'
           onSubmit={this.handleSubmit}
