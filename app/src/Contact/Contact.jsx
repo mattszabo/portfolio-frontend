@@ -147,6 +147,10 @@ class Contact extends React.Component {
       'contact-submit': true,
       active: this.isContactReadyToSubmit()
     })
+    const emailSendSimulationClass = className({
+      'email-send-simulation': true,
+      'email-send-simulation-active': this.state.isEmailSendTestAvailable
+    })
     return (
       <section className={pageContactClass} id='contact'>
         <h2>conTAcT</h2>
@@ -163,7 +167,7 @@ class Contact extends React.Component {
         <p className='mobile-visible'>
           To send an email to szabo.matthew@gmail.com, click the gmail icon above
         </p>
-        <p> <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate email sent state to see what the form looks like after sending an email</p>
+        <p className={emailSendSimulationClass}> <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate email sent state to see what the form looks like after sending an email</p>
         <form
           className='contact-email'
           onSubmit={this.handleSubmit}
