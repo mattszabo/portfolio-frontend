@@ -50,6 +50,7 @@
     "express": "^4.13.4",
     "history": "^1.17.0",
     "jquery": "^2.2.4",
+    "nodemailer": "^2.5.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",

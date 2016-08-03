@@ -26,28 +26,21 @@ app.use(function(req, res, next) {
 })
 
 app.post('/api/emails', function(req, res) {
-  // fs.readFile(EMAILS_FILE, function(err, data) {
-  //   if (err) {
-  //     console.error(err);
-  //     process.exit(1);
-  //   }
-  //   console.log('data:', req);
-  //   var emails = JSON.parse(data);
-  //   // NOTE: In a real implementation, we would likely rely on a database or
-  //   // some other approach (e.g. UUIDs) to ensure a globally unique id. We'll
-  //   // treat Date.now() as unique-enough for our purposes.
-    // var emails = JSON.parse({})
-
-    // create the new email from body. this is essentailly the same data with an id
+  fs.readFile(EMAILS_FILE, function(err, data) {
+    if (err) {
+     console.error(err);
+     process.exit(1);
+    }
+    var emails = JSON.parse(data);
     var newEmail = {
       id: Date.now(),
       contactName: req.body.contactName,
       contactEmail: req.body.contactEmail,
       contactMessage: req.body.contactMessage
     };
-    // emails.push(newEmail);
-    // write to file. not necessary really.
-    fs.writeFile(EMAILS_FILE, JSON.stringify(newEmail, null, 4), function(err) {
+    emails.push(newEmail);
+    // write to file for archive purposes. serves as a backup if the email service fails.
+    fs.writeFile(EMAILS_FILE, JSON.stringify(emails, null, 4), function(err) {
       if (err) {
         console.error('err: ', err);
         console.error('newEmail: ', newEmail);
@@ -56,14 +49,9 @@ app.post('/api/emails', function(req, res) {
       res.json(newEmail);
     });
 
-    //lets send an email
-    function puts(error, stdout, stderr) {
-      console.log(stdout)
-      console.log(stderr)
-    }
-    var emailBody = 'From: ' + newEmail.contactName + '\n\nMessage:\n\n' + newEmail.contactMessage
-    exec('echo \"' + emailBody + '\" | mail -s \"Portfolio Contact\" example@email.com', puts);
-  // });
+    var emailBody = 'From: ' + newEmail.contactName + ' (' + newEmail.contactEmail + ' )\n\nMessage:\n\n' + newEmail.contactMessage
+    exec('echo \"' + emailBody + '\" | mail -s \"Portfolio Contact\" szabo.matthew@gmail.com');
+  });
 });
 
 app.listen(app.get('port'), function() {
