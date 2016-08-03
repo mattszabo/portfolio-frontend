@@ -138,7 +138,7 @@ class Contact extends React.Component {
       active: this.isContactReadyToSubmit()
     })
     return (
-      <section className='page-contact' id='contact'>
+      <section className='page-contact clearfix' id='contact'>
         <h2>conTAcT</h2>
         <div className='contact-icons'>
           <ul>
