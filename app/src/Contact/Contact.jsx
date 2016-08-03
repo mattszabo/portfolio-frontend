@@ -147,7 +147,7 @@ class Contact extends React.Component {
             <li><a href='mailto:szabo.matthew@gmail.com'><GmailLogo /></a></li>
           </ul>
         </div>
-        <p className='mobile-hidden'>
+        <p className='p-text mobile-hidden'>
           Send an email to szabo.matthew@gmail.com right from here.
         </p>
         <p className='mobile-visible'>

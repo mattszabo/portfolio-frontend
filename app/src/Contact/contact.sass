@@ -1,9 +1,11 @@
 @import '../../styles/constants.sass'
 
+$contactRed: #E75A4D
+
 .page-contact
   input:-webkit-autofill
     transition: background-color 9999s ease-in-out 0s
-  background-color: #7f8c8d !important
+  background-color: #BDC3C7 !important
   text-align: center
   ul
     margin-top: 30vh
@@ -19,6 +21,8 @@
       display: none
     &.mobile-visible
       display: block
+  .p-text
+    margin-top: 6vh
   .contact-email
     display: none
 
@@ -78,9 +82,10 @@
         position: relative
         display: block
         padding: 1rem 0
+        font-weight: 400
         // width: 100%
         // color: rgba($darkgray, 0.6)
-        color: #C0392B
+        color: $contactRed
       .input-styled
         margin: 2rem 2rem 1rem 2rem
         &:first-child
@@ -156,7 +161,7 @@
         p
           display: none
           width: 65%
-          color: #C0392B
+          color: $contactRed
           padding: 0
           float: left
           // font-weight: 200

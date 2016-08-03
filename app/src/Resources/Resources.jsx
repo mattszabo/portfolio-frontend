@@ -19,9 +19,6 @@ class Resources extends React.Component {
       <section className='page-resources' id='resources'>
         <h2>resources</h2>
         <div className='resources-content'>
-          <p className='resources-hint'>
-            (Click the logos to change topic)
-          </p>
           <ul className='resource-topics'>
             <li onClick={this.displayLinks.bind(this, 'react')}>
               <ReactLogo    /></li>
