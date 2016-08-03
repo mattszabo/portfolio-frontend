@@ -169,7 +169,7 @@ class Contact extends React.Component {
           To send an email to szabo.matthew@gmail.com, click the gmail icon above
         </p>
         <p className={emailSendSimulationClass}>
-          <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate the app state of having sent an email to see what the form looks like then
+          <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate state change to see what happens when you send an email.
         </p>
         <form
           className='contact-email'
