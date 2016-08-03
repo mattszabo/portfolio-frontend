@@ -148,6 +148,7 @@ class Contact extends React.Component {
       active: this.isContactReadyToSubmit()
     })
     const emailSendSimulationClass = className({
+      'mobile-hidden': true,
       'email-send-simulation': true,
       'email-send-simulation-active': this.state.isEmailSendTestAvailable
     })
