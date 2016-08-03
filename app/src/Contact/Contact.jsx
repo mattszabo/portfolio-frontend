@@ -9,7 +9,7 @@ class Contact extends React.Component {
   constructor() {
     super();
     this.state = {
-      isEmailSent: true,
+      isEmailSent: false,
       contactName: '',
       contactEmail: '',
       contactMessage: ''
