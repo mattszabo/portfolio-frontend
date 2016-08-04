@@ -2,7 +2,7 @@ import React from 'react';
 
 const GmailLogo = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 45555 33097" height='50px' width='60px'>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 45555 33097" height='50px' width='60px'>
       <g>
         <path fill="#E75A4D" d="M41608 250c2030,0 3691,1661 3691,3691l0 1070 -5128 3663 -17458 12026 -17458 -12148 0 24295 -1314 0c-2030,0 -3691,-1661 -3691,-3691l0 -25214c0,-2030 1661,-3691 3691,-3691l18772 13918 18894 -13918z"/>
         <polygon fill="#E7E4D7" points="5255,8552 5255,32847 40172,32847 40172,8674 22713,20700 "/>
@@ -17,9 +17,9 @@ const GmailLogo = () => {
 
 const GitHubLogo = () => {
   return (
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xmlspace="preserve">
-      <path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M24.913,1.059c-13.56,0-24.556,10.995-24.556,24.558
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="50px" height="50px" viewBox="0 0 50 50" enableBackground="new 0 0 50 50" xmlSpace="preserve">
+      <path fillRule="evenodd" clipRule="evenodd" fill="#000" d="M24.913,1.059c-13.56,0-24.556,10.995-24.556,24.558
         c0,10.851,7.035,20.056,16.796,23.305c1.228,0.224,1.676-0.533,1.676-1.186c0-0.581-0.021-2.128-0.033-4.179
         c-6.832,1.485-8.272-3.29-8.272-3.29c-1.118-2.837-2.727-3.593-2.727-3.593c-2.23-1.523,0.169-1.494,0.169-1.494
         c2.464,0.175,3.761,2.533,3.761,2.533c2.19,3.751,5.748,2.669,7.147,2.041c0.223-1.588,0.858-2.672,1.559-3.284
@@ -34,8 +34,8 @@ const GitHubLogo = () => {
 
 const LinkedInLogo = () => {
   return (
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="50px" height="50px" viewBox="0 0 42.269 36" enable-background="new 0 0 42.269 36" xmlspace="preserve">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="50px" height="50px" viewBox="0 0 42.269 36" enableBackground="new 0 0 42.269 36" xmlSpace="preserve">
       <g>
         <g>
           <path d="M40.271,29.051c0.423-0.052,0.645-0.285,0.645-0.676c0-0.477-0.29-0.708-0.884-0.708h-0.953v2.507h0.358v-1.092h0.443

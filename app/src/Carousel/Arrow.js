@@ -2,8 +2,8 @@ import React from 'react';
 
 const Arrow = () => {
   return (
-    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      viewBox="0 0 800 800" enable-background="new 0 0 800 800" xmlspace="preserve">
+    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      viewBox="0 0 800 800" enableBackground="new 0 0 800 800">
       <g>
         <g>
 

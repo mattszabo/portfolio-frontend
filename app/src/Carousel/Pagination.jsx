@@ -19,7 +19,7 @@ class Pagination extends React.Component {
             active: i === this.props.currentId
           })
           return (
-            <li key={i} index={i}>
+            <li key={i}>
               <svg
                 id='dot'
                 onClick={this.handleClick.bind(this, i)}
