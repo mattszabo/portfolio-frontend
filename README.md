@@ -4,7 +4,7 @@ This is my portfolio, which is written using **react** components. It's hosted o
 The webpage is a single page app written with a mobile first approach. It is also my first attempt at a full webpage, so there have been many learning milestones at different stages of development.
 
 ## install
-```git clone https://github.com/wekilledit/portfolio-frontend.git .```  
+```git clone https://github.com/wekilledit/portfolio-frontend.git portfolio-frontend```  
 ```cd portfolio-frontend```  
 ```npm install```  
 
