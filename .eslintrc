@@ -21,8 +21,7 @@
     // Disable `no-console` rule
     "no-console": 0,
     // Should allow underscores if preceeded by this.
-    # "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-    "no-underscore-dangle": off,
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
     // Default to single quotes and raise an error if something
     // else is used
     "quotes": [2, "single"]

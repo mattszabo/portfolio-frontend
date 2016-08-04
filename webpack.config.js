@@ -13,7 +13,7 @@ const PATHS = {
   release: path.join(__dirname, 'build', 'release')
 };
 
-var PUBLIC_PATH
+var PUBLIC_PATH;
 switch(process.env.npm_lifecycle_event) {
   //** PRODUCTION ** //
   case 'build':
@@ -80,7 +80,6 @@ const common = {
       },
       { test: /\.(jpe?g|png|gif)$/i,
         loader: 'url-loader?limit=1024&name=/images/[name].[ext]',
-        // loader: 'url?name=./images/[name].[ext]',
         include: PATHS.app
       },
       { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]', include: PATHS.app },
@@ -103,9 +102,6 @@ switch(process.env.npm_lifecycle_event) {
   case 'build':
     config = merge(common, {
       devtool: 'cheap-module-source-map',
-      // Unfortunately there's no way to only ignore third party libraries... it's
-      // all or nothing. I may eventually  have my own warnings, but i'll take this
-      // risk and try to remember to turn on these warnings occasionally.
       plugins: [
         new webpack.optimize.UglifyJsPlugin({
           compress: {warnings: false}
@@ -143,20 +139,13 @@ switch(process.env.npm_lifecycle_event) {
         // Display only errors to reduce the amount of output.
         stats: 'errors-only',
 
-        // Parse host and port from env so this is easy to customize.
-        //
-        // If you use Vagrant or Cloud9, set
-        // host: process.env.HOST || '0.0.0.0';
-        //
-        // 0.0.0.0 is available to all network devices unlike default
-        // localhost
         host: process.env.HOST,
         port: process.env.PORT
       },
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new NpmInstallPlugin({
-          save: true //--save
+          save: true
         })
       ]
     });
