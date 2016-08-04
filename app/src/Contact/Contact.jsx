@@ -123,6 +123,8 @@ class Contact extends React.Component {
   }
   render() {
     const hText = this.printHelpText();
+
+    // SET DYNAMIC STYLE CLASSES
     const pageContactClass = className({
       'email-sent': this.state.isEmailSent,
       'page-contact': true
@@ -152,6 +154,8 @@ class Contact extends React.Component {
       'email-send-simulation': true,
       'email-send-simulation-active': this.state.isEmailSendTestAvailable
     })
+
+    // ACTUAL RENDERING
     return (
       <section className={pageContactClass} id='contact'>
         <h2>conTAcT</h2>
@@ -217,7 +221,7 @@ class Contact extends React.Component {
               type="submit"
               value="Send"
             />
-        </div>
+          </div>
         </form>
       </section>
     )

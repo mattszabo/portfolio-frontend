@@ -6,12 +6,12 @@ import Navbar       from '../Navbar/Navbar';
 import Home         from '../Home/Home';
 import About        from '../About/About';
 import Projects     from '../Projects/Projects';
-import Resources   from '../Resources/Resources';
+import Resources    from '../Resources/Resources';
 import Contact      from '../Contact/Contact';
 
 import './layout.sass';
 
-const { Element, Events } = Scroll;
+const { Element } = Scroll;
 
 class Layout extends React.Component {
   constructor(props) {
@@ -20,38 +20,25 @@ class Layout extends React.Component {
       navPushEffect: false
     }
   }
-  componentDidMount() {
-    Events.scrollEvent.register('begin', () => {
-      console.log('begin', arguments);
-    });
-
-    Events.scrollEvent.register('end', () => {
-      console.log('end', arguments);
-    })
-  }
 
   scrollToTop() {
     scroll.scrollToTop();
   }
 
-  componentWillUnmount() {
-    Events.scrollEvent.remove('begin');
-    Events.scrollEvent.remove('end');
-  }
   toggleNavPushEffect = () => {
     this.setState({
       navPushEffect: !this.state.navPushEffect
     })
   }
   render() {
-    const _class = className({
+    const layoutClass = className({
       'layout-content': true,
       'nav-push-effect': this.state.navPushEffect
     })
     return (
       <div className='layout'>
         <Navbar togglePushEffect={this.toggleNavPushEffect} />
-        <div className={_class}>
+        <div className={layoutClass}>
           <Element name='page0'>
             <Home      />
           </Element>

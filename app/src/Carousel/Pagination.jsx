@@ -5,6 +5,8 @@ class Pagination extends React.Component {
   constructor(props) {
     super(props);
   }
+  // Couldn't figure out how to use arrow functions for auto binding
+  // with a variable inside of a map scope
   handleClick(i) {
     console.log('index', i);
     this.props.onClick(i);
@@ -13,7 +15,7 @@ class Pagination extends React.Component {
     return (
       <ol>
         {this.props.pages.map((page, i) => {
-          const _class = className({
+          const dotClass = className({
             active: i === this.props.currentId
           })
           return (
@@ -21,7 +23,7 @@ class Pagination extends React.Component {
               <svg
                 id='dot'
                 onClick={this.handleClick.bind(this, i)}
-                className={_class}
+                className={dotClass}
                 height="20" width="20">
                 <circle cx="10" cy="10" r="4" />
               </svg>

@@ -1,12 +1,5 @@
 @import '../../styles/constants.sass'
 
-@mixin effectState($state)
-    webkit-filter: $state
-    -moz-filter: $state
-    -ms-filter: $state
-    -o-filter: $state
-    filter: $state
-
 .page-home
   text-align: center
   display: block
@@ -71,6 +64,5 @@
         -ms-filter: drop-shadow( -1px -1px 1px $darkgray )
         -o-filter: drop-shadow( -1px -1px 1px $darkgray )
         filter: drop-shadow( -1px -1px 1px $darkgray )
-        // @include effectState('drop-shadow( 3px 2px 1px $darkgray )' )
   @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
     background-image: url('./images/large-laptop@2x.jpg')
