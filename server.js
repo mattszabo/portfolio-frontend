@@ -11,7 +11,7 @@ var EMAILS_FILE = path.join(__dirname, 'emails.json');
 app.set('port', (process.env.PORT || 3300));
 
 app.use('/', express.static('' + __dirname + ''));
-
+app.use('/static/', express.static('' + __dirname + ''));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 

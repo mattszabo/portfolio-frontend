@@ -13,6 +13,18 @@ const PATHS = {
   release: path.join(__dirname, 'build', 'release')
 };
 
+var PUBLIC_PATH
+switch(process.env.npm_lifecycle_event) {
+  //** PRODUCTION ** //
+  case 'build':
+    PUBLIC_PATH = 'http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3300/static/'
+    break;
+  // ** DEV ** //
+  case 'start':
+    PUBLIC_PATH = 'http://localhost:8080/static/'
+    break;
+}
+
 process.env.BABEL_ENV = TARGET;
 
 const common = {
@@ -24,7 +36,8 @@ const common = {
   },
   output: {
     path: PATHS.release,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: PUBLIC_PATH
   },
 
   module: {
@@ -66,8 +79,8 @@ const common = {
         include: PATHS.app
       },
       { test: /\.(jpe?g|png|gif)$/i,
-        // loader: 'url-loader?limit=1024&name=images/[name].[ext]',
-        loader: 'url?name=./images/[name].[ext]',
+        loader: 'url-loader?limit=1024&name=/images/[name].[ext]',
+        // loader: 'url?name=./images/[name].[ext]',
         include: PATHS.app
       },
       { test: /\.svg$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=public/fonts/[name].[ext]', include: PATHS.app },
