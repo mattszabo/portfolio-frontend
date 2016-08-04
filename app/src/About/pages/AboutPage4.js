@@ -5,7 +5,7 @@ const AboutPage4 = () => {
     <div className='subpage-about'>
       <h3>This porTfoLio</h3>
       <p>
-        This site utilizes vw and vh style units in an attempt to give a consistent look and feel to all screen sizes. The dimensions of each section is one screen height and one screen width regardless of the device you're viewing on. The navigation bar links are intended to slide each section into propper view. There is also a breakpoint set for a large mobile device. Screen resolutions above and below will display some things differently, most notably seen with the contact page.
+        This site is deisgned with responsiveness and mobile first principles in mind to give a consistent look and feel to all screen sizes, and to avoid the mobile view feeling degraded. This means some sections will appear differently depending on the viewing device (see the contact page for a good example of this). Different background images are loaded separately for different device screen sizes and pixel densities, so load times should be low for each device. The navigation bar links are also intended to slide each section into propper view.
       </p>
       <h4>developmenT environmenT</h4>
       <p>
