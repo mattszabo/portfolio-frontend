@@ -10,7 +10,7 @@ const PortfolioProject = () => {
         <a href="https://github.com/wekilledit/portfolio-frontend"><GitHubLogo /></a>
       </div>
       <p>
-        This project focuses on responsive mobile first web development and React. The site was designed for a smart phone like the iphone 6 and was then adapted for larger screens. This was mostly achieved by using the vh and vw style units.
+        This project focuses on responsive mobile first web development and React. The site was designed for a smart phone like the iphone 6 and was then adapted for larger screens. See the about section to learn more about this app.
       </p>
       <p>
         If you're on a computer, try resizing the browser window or use browser dev tools to see what it might look like on a mobile device.

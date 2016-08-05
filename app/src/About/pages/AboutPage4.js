@@ -5,7 +5,7 @@ const AboutPage4 = () => {
     <div className='subpage-about'>
       <h3>This porTfoLio</h3>
       <p>
-        This site is deisgned with responsiveness and mobile first principles in mind to give a consistent look and feel to all screen sizes, and to avoid the mobile view feeling degraded. This means some sections will appear differently depending on the viewing device (see the contact page for a good example of this). Different background images are loaded separately for different device screen sizes and pixel densities, so load times should be low for each device. The navigation bar links are also intended to slide each section into propper view.
+        This site is deisgned with responsiveness and mobile first principles in mind to give a consistent look and feel to all screen sizes, and to avoid the mobile view feeling degraded. This means some sections will appear differently depending on the viewing device (see the contact page for a good example of this). Background images of different dimensions and file sizes are loaded separately for different device screen sizes and pixel densities, which ensures load times are as low as possible for each device. The navigation bar links are also intended to slide each section into propper view.
       </p>
       <h4>developmenT environmenT</h4>
       <p>
