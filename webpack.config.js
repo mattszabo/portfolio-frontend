@@ -17,7 +17,7 @@ var PUBLIC_PATH;
 switch(process.env.npm_lifecycle_event) {
   //** PRODUCTION ** //
   case 'build':
-    PUBLIC_PATH = 'http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3300/static/'
+    PUBLIC_PATH = 'http://portfolio.mattcodes.com.au/static/'
     break;
   // ** DEV ** //
   case 'start':
