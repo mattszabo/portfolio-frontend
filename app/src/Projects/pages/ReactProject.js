@@ -9,7 +9,7 @@ const ReactProject = () => {
       <h3>reAct nAvigAtion tAbs</h3>
       <div className='project-icons'>
         <a href="https://github.com/wekilledit/react-website"><GitHubLogo /></a>
-        <a href="http://ec2-54-206-69-241.ap-southeast-2.compute.amazonaws.com:3100"><WebIcon /></a>
+        <a href="http://reacttabs.mattcodes.com.au"><WebIcon /></a>
       </div>
       <p>
         This project focussed more on the development environment as well as utilizing React components to create a very basic website. The main focus was understanding webpack and babel (enough) to have a featureful and comfortable dev environment.
