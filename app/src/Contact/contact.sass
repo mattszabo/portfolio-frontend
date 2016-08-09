@@ -22,8 +22,8 @@ $contactRed: #E75A4D
     &.mobile-visible
       display: block
   .p-text
-    margin-top: 6vh
-  .contact-email
+    margin-top: 1vh
+  .contact-email-form
     display: none
   p + p
     margin: 0
@@ -43,7 +43,8 @@ $contactRed: #E75A4D
         display: none
         &.email-send-simulation-active
          display: inline-block
-    .contact-email
+         padding-bottom: 5vh
+    .contact-email-form
       width: 650px
       margin: 0 auto
       display: block
@@ -220,7 +221,7 @@ $contactRed: #E75A4D
             .submit-btn
               background: rgba($darkblue, 0.6)
     &.email-sent
-      .contact-email
+      .contact-email-form
         .input-label-content
           color: $darkblue
         .contact-submit

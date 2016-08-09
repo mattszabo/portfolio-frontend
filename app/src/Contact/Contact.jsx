@@ -176,7 +176,7 @@ class Contact extends React.Component {
           <input type="checkbox" onClick={this.handleSentCheckbox}/> Simulate state change to see what happens when you send an email.
         </p>
         <form
-          className='contact-email'
+          className='contact-email-form'
           onSubmit={this.handleSubmit}
         >
           <div className={contactNameClass}>
