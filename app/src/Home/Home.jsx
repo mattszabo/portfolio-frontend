@@ -11,6 +11,7 @@ const Home = () => {
     <section className='page-home' id='home'>
       <h1>mATT</h1>
       <h1>sZAbo</h1>
+      <h5>This site is mobile and desktop friendly</h5>
       <Link
         activeClass='active'
         className='page0'
@@ -21,6 +22,7 @@ const Home = () => {
       >
         <DownArrow />
       </Link>
+
     </section>
   );
 }
