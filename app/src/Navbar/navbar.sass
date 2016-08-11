@@ -11,74 +11,74 @@
     color: $darkblue
     font-weight: bold
 
-@media only screen and (max-width:435px)
-  .nav-bar
-    height: 6vh
-    text-align: right
-    .icon
-      display: block
-      font-size: 5vh
-      padding: 1vh 1vw 0 1vw
-    .navbar-links
-      transform: translateX(200px)
+// @media only screen and (max-width:435px)
+.nav-bar
+  height: 6vh
+  text-align: right
+  .icon
+    display: block
+    font-size: 5vh
+    padding: 1vh 1vw 0 1vw
+  .navbar-links
+    transform: translateX(200px)
+    webkit-transition: all .5s ease-out
+    -moz-transition: all .5s ease-out
+    -ms-transition: all .5s ease-out
+    -o-transition: all .5s ease-out
+    transition: all .5s ease-out
+    ul
+      list-style-type: none
+      display: inline-block
+      float: right
+      background-color: $darkgray
+      width: 200px
+      padding-bottom: 20px
+      li
+        font-size: 2rem
+        width: 100%
+        margin-right: 10px
+        padding: 10px 0 5px 0
+        border-bottom: 1px solid gray
+        letter-spacing: 3px
+        &:first-child
+          border-top: 1px solid $offwhite
+        &:last-child
+          margin-bottom: 100vh
+          border-bottom: 1px solid $offwhite
+          padding-bottom: 1vh
+        a
+          padding-right: 1vh
+    &.pushout
+      .active
+      transform: translateX(0px)
       webkit-transition: all .5s ease-out
       -moz-transition: all .5s ease-out
       -ms-transition: all .5s ease-out
       -o-transition: all .5s ease-out
       transition: all .5s ease-out
-      ul
-        list-style-type: none
-        display: inline-block
-        float: right
-        background-color: $darkgray
-        width: 200px
-        padding-bottom: 20px
-        li
-          font-size: 2rem
-          width: 100%
-          margin-right: 10px
-          padding: 10px 0 5px 0
-          border-bottom: 1px solid gray
-          letter-spacing: 3px
-          &:first-child
-            border-top: 1px solid $offwhite
-          &:last-child
-            margin-bottom: 100vh
-            border-bottom: 1px solid $offwhite
-            padding-bottom: 1vh
-          a
-            padding-right: 1vh
-      &.pushout
-        .active
-        transform: translateX(0px)
-        webkit-transition: all .5s ease-out
-        -moz-transition: all .5s ease-out
-        -ms-transition: all .5s ease-out
-        -o-transition: all .5s ease-out
-        transition: all .5s ease-out
-  @media screen and (-webkit-device-pixel-ratio:3)
-    .nav-bar
-      .icon
-        font-size: 5vh
-      .navbar-links
-        ul
-          li
-            &:first-child
-              padding-top: 3vh
-              margin-top: 1.5vh
-@media only screen and (min-width:436px)
+@media screen and (-webkit-device-pixel-ratio:3)
   .nav-bar
-    background: $darkgray
-    padding: 1rem 0
+    .icon
+      font-size: 5vh
     .navbar-links
       ul
-        background: none
-        list-style-type: none
-        text-align: center
-        color: $offwhite
-        font-size: 5vh
-        letter-spacing: 5px
-        // padding-bottom: 1rem
         li
-          display: inline-block
-          padding: .5rem 1vw 0 1vw
+          &:first-child
+            padding-top: 3vh
+            margin-top: 1.5vh
+@media only screen and (min-width:436px)
+  // .nav-bar
+  //   background: $darkgray
+  //   padding: 1rem 0
+  //   .navbar-links
+  //     ul
+  //       background: none
+  //       list-style-type: none
+  //       text-align: center
+  //       color: $offwhite
+  //       font-size: 5vh
+  //       letter-spacing: 5px
+  //       // padding-bottom: 1rem
+  //       li
+  //         display: inline-block
+  //         padding: .5rem 1vw 0 1vw
