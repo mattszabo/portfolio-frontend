@@ -14,6 +14,7 @@ const AboutPage5 = () => {
           <li>Coding</li>
           <li>Futsal</li>
           <li>Nature walks</li>
+          <li>Keyboard shortcuts</li>
         </ul>
       </div>
     </div>
